@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import { languageLinks } from '../i18n/index.js';
+
+const langs = languageLinks('tr');
+---
+<Base
+  locale="tr"
+  title="Sayfa bulunamadı — EMDR İzmir"
+  description="Aradığınız sayfa bulunamadı."
+  noindex
+>
+  <section class="sect">
+    <div class="wrap sect__head">
+      <p class="eyebrow">404</p>
+      <h1>Aradığınız sayfa bulunamadı</h1>
+      <p>
+        Bağlantı taşınmış ya da yanlış yazılmış olabilir. Aşağıdan dilinizi seçerek
+        ana sayfaya dönebilirsiniz.
+      </p>
+      <div class="topics stack-lg">
+        {langs.map((l) => <a href={l.href} hreflang={l.code} lang={l.code}>{l.name}</a>)}
+      </div>
+    </div>
+  </section>
+</Base>

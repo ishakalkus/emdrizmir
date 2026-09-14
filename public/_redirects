@@ -1,0 +1,10 @@
+# Cloudflare Pages yönlendirmeleri.
+# Eski tek sayfalık sürümden gelen bağlantılar ana sayfaya düşsün.
+/index.html      /            301
+/tr              /            301
+/tr/             /            301
+
+# Dil köklerinde sondaki eğik çizgiyi sabitle
+/en              /en/         301
+/de              /de/         301
+/fr              /fr/         301

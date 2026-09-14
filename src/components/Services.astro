@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import { image } from '../assets/images.js';
+
+interface Props { t: any; }
+const { t } = Astro.props;
+const s = t.services;
+---
+<section class="sect sect--tint" id="hizmetler">
+  <div class="wrap">
+    <div class="sect__head">
+      <p class="eyebrow">{s.eyebrow}</p>
+      <h2>{s.h2}</h2>
+      <p>{s.intro}</p>
+    </div>
+
+    <div class="svcs">
+      {s.items.map((item: any) => (
+        <article class="svc">
+          <figure class="shot svc__ph">
+            <Image src={image(item.image)} alt={item.alt} widths={[380, 760]} sizes="(min-width: 900px) 360px, (min-width: 600px) 50vw, 100vw" loading="lazy" />
+          </figure>
+          <div class="svc__body">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+            <ul>
+              {item.tags.map((tag: string) => <li>{tag}</li>)}
+            </ul>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <p class="eyebrow eyebrow--spaced">{s.topicsLabel}</p>
+    <div class="topics">
+      {s.topics.map((topic: string) => <a href="#iletisim">{topic}</a>)}
+    </div>
+  </div>
+</section>

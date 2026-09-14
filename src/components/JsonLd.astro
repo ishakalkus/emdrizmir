@@ -1,0 +1,98 @@
+---
+import { SITE_URL, CONTACT } from '../i18n/config.js';
+import { LOCALES, localeUrl } from '../i18n/index.js';
+import type { Locale } from '../i18n/config.js';
+
+interface Props { locale: Locale; t: any; }
+const { locale, t } = Astro.props;
+
+const pageUrl = localeUrl(locale);
+const orgId = `${SITE_URL}/#organization`;
+const siteId = `${SITE_URL}/#website`;
+
+const address = {
+  '@type': 'PostalAddress',
+  streetAddress: CONTACT.street,
+  addressLocality: CONTACT.district,
+  addressRegion: CONTACT.city,
+  postalCode: CONTACT.postalCode,
+  addressCountry: CONTACT.country,
+};
+
+/** Ekip sayfasındaki hekimleri Physician olarak modelle. */
+const physicians = t.team.members
+  .filter((m: any) => /Dr/i.test(m.name))
+  .map((m: any) => ({
+    '@type': 'Physician',
+    '@id': `${SITE_URL}/#${m.image}`,
+    name: m.name,
+    jobTitle: m.role,
+    medicalSpecialty: 'Psychiatric',
+    description: m.summary,
+    worksFor: { '@id': orgId },
+    address,
+  }));
+
+const services = t.services.items.map((item: any) => ({
+  '@type': 'MedicalTherapy',
+  name: item.title,
+  description: item.text,
+}));
+
+const graph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': ['MedicalClinic', 'LocalBusiness'],
+      '@id': orgId,
+      name: 'EMDR İzmir',
+      url: pageUrl,
+      description: t.meta.description,
+      image: `${SITE_URL}/og/emdrizmir.jpg`,
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}/icon-512.png`, width: 512, height: 512 },
+      telephone: CONTACT.phoneE164,
+      email: CONTACT.email,
+      foundingDate: CONTACT.foundingYear,
+      address,
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: CONTACT.geo.lat,
+        longitude: CONTACT.geo.lng,
+      },
+      hasMap: `https://www.google.com/maps/search/?api=1&query=${CONTACT.mapsQuery}`,
+      openingHours: CONTACT.openingHours,
+      medicalSpecialty: 'Psychiatric',
+      availableService: services,
+      availableLanguage: ['tr', 'en', 'de', 'fr'],
+      areaServed: [
+        { '@type': 'City', name: 'İzmir' },
+        { '@type': 'Country', name: 'Türkiye' },
+      ],
+      sameAs: [CONTACT.instagram, CONTACT.youtube],
+      employee: physicians,
+      isAcceptingNewPatients: true,
+    },
+    ...physicians,
+    {
+      '@type': 'WebSite',
+      '@id': siteId,
+      url: SITE_URL + '/',
+      name: 'EMDR İzmir',
+      publisher: { '@id': orgId },
+      inLanguage: LOCALES,
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: t.meta.title,
+      description: t.meta.description,
+      inLanguage: t.htmlLang,
+      isPartOf: { '@id': siteId },
+      about: { '@id': orgId },
+      primaryImageOfPage: `${SITE_URL}/og/emdrizmir.jpg`,
+    },
+  ],
+};
+---
+<script type="application/ld+json" is:inline set:html={JSON.stringify(graph)} />

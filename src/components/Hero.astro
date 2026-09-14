@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+import Icon from './Icon.astro';
+import heroImage from '../assets/img/hero-clinic.webp';
+import { CONTACT } from '../i18n/config.js';
+
+interface Props { t: any; }
+const { t } = Astro.props;
+const h = t.hero;
+---
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div>
+      <p class="eyebrow">{h.eyebrow}</p>
+      <h1 set:html={h.titleHtml} />
+      <p class="hero__lede">{h.lede}</p>
+
+      <div class="hero__acts">
+        <a class="btn btn--solid" href="#iletisim">
+          <Icon name="calendar" />
+          {t.cta.appointment}
+        </a>
+        <a class="btn btn--wa" href={CONTACT.whatsapp} target="_blank" rel="noopener">
+          <Icon name="whatsapp" />
+          {t.cta.whatsapp}
+        </a>
+      </div>
+
+      <ul class="trust">
+        {h.trust.map((item: any) => (
+          <li><b>{item.b}</b>{item.rest}</li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- çift yönlü uyarım şeridi -->
+    <div class="bls" id="bls">
+      <div class="bls__head">
+        <p class="bls__title">{h.bls.title}</p>
+        <span class="bls__rate">{h.bls.rate}</span>
+      </div>
+      <div class="bls__track" role="img" aria-label={h.bls.trackAlt}>
+        <span class="bls__dot"></span>
+      </div>
+      <div class="bls__foot">
+        <p class="bls__note">{h.bls.note}</p>
+        <button
+          class="bls__toggle"
+          id="blsBtn"
+          type="button"
+          aria-pressed="false"
+          data-pause={h.bls.pause}
+          data-resume={h.bls.resume}
+        >{h.bls.pause}</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <figure class="shot strip">
+      <Image src={heroImage} alt={h.imageAlt} widths={[720, 1100, 1500]} sizes="(min-width: 1140px) 1100px, 100vw" loading="eager" fetchpriority="high" />
+    </figure>
+  </div>
+</section>

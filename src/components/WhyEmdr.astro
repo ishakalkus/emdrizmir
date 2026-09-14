@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+import signImage from '../assets/img/dr-mehmet-oguz.jpg';
+
+interface Props { t: any; }
+const { t } = Astro.props;
+const w = t.why;
+---
+<section class="sect sect--tint" id="neden">
+  <div class="wrap">
+    <div class="sect__head">
+      <p class="eyebrow">{w.eyebrow}</p>
+      <h2>{w.h2}</h2>
+    </div>
+
+    <div class="letter">
+      <span class="letter__mark" aria-hidden="true">“</span>
+      <blockquote>
+        {w.intro.map((p: string) => <p>{p}</p>)}
+
+        <details>
+          <summary>
+            <span class="lbl-open">{w.open}</span>
+            <span class="lbl-close">{w.close}</span>
+          </summary>
+          <div class="bio letter__body">
+            {w.body.map((p: string) => <p>{p}</p>)}
+          </div>
+        </details>
+      </blockquote>
+
+      <div class="letter__sign">
+        <Image src={signImage} alt="" width={52} height={52} densities={[1, 2]} loading="lazy" />
+        <div>
+          <b>{w.sign.name}</b>
+          <span>{w.sign.role}</span>
+        </div>
+      </div>
+    </div>
+
+    <blockquote class="prose closing">{w.closing}</blockquote>
+  </div>
+</section>

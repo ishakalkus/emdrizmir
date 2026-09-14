@@ -1,0 +1,126 @@
+---
+import { Image } from 'astro:assets';
+import Icon from './Icon.astro';
+import roomImage from '../assets/img/clinic-room.webp';
+import { CONTACT } from '../i18n/config.js';
+
+interface Props { t: any; }
+const { t } = Astro.props;
+const c = t.contact;
+
+const mapsSearch = `https://www.google.com/maps/search/?api=1&query=${CONTACT.mapsQuery}`;
+const mapsDirections = `https://www.google.com/maps/dir/?api=1&destination=${CONTACT.mapsQuery}`;
+const mapsEmbed = `https://www.google.com/maps?q=${CONTACT.mapsQuery}&z=16&output=embed`;
+const addressLine2 = `${CONTACT.postalCode} ${CONTACT.district} / ${CONTACT.city}`;
+---
+<section class="sect" id="iletisim">
+  <div class="wrap">
+    <div class="sect__head">
+      <p class="eyebrow">{c.eyebrow}</p>
+      <h2>{c.h2}</h2>
+      <p>{c.intro}</p>
+    </div>
+
+    <div class="contact">
+      <div class="info">
+        <div class="info__row">
+          <span class="info__k">{c.labels.address}</span>
+          <span class="info__v">
+            <a href={mapsSearch} target="_blank" rel="noopener">
+              {CONTACT.street}<br />{addressLine2}
+            </a>
+          </span>
+        </div>
+        <div class="info__row">
+          <span class="info__k">{c.labels.phone}</span>
+          <span class="info__v"><a href={CONTACT.phoneHref}>{CONTACT.phone}</a></span>
+        </div>
+        <div class="info__row">
+          <span class="info__k">{c.labels.email}</span>
+          <span class="info__v"><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></span>
+        </div>
+        <div class="info__row">
+          <span class="info__k">{c.labels.languages}</span>
+          <span class="info__v">{c.languagesValue}</span>
+        </div>
+        <div class="info__row">
+          <span class="info__k">{c.labels.social}</span>
+          <div class="social">
+            <a href={CONTACT.instagram} target="_blank" rel="noopener" aria-label="Instagram"><Icon name="instagram" /></a>
+            <a href={CONTACT.youtube} target="_blank" rel="noopener" aria-label="YouTube"><Icon name="youtube" /></a>
+            <a href={CONTACT.whatsapp} target="_blank" rel="noopener" aria-label="WhatsApp"><Icon name="whatsapp" /></a>
+          </div>
+        </div>
+        <figure class="shot info__ph">
+          <Image src={roomImage} alt={c.imageAlt} widths={[450, 900]} sizes="(min-width: 940px) 420px, 100vw" loading="lazy" />
+        </figure>
+      </div>
+
+      <form
+        class="form"
+        id="apptForm"
+        novalidate
+        data-wa={CONTACT.whatsappNumber}
+        data-mail={CONTACT.email}
+        data-greeting={c.message.greeting}
+        data-subject={c.message.subject}
+        data-l-name={c.message.name}
+        data-l-tel={c.message.tel}
+        data-l-mode={c.message.mode}
+      >
+        <h3>{c.form.h3}</h3>
+        <p>{c.form.note}</p>
+
+        <div class="fields">
+          <div class="field">
+            <label for="f-name">{c.form.name.label}</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" placeholder={c.form.name.placeholder} />
+          </div>
+          <div class="field">
+            <label for="f-tel">{c.form.tel.label} <i>{c.form.tel.optional}</i></label>
+            <input id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder={c.form.tel.placeholder} />
+          </div>
+          <div class="field field--full">
+            <label for="f-mode">{c.form.mode.label}</label>
+            <select id="f-mode" name="mode">
+              {c.form.mode.options.map((o: string) => <option>{o}</option>)}
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="f-msg">{c.form.msg.label}</label>
+            <textarea id="f-msg" name="msg" placeholder={c.form.msg.placeholder}></textarea>
+          </div>
+        </div>
+
+        <div class="form__acts">
+          <button class="btn btn--wa" type="button" id="sendWa">
+            <Icon name="whatsapp" />
+            {c.form.sendWa}
+          </button>
+          <button class="btn btn--ghost" type="button" id="sendMail">
+            <Icon name="mail" />
+            {c.form.sendMail}
+          </button>
+        </div>
+
+        <p class="form__note">{c.form.privacy}</p>
+      </form>
+    </div>
+
+    <!-- Harita ancak tıklanınca yüklenir: onay olmadan Google'a istek gitmez -->
+    <div class="map" id="map" data-loaded="false" data-src={mapsEmbed} data-title={c.map.iframeTitle}>
+      <div class="map__fb">
+        <Icon name="pin" />
+        <address>{CONTACT.street}<br />{addressLine2}</address>
+        <button class="map__consent" id="mapConsent" type="button">
+          <span class="btn btn--solid btn--sm">{c.map.consentButton}</span>
+        </button>
+        <p class="map__note">{c.map.consentNote}</p>
+      </div>
+      <a class="btn btn--ghost btn--sm map__act" href={mapsDirections} target="_blank" rel="noopener">
+        <Icon name="directions" />
+        {c.map.directions}
+      </a>
+    </div>
+  </div>
+</section>

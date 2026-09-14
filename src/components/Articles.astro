@@ -1,0 +1,27 @@
+---
+interface Props { t: any; }
+const { t } = Astro.props;
+const a = t.articles;
+---
+<section class="sect" id="makaleler">
+  <div class="wrap">
+    <div class="sect__head">
+      <p class="eyebrow">{a.eyebrow}</p>
+      <h2>{a.h2}</h2>
+    </div>
+
+    <div class="papers">
+      {a.items.map((item: any) => (
+        <article class="paper">
+          <h3>{item.title}</h3>
+          <p class="paper__meta">
+            {item.meta.map((line: string, i: number) => (
+              <>{i > 0 && <br />}{line}</>
+            ))}
+          </p>
+          <p class="paper__auth">{item.authors}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

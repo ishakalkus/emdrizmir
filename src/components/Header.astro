@@ -1,0 +1,85 @@
+---
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+import { languageLinks, localePath } from '../i18n/index.js';
+import type { Locale } from '../i18n/config.js';
+
+interface Props { locale: Locale; t: any; }
+const { locale, t } = Astro.props;
+const langs = languageLinks(locale);
+const home = localePath(locale);
+---
+<header class="top" id="top">
+  <div class="wrap top__in">
+    <a class="brand" href={home} aria-label={t.a11y.brandHome}>
+      <Logo />
+    </a>
+
+    <nav class="nav" aria-label={t.a11y.mainNav}>
+      {t.nav.map((item: any) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+
+    <div class="top__cta">
+      <div class="langs">
+        <button
+          class="langs__btn"
+          id="langBtn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="langMenu"
+          aria-label={t.a11y.langSwitch}
+        >
+          <Icon name="globe" />
+          <span class="langs__short">{locale}</span>
+          <Icon name="chevron" />
+        </button>
+        <div class="langs__menu" id="langMenu" data-open="false">
+          {langs.map((l) => (
+            <a
+              href={l.href}
+              hreflang={l.code}
+              lang={l.code}
+              aria-current={l.current ? 'true' : undefined}
+            >
+              <span>{l.name}</span>
+              <span class="langs__code">{l.code}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <button class="iconbtn" id="themeBtn" type="button" aria-label={t.a11y.themeToggle}>
+        <Icon name="moon" />
+      </button>
+
+      <a class="btn btn--solid btn--sm" href="#iletisim">{t.cta.appointment}</a>
+
+      <button
+        class="iconbtn menubtn"
+        id="menuBtn"
+        type="button"
+        aria-expanded="false"
+        aria-controls="drawer"
+        aria-label={t.a11y.openMenu}
+      >
+        <Icon name="menu" />
+      </button>
+    </div>
+  </div>
+
+  <div class="drawer" id="drawer" data-open="false">
+    <div class="wrap drawer__in">
+      {t.drawer.map((item: any) => <a href={item.href}>{item.label}</a>)}
+      <div class="drawer__langs">
+        {langs.map((l) => (
+          <a
+            href={l.href}
+            hreflang={l.code}
+            lang={l.code}
+            aria-current={l.current ? 'true' : undefined}
+          >{l.name}</a>
+        ))}
+      </div>
+    </div>
+  </div>
+</header>

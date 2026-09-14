@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+import statImage from '../assets/img/emdr-memory.webp';
+
+interface Props { t: any; }
+const { t } = Astro.props;
+const e = t.emdr;
+---
+<section class="sect sect--tint" id="emdr">
+  <div class="wrap">
+    <div class="sect__head">
+      <p class="eyebrow">{e.eyebrow}</p>
+      <h2>{e.h2}</h2>
+    </div>
+
+    <div class="explain">
+      <div>
+        <p class="lead">{e.lead}</p>
+        {e.parasHtml.map((p: string) => <p set:html={p} />)}
+      </div>
+
+      <aside class="stat">
+        <figure class="shot stat__ph">
+          <Image src={statImage} alt={e.stat.imageAlt} widths={[360, 720]} sizes="(min-width: 900px) 360px, 100vw" loading="lazy" />
+        </figure>
+        <div class="stat__n">{e.stat.number}</div>
+        <p class="stat__l">{e.stat.label}</p>
+        <hr>
+        <dl>
+          {e.stat.scales.map((s: any) => (
+            <>
+              <dt>{s.dt}</dt>
+              <dd>{s.dd}</dd>
+            </>
+          ))}
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>

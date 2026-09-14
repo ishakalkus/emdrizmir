@@ -1,0 +1,26 @@
+---
+import { GA_MEASUREMENT_ID } from '../i18n/config.js';
+
+/**
+ * Google Analytics 4 — yalnızca GA_MEASUREMENT_ID tanımlıysa üretilir.
+ *
+ * Consent Mode v2 ile başlar ve bütün izinler baştan "denied" verilir:
+ * ziyaretçi açık onay vermeden çerez yazılmaz, reklam sinyali gönderilmez.
+ * Onayı toplayan arayüz eklendiğinde tek yapılacak şey şudur:
+ *   gtag('consent','update',{ analytics_storage:'granted' })
+ * KVKK md. 5 ve GDPR md. 6 açısından güvenli olan varsayılan budur.
+ */
+const id = GA_MEASUREMENT_ID;
+---
+{id && (
+  <>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <script type="text/javascript" is:inline set:html={`
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
+gtag('js',new Date());
+gtag('config','${id}',{anonymize_ip:true});
+    `.trim()} />
+    <script type="text/javascript" is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${id}`}></script>
+  </>
+)}

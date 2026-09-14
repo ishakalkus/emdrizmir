@@ -1,0 +1,72 @@
+---
+import '../styles/fonts.css';
+import '../styles/site.css';
+
+import Seo from '../components/Seo.astro';
+import JsonLd from '../components/JsonLd.astro';
+import Analytics from '../components/Analytics.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { t as dict, assertParity } from '../i18n/index.js';
+import type { Locale } from '../i18n/config.js';
+
+interface Props {
+  locale: Locale;
+  title?: string;
+  description?: string;
+  noindex?: boolean;
+}
+const { locale, title, description, noindex = false } = Astro.props;
+
+// Bir dile çeviri eklenip diğerleri unutulursa derleme burada durur.
+assertParity();
+
+const t = dict(locale);
+
+/**
+ * Temayı boyamadan önce uygula: "flash of wrong theme" olmasın diye
+ * <head> içinde, bloklayan ve çok küçük tutulan tek satır.
+ * CSP'de bu betiğin sha256 özeti derleme sonrası otomatik eklenir.
+ */
+const themeBoot =
+  "try{var s=localStorage.getItem('emdrizmir-theme');if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s)}catch(e){}";
+---
+<!doctype html>
+<html lang={t.htmlLang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2A5AAD" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0D131B" media="(prefers-color-scheme: dark)" />
+
+    <script is:inline set:html={themeBoot} />
+
+    <Seo locale={locale} t={t} title={title} description={description} noindex={noindex} />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    {/* İlk boyamada kullanılan latin alt kümeleri; gerisi unicode-range ile gelir. */}
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/instrument-sans-latin-wght-normal.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-latin-opsz-normal.woff2" crossorigin />
+
+    {!noindex && <JsonLd locale={locale} t={t} />}
+    <Analytics />
+  </head>
+
+  <body>
+    <a class="skip" href="#main">{t.a11y.skip}</a>
+
+    <Header locale={locale} t={t} />
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <Footer t={t} />
+
+    <script src="../scripts/site.js"></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+---
+import { Image } from 'astro:assets';
+import { image } from '../assets/images.js';
+
+interface Props { t: any; }
+const { t } = Astro.props;
+const team = t.team;
+---
+<section class="sect" id="ekip">
+  <div class="wrap">
+    <div class="sect__head">
+      <p class="eyebrow">{team.eyebrow}</p>
+      <h2>{team.h2}</h2>
+      <p>{team.intro}</p>
+    </div>
+
+    <div class="team">
+      {team.members.map((m: any) => (
+        <article class="member">
+          <div class="member__ph">
+            <Image src={image(m.image)} alt={m.alt} widths={[320, 560]} sizes="(min-width: 900px) 320px, (min-width: 600px) 45vw, 100vw" loading="lazy" />
+          </div>
+          <div class="member__pad">
+            <h3>{m.name}</h3>
+            <p class="member__role">{m.role}</p>
+            <p class="member__sum">{m.summary}</p>
+            <details>
+              <summary>
+                <span class="lbl-open">{team.open}</span>
+                <span class="lbl-close">{team.close}</span>
+              </summary>
+              <div class="bio">
+                {m.paras.map((p: string) => <p>{p}</p>)}
+                {m.groups.map((g: any) => (
+                  <>
+                    <h4>{g.h4}</h4>
+                    <ul>{g.items.map((i: string) => <li>{i}</li>)}</ul>
+                  </>
+                ))}
+                {m.citationsHtml.length > 0 && <h4>{m.publicationsTitle}</h4>}
+                {m.citationsHtml.map((c: string) => <cite set:html={c} />)}
+              </div>
+            </details>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

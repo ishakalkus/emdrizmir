@@ -1,0 +1,162 @@
+# Yayına alma — Cloudflare Pages + Google
+
+Bu belge sıfırdan yayına alma adımlarını sırayla anlatır.
+
+---
+
+## 1. Cloudflare Pages projesi
+
+Cloudflare panelinde **Workers & Pages → Create → Pages → Connect to Git**
+ile bu depoyu bağlayın ve şu ayarları girin:
+
+| Ayar | Değer |
+| --- | --- |
+| Framework preset | Astro |
+| Build command | `npm run build` |
+| Build output directory | `dist` |
+| Root directory | (boş) |
+| Node version | `22` (`NODE_VERSION` ortam değişkeni ile) |
+
+Üretim dalı olarak `main` seçin. Her push'ta yeniden derlenir; diğer
+dallar önizleme dağıtımı olarak yayınlanır.
+
+Git bağlamadan elle yüklemek isterseniz:
+
+```bash
+npm run deploy      # npx wrangler pages deploy dist
+```
+
+## 2. Ortam değişkenleri
+
+**Settings → Environment variables** altında, *Production* için:
+
+| Değişken | Değer | Zorunlu mu |
+| --- | --- | --- |
+| `NODE_VERSION` | `22` | evet |
+| `SITE_URL` | `https://www.emdrizmir.com` | evet (kanonik adres) |
+| `GOOGLE_SITE_VERIFICATION` | Search Console'un verdiği kod | hayır |
+| `GA_MEASUREMENT_ID` | `G-XXXXXXXXXX` | hayır (boşsa analitik hiç yüklenmez) |
+
+`SITE_URL` yanlışsa `canonical`, `hreflang`, `sitemap.xml` ve `og:url`
+yanlış adrese işaret eder; ilk yayından önce doğrulayın.
+
+## 3. Alan adı ve yönlendirme
+
+1. **Custom domains** altında `www.emdrizmir.com` ekleyin.
+2. Çıplak alan adı için `emdrizmir.com` → `www.emdrizmir.com` **301**
+   yönlendirmesi kurun (Cloudflare → Rules → Redirect Rules). Tek bir
+   kanonik ana bilgisayar adı kullanmak, arama motorlarının aynı içeriği
+   iki ayrı site sanmasını önler.
+3. SSL/TLS modunu **Full (strict)** yapın.
+4. `Always Use HTTPS` açık olsun.
+
+`public/_headers` dosyası `Strict-Transport-Security` gönderir; HSTS
+preload listesine başvurmadan önce çıplak alan adının da HTTPS'te
+çalıştığından emin olun.
+
+## 4. Google Search Console
+
+1. <https://search.google.com/search-console> → **Mülk ekle** →
+   *URL öneki* → `https://www.emdrizmir.com/`
+2. Doğrulama yöntemi olarak **HTML etiketi**'ni seçin; verilen
+   `content="…"` değerini `GOOGLE_SITE_VERIFICATION` ortam değişkenine
+   yazıp yeniden dağıtın, sonra **Doğrula**'ya basın.
+3. **Site haritaları** bölümüne şunu ekleyin:
+
+   ```
+   sitemap-index.xml
+   ```
+
+   Bu dosya derlemede üretilir ve dört dilin tamamını, karşılıklı
+   `hreflang` bağlarıyla içerir.
+4. **Uluslararası hedefleme** ayarını *kullanmayın*: site tek bir ülkeye
+   değil, dört dile hitap ediyor; `hreflang` etiketleri zaten doğru
+   sinyali veriyor.
+
+Dizine alınmayı hızlandırmak için **URL Denetimi** ile dört adresi tek tek
+isteyebilirsiniz: `/`, `/en/`, `/de/`, `/fr/`.
+
+## 5. Google Business Profile (harita sonuçları)
+
+Bir muayenehane için yerel aramada en çok işe yarayan adım budur.
+
+1. <https://business.google.com> üzerinde işletmeyi doğrulayın.
+2. Kategori: **Psikiyatrist** (ikincil: *Psikoterapist*).
+3. Adres, telefon ve internet sitesi alanlarının sitedeki bilgilerle
+   **birebir aynı** yazıldığından emin olun:
+
+   ```
+   Yalı Mah. 268. Sk. No: 17, 35310 Güzelbahçe / İzmir
+   +90 539 650 11 59
+   https://www.emdrizmir.com
+   ```
+
+   Sitedeki `MedicalClinic` yapılandırılmış verisi de aynı değerleri
+   bildirir (`src/i18n/config.js`). İkisi arasındaki tutarlılık, Google'ın
+   iki kaydı eşleştirmesini kolaylaştırır.
+4. Çalışma saatlerini profilde güncellerseniz `src/i18n/config.js`
+   içindeki `openingHours` alanını da güncelleyin.
+
+## 6. Google Analytics (isteğe bağlı)
+
+`GA_MEASUREMENT_ID` **boş bırakılırsa** siteden Google'a hiçbir istek
+gitmez ve çerez yazılmaz. Önerilen varsayılan budur.
+
+Açmaya karar verirseniz:
+
+- Kod, Consent Mode v2 ile yüklenir ve `ad_storage`, `ad_user_data`,
+  `ad_personalization`, `analytics_storage` izinlerinin tamamı
+  **`denied`** başlar. Bu hâliyle çerez yazılmaz.
+- Ölçüm yapabilmek için ziyaretçiden açık onay alan bir arayüz eklemek ve
+  onay gelince şunu çağırmak gerekir:
+
+  ```js
+  gtag('consent', 'update', { analytics_storage: 'granted' });
+  ```
+
+- Onay arayüzü olmadan izinleri `granted` yapmayın: KVKK md. 5 ve GDPR
+  md. 6 açısından açık rıza olmadan ölçüm çerezi yazmak sorun yaratır.
+- Analitiği açtığınızda `scripts/postbuild.mjs`, Google'ın alan adlarını
+  CSP'ye kendiliğinden ekler; elle düzenleme gerekmez.
+
+## 7. Yayın sonrası kontrol listesi
+
+```bash
+# Güvenlik başlıkları
+curl -sI https://www.emdrizmir.com/ | grep -i "content-security\|strict-transport\|x-frame"
+
+# Dört dil de 200 dönüyor mu
+for p in "" en/ de/ fr/; do
+  curl -s -o /dev/null -w "%{http_code} /$p\n" "https://www.emdrizmir.com/$p"
+done
+
+# Site haritası
+curl -s https://www.emdrizmir.com/sitemap-index.xml
+```
+
+Ayrıca:
+
+- [Rich Results Test](https://search.google.com/test/rich-results) —
+  `MedicalClinic` ve `Physician` verisi okunuyor mu.
+- [PageSpeed Insights](https://pagespeed.web.dev/) — mobil Core Web Vitals.
+- [securityheaders.com](https://securityheaders.com/) — başlık notu.
+- Facebook/LinkedIn paylaşım önizlemesi — `og/emdrizmir.jpg` görünüyor mu.
+
+## 8. Gönderilen güvenlik başlıkları
+
+`public/_headers` dosyasında tanımlıdır; `Content-Security-Policy` satırı
+her derlemede satır içi betiklerin sha256 özetleriyle yeniden yazılır
+(`scripts/postbuild.mjs`), böylece politikada `'unsafe-inline'` yer almaz.
+
+| Başlık | Değer |
+| --- | --- |
+| `Content-Security-Policy` | `default-src 'self'`, betikler yalnızca özet eşleşmesiyle, `frame-ancestors 'none'`, `object-src 'none'`, `base-uri 'none'` |
+| `Strict-Transport-Security` | `max-age=63072000; includeSubDomains; preload` |
+| `X-Content-Type-Options` | `nosniff` |
+| `X-Frame-Options` | `DENY` |
+| `Referrer-Policy` | `strict-origin-when-cross-origin` |
+| `Permissions-Policy` | kamera, mikrofon, konum, ödeme vb. tamamen kapalı |
+| `Cross-Origin-Opener-Policy` | `same-origin` |
+
+`frame-src` yalnızca `https://www.google.com` içindir; Google Maps
+çerçevesi de ancak ziyaretçi onayıyla eklenir.

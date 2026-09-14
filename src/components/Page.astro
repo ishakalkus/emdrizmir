@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from './Hero.astro';
+import WhatIsEmdr from './WhatIsEmdr.astro';
+import Protocol from './Protocol.astro';
+import Services from './Services.astro';
+import Team from './Team.astro';
+import WhyEmdr from './WhyEmdr.astro';
+import Articles from './Articles.astro';
+import Contact from './Contact.astro';
+import { t as dict } from '../i18n/index.js';
+import type { Locale } from '../i18n/config.js';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = dict(locale);
+---
+<Base locale={locale}>
+  <Hero t={t} />
+  <WhatIsEmdr t={t} />
+  <Protocol t={t} />
+  <Services t={t} />
+  <Team t={t} />
+  <WhyEmdr t={t} />
+  <Articles t={t} />
+  <Contact t={t} />
+</Base>

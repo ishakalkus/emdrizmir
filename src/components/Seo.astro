@@ -1,0 +1,67 @@
+---
+import { LOCALES, DEFAULT_LOCALE, localeUrl, HREFLANG, dictionaries } from '../i18n/index.js';
+import { SITE_URL, GOOGLE_SITE_VERIFICATION } from '../i18n/config.js';
+import type { Locale } from '../i18n/config.js';
+
+interface Props {
+  locale: Locale;
+  t: any;
+  /** Ana sayfa dışındaki sayfalar için başlık/açıklama ve indeksleme kontrolü. */
+  title?: string;
+  description?: string;
+  noindex?: boolean;
+}
+const { locale, t, title, description, noindex = false } = Astro.props;
+
+const pageTitle = title ?? t.meta.title;
+const pageDescription = description ?? t.meta.description;
+const canonical = localeUrl(locale);
+const ogImage = `${SITE_URL}/og/emdrizmir.jpg`;
+---
+<title>{pageTitle}</title>
+<meta name="description" content={pageDescription} />
+{!noindex && <link rel="canonical" href={canonical} />}
+
+{/* Her dil, diğer üçünü ve x-default'u işaret eder — Google'ın istediği karşılıklı bağ. */}
+{!noindex && LOCALES.map((code) => (
+  <link rel="alternate" hreflang={HREFLANG[code]} href={localeUrl(code)} />
+))}
+{!noindex && <link rel="alternate" hreflang="x-default" href={localeUrl(DEFAULT_LOCALE)} />}
+
+{/* Open Graph */}
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="EMDR İzmir" />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={pageDescription} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={t.meta.ogImageAlt} />
+<meta property="og:locale" content={t.ogLocale} />
+{LOCALES.filter((c) => c !== locale).map((code) => (
+  <meta property="og:locale:alternate" content={dictionaries[code].ogLocale} />
+))}
+
+{/* Twitter / X */}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={pageDescription} />
+<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image:alt" content={t.meta.ogImageAlt} />
+
+{/* Tarayıcı ve indeksleme ipuçları */}
+<meta
+  name="robots"
+  content={noindex
+    ? 'noindex, follow'
+    : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}
+/>
+<meta name="author" content="EMDR İzmir" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="geo.region" content="TR-35" />
+<meta name="geo.placename" content="Güzelbahçe, İzmir" />
+
+{GOOGLE_SITE_VERIFICATION && (
+  <meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
+)}
