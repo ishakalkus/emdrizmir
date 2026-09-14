@@ -196,14 +196,16 @@ her derlemede satır içi betiklerin sha256 özetleriyle yeniden yazılır
 
 ## Yayından önce doğrulanması gerekenler
 
-`src/i18n/config.js` içinde `DOĞRULANMALI` etiketiyle işaretlenmiş iki
-değer var. İkisi de `MedicalClinic` yapılandırılmış verisinde Google'a
-bildirildiği için, yayına almadan önce gerçek bilgilerle değiştirilmelidir:
+`src/i18n/config.js` içinde `DOĞRULANMALI` etiketiyle işaretlenmiş bir
+değer kaldı. `MedicalClinic` yapılandırılmış verisinde Google'a
+bildirildiği için, yayına almadan önce gerçeğiyle değiştirilmelidir:
 
 | Alan | Şu anki değer | Neden |
 | --- | --- | --- |
 | `geo` | `38.3697, 26.8806` | Güzelbahçe için yaklaşık koordinat; muayenehanenin tam konumu değil. Google Maps'te pime sağ tıklayıp koordinatları kopyalayabilirsiniz. |
-| `openingHours` | `Mo-Fr 09:00-19:00, Sa 09:00-14:00` | Varsayım. Google Business Profile'daki saatlerle birebir aynı olmalı. |
+
+Çalışma saatleri (`openingHours`) hekimden alındı: **Pazartesi–Cumartesi
+10:00–18:00**. Profildeki saatleri değiştirirseniz burayı da güncelleyin.
 
 Ayrıca sitedeki dört dilin metinleri bu taşıma sırasında hazırlandı.
 Hekimlik içeriği olduğu için, İngilizce/Almanca/Fransızca sürümlerin
