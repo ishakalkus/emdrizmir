@@ -402,9 +402,12 @@ export default {
       address: 'Adresse',
       phone: 'Téléphone',
       email: 'E-mail',
+      hours: 'Horaires d’ouverture',
       languages: 'Langues des consultations',
       social: 'Réseaux sociaux',
     },
+    hoursValue: 'Lundi – Samedi · 10:00 – 18:00',
+    hoursClosed: 'Fermé le dimanche',
     languagesValue: 'Türkçe · English · Deutsch · Français',
     imageAlt: '',
     form: {

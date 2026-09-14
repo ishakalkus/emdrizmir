@@ -2,7 +2,7 @@ import tr from './tr.js';
 import en from './en.js';
 import de from './de.js';
 import fr from './fr.js';
-import { LOCALES, DEFAULT_LOCALE, localePath, localeUrl, HREFLANG } from './config.js';
+import { LOCALES, DEFAULT_LOCALE, localePath, localeUrl, HREFLANG, CONTACT } from './config.js';
 
 export const dictionaries = { tr, en, de, fr };
 
@@ -61,6 +61,34 @@ export function assertParity() {
   }
   if (problems.length) {
     throw new Error('i18n sözlükleri uyuşmuyor:\n  ' + problems.join('\n  '));
+  }
+  return true;
+}
+
+/**
+ * Sayfada görünen çalışma saati metni ile yapılandırılmış verideki
+ * CONTACT.openingHours birbirinden kopmasın diye kontrol edilir:
+ * biri güncellenip diğeri unutulursa derleme durur.
+ */
+export function assertHours() {
+  const range = CONTACT.openingHours.match(/(\d{2}:\d{2})-(\d{2}:\d{2})/);
+  if (!range) {
+    throw new Error(`CONTACT.openingHours okunamadı: "${CONTACT.openingHours}"`);
+  }
+  const [, opens, closes] = range;
+
+  const problems = [];
+  for (const code of LOCALES) {
+    const shown = dictionaries[code].contact.hoursValue;
+    if (!shown.includes(opens) || !shown.includes(closes)) {
+      problems.push(`${code}: sayfada "${shown}" yazıyor`);
+    }
+  }
+  if (problems.length) {
+    throw new Error(
+      `Çalışma saatleri uyuşmuyor. Yapılandırılmış veri ${opens}–${closes} diyor:\n  ` +
+        problems.join('\n  ')
+    );
   }
   return true;
 }

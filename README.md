@@ -65,6 +65,11 @@ Dört sözlük aynı anahtar ağacını taşımak zorundadır. Bir dile alan ekl
 diğerlerini unutursanız **derleme hata vererek durur** (`assertParity()`),
 böylece bir dilde sessizce boş kalan bölüm oluşmaz.
 
+Çalışma saati iki yerde geçer: sayfada görünen metin (dört dilde
+`contact.hoursValue`) ve yapılandırılmış veriye giden makine biçimi
+(`config.js` içindeki `openingHours`). İkisi ayrışırsa `assertHours()`
+derlemeyi durdurur ve hangi dilde ne yazdığını söyler.
+
 Yeni bir görsel eklerken: dosyayı `src/assets/img/` içine koyun, anahtarını
 `src/assets/images.js` dosyasına yazın, sözlükte `image: 'anahtar'` olarak
 kullanın.

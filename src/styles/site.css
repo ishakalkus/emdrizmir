@@ -464,6 +464,7 @@ ul{margin:0;padding:0;list-style:none}
 .info__v{font-size:16.5px;color:var(--ink);line-height:1.55}
 .info__v a{color:var(--ink);text-decoration:none}
 .info__v a:hover{color:var(--accent)}
+.info__sub{display:block;margin-top:3px;font-size:13.5px;color:var(--muted)}
 .social{display:flex;gap:9px;margin-top:4px}
 .social a{
   width:40px;height:40px;border:1px solid var(--line);border-radius:10px;

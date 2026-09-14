@@ -401,9 +401,12 @@ export default {
       address: 'Adres',
       phone: 'Telefon',
       email: 'E-posta',
+      hours: 'Çalışma saatleri',
       languages: 'Görüşme dilleri',
       social: 'Sosyal medya',
     },
+    hoursValue: 'Pazartesi – Cumartesi · 10:00 – 18:00',
+    hoursClosed: 'Pazar kapalı',
     languagesValue: 'Türkçe · English · Deutsch · Français',
     imageAlt: '',
     form: {

@@ -203,8 +203,15 @@ Yalı Mah. 268. Sk. No: 17, 35310 Güzelbahçe / İzmir
 Pazartesi – Cumartesi, 10:00 – 18:00
 ```
 
-Saatleri Google Business Profile'da değiştirirseniz `src/i18n/config.js`
-içindeki `openingHours` alanını da aynı şekilde güncelleyin.
+Saatler iki yerde durur ve ikisi de güncellenmelidir:
+
+- `src/i18n/config.js` → `openingHours` (yapılandırılmış veri, makine biçimi)
+- `src/i18n/{tr,en,de,fr}.js` → `contact.hoursValue` ve `contact.hoursClosed`
+  (iletişim bölümünde görünen metin)
+
+Yalnızca birini değiştirirseniz derleme `assertHours()` ile durur; yani
+ikisinin birbirinden kopması mümkün değildir. Google Business Profile'daki
+saatleri de aynı tutmayı unutmayın.
 
 ### İsteğe bağlı: kesin koordinat
 

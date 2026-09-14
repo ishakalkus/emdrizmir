@@ -7,7 +7,7 @@ import JsonLd from '../components/JsonLd.astro';
 import Analytics from '../components/Analytics.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { t as dict, assertParity } from '../i18n/index.js';
+import { t as dict, assertParity, assertHours } from '../i18n/index.js';
 import type { Locale } from '../i18n/config.js';
 
 interface Props {
@@ -20,6 +20,8 @@ const { locale, title, description, noindex = false } = Astro.props;
 
 // Bir dile çeviri eklenip diğerleri unutulursa derleme burada durur.
 assertParity();
+// Sayfadaki çalışma saati, yapılandırılmış verideki saatle aynı mı?
+assertHours();
 
 const t = dict(locale);
 

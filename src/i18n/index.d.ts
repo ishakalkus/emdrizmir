@@ -20,6 +20,7 @@ export function languageLinks(current: Locale): Array<{
 }>;
 
 export function assertParity(): true;
+export function assertHours(): true;
 
 export {
   LOCALES,

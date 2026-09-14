@@ -61,8 +61,11 @@ export const CONTACT = {
   mapsQuery:
     'Yal%C4%B1%20Mah.%20268.%20Sk.%20No%3A17%20G%C3%BCzelbah%C3%A7e%20%C4%B0zmir',
   foundingYear: '1999',
-  // Pazartesi–Cumartesi 10:00–18:00. Yapılandırılmış veride yayınlanır;
+  // Pazartesi–Cumartesi 10:00–18:00. Yapılandırılmış veride yayınlanır ve
   // Google Business Profile'daki saatlerle birebir aynı kalmalıdır.
+  // Saat aralığı sayfada da görünür: burayı değiştirirseniz dört dildeki
+  // contact.hoursValue metinlerini de güncelleyin — assertHours() ikisi
+  // ayrışırsa derlemeyi durdurur.
   openingHours: 'Mo-Sa 10:00-18:00',
 };
 

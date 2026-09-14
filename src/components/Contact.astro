@@ -40,6 +40,13 @@ const addressLine2 = `${CONTACT.postalCode} ${CONTACT.district} / ${CONTACT.city
           <span class="info__v"><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></span>
         </div>
         <div class="info__row">
+          <span class="info__k">{c.labels.hours}</span>
+          <span class="info__v">
+            {c.hoursValue}
+            <span class="info__sub">{c.hoursClosed}</span>
+          </span>
+        </div>
+        <div class="info__row">
           <span class="info__k">{c.labels.languages}</span>
           <span class="info__v">{c.languagesValue}</span>
         </div>
