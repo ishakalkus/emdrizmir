@@ -134,21 +134,97 @@ taşımaktır (bkz. aşağıdaki bölüm).
 preload listesine başvurmadan önce çıplak alan adının da HTTPS'te
 çalıştığından emin olun.
 
+### Nameserver'ı taşımadan önce: mevcut kayıtlar
+
+14/09/2026 tarihli WHOIS ve DNS taramasına göre alan adının bugünkü
+durumu şudur. **Cloudflare'e geçmeden önce aşağıdaki kayıtların
+Cloudflare'de birebir oluşturulmuş olması gerekir**; nameserver
+değiştiği an burada olmayan her kayıt kaybolur.
+
+| Kayıt | Değer |
+| --- | --- |
+| NS (tescilde) | `ns1.izajans.com`, `ns2.izajans.com` |
+| A `emdrizmir.com` | `5.9.123.99` (Hetzner) |
+| CNAME `www` | `emdrizmir.com` |
+| **MX `emdrizmir.com`** | **`emdrizmir.com`** — yani posta, web ile aynı sunucuda |
+| TXT (SPF) | `v=spf1 ip4:5.9.123.99 +a +mx +ip4:89.19.19.226 +ip4:168.119.86.108 +mx:emdrizmir.com ~all` |
+| DMARC | **yok** |
+| CAA | yok |
+
+#### ⚠ Posta ile web aynı adreste — çakışma
+
+`MX` kaydı `emdrizmir.com` adresini gösteriyor, o da apex `A` kaydıyla
+`5.9.123.99` sunucusuna çözülüyor. Apex `A` kaydını Cloudflare Pages'e
+çevirdiğiniz anda **posta teslimi de Cloudflare'e yönlenir ve
+`info@emdrizmir.com` çalışmaz.**
+
+Doğru sıra:
+
+1. Cloudflare'de `mail` adında bir **A** kaydı açın → `5.9.123.99`,
+   proxy **kapalı** (gri bulut). Posta trafiği Cloudflare üzerinden
+   geçemez.
+2. `MX` kaydını `emdrizmir.com` yerine `mail.emdrizmir.com` yapın.
+3. SPF ve varsa DKIM `TXT` kayıtlarını aynen kopyalayın.
+4. Web için apex `A` / `CNAME` kaydını Pages'e yönlendirin.
+5. **En son** nameserver'ları değiştirin.
+
+Posta sunucusunun `mail.emdrizmir.com` adıyla da posta kabul ettiğini
+önceden teyit ettirin.
+
+#### Postanın kendisi de ajansta
+
+Posta sunucusu (`5.9.123.99`) alan adını elinde tutan ajansın
+sunucusudur. Nameserver'ı Cloudflare'e almak bunu değiştirmez: yazışmalar
+hâlâ onların altyapısında durur. Orta vadede postayı bağımsız bir
+sağlayıcıya (Google Workspace, Microsoft 365, Yandex 360 vb.) taşımak,
+alan adını devralmak kadar önemlidir.
+
+#### Eksik e-posta güvenliği kayıtları
+
+`DMARC` kaydı yok; bu, alan adı adına sahte e-posta gönderilmesini
+kolaylaştırır. Bir hekim alan adı için gerçek bir risktir. Posta taşındıktan
+sonra en azından şunu ekleyin:
+
+```
+_dmarc.emdrizmir.com  TXT  "v=DMARC1; p=quarantine; rua=mailto:info@emdrizmir.com"
+```
+
+SPF kaydında `89.19.19.226` iki kez geçiyor ve `+a +mx` ile geniş
+tutulmuş; posta taşınırken sadeleştirin.
+
 ### Alan adını kendi hesabınıza almak
 
 Alan adı muayenehanenin varlığıdır; siteyi yapan kişinin değil.
+14/09/2026 tarihli WHOIS kaydına göre bugünkü durum:
 
-- **.com** ise: WHOIS kaydındaki *registrant* (tescil sahibi) hekim veya
-  muayenehane görünüyorsa, kayıt kuruluşuna kimlik ve yetki belgesiyle
-  doğrudan başvurup **transfer (EPP/auth) kodunu** talep edebilirsiniz;
-  alan adını kendi seçtiğiniz bir kayıt kuruluşuna taşırsınız. Registrant
-  başkası görünüyorsa önce bunun düzeltilmesi gerekir.
-- **.com.tr / .tr** ise: TRABIS kuralları gereği tahsis, belgeye (vergi
-  levhası, marka, ticaret sicili) bağlıdır. Belge sizin adınızaysa
-  kayıt kuruluşu üzerinden sahiplik devri talep edilebilir.
+| Alan | Değer |
+| --- | --- |
+| Tescil sahibi (registrant) | **Adnan Kahveci — iz ajans**, Balçova / İzmir |
+| Kayıt kuruluşu (registrar) | Squarespace Domains II LLC |
+| Oluşturma | 11 Ağustos 2016 |
+| Bitiş | **11 Ağustos 2027** |
+| Durum | `ok`, `active` — transfer kilidi **yok** |
 
-Her iki durumda da ilk adım WHOIS kaydına bakıp *registrant* ve *kayıt
-kuruluşu* alanlarını görmektir.
+Yani alan adı hekimin veya muayenehanenin değil, **ajansın adına
+tescillidir.** Nameserver'ı Cloudflare'e almak bunu değiştirmez.
+
+Tescil sahibi zaten karşı taraf olduğu için, kayıt kuruluşuna doğrudan
+başvurarak devralma yolu kapalıdır; devir ancak tescil sahibinin
+onayıyla olur. İzlenecek yol:
+
+1. Alan adının muayenehaneye devrini **yazılı olarak** talep edin;
+   aranızda bir sözleşme veya ödeme kaydı varsa dayanak olarak ekleyin.
+2. Kabul edilirse: Squarespace panelinden **transfer (EPP/auth) kodu**
+   alınır ve alan adı sizin seçtiğiniz kayıt kuruluşundaki hesaba
+   taşınır. Transfer kilidi kapalı olduğu için teknik engel yoktur.
+3. Devirden sonra WHOIS'teki tescil sahibinin muayenehane olduğunu
+   doğrulayın.
+4. Anlaşma sağlanamazsa: "EMDR İzmir" adına marka hakkınız varsa
+   UDRP/alan adı uyuşmazlığı yolu değerlendirilebilir. Bu bir avukat
+   işidir.
+
+**Bitiş tarihini takvime alın: 11 Ağustos 2027.** Alan adı yenilenmezse
+site ve e-posta aynı anda durur.
 
 ## 4. Google Search Console
 
