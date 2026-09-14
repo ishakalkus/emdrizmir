@@ -82,7 +82,8 @@ const csp = [
   "default-src 'self'",
   `script-src ${scriptSrc.join(' ')}`,
   `style-src ${styleSrc.join(' ')}`,
-  "img-src 'self' data:",
+  // Görseller derlemede dosyaya çıkıyor; data: URI üretilmiyor.
+  "img-src 'self'",
   "font-src 'self'",
   `connect-src ${connectSrc.join(' ')}`,
   // Google Maps çerçevesi yalnızca ziyaretçi "Haritayı yükle"ye bastığında eklenir
@@ -90,7 +91,8 @@ const csp = [
   "manifest-src 'self'",
   "base-uri 'none'",
   "object-src 'none'",
-  "form-action 'self'",
+  // Randevu formu hiçbir yere gönderilmiyor (submit JS ile engelli).
+  "form-action 'none'",
   "frame-ancestors 'none'",
   'upgrade-insecure-requests',
 ].join('; ');

@@ -117,6 +117,13 @@
      Form hiçbir sunucuya istek atmaz; yalnızca cihazda metin kurar. */
   var form = $('apptForm');
   if (form) {
+    /* Form hiçbir sunucuya gönderilmez. Bir alandayken Enter'a basmak
+       sayfayı yeniden yükleyip yazılanları silerdi; engelliyoruz.
+       Böylece CSP'de form-action 'none' kalabiliyor. */
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+    });
+
     var val = function (id) {
       var el = $(id);
       return el ? (el.value || '').trim() : '';
