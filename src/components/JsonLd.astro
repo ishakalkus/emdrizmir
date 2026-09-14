@@ -54,11 +54,17 @@ const graph = {
       email: CONTACT.email,
       foundingDate: CONTACT.foundingYear,
       address,
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: CONTACT.geo.lat,
-        longitude: CONTACT.geo.lng,
-      },
+      // Kesin koordinat yoksa alan hiç yazılmaz; konum `address` ve
+      // `hasMap` ile bildirilir.
+      ...(CONTACT.geo
+        ? {
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: CONTACT.geo.lat,
+              longitude: CONTACT.geo.lng,
+            },
+          }
+        : {}),
       hasMap: `https://www.google.com/maps/search/?api=1&query=${CONTACT.mapsQuery}`,
       openingHours: CONTACT.openingHours,
       medicalSpecialty: 'Psychiatric',

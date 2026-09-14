@@ -19,7 +19,7 @@ export const CONTACT: {
   district: string;
   city: string;
   country: string;
-  geo: { lat: number; lng: number };
+  geo: { lat: number; lng: number } | null;
   instagram: string;
   youtube: string;
   mapsQuery: string;

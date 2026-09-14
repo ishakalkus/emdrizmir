@@ -196,16 +196,35 @@ her derlemede satır içi betiklerin sha256 özetleriyle yeniden yazılır
 
 ## Yayından önce doğrulanması gerekenler
 
-`src/i18n/config.js` içinde `DOĞRULANMALI` etiketiyle işaretlenmiş bir
-değer kaldı. `MedicalClinic` yapılandırılmış verisinde Google'a
-bildirildiği için, yayına almadan önce gerçeğiyle değiştirilmelidir:
+Adres ve çalışma saatleri hekimden alındı ve yerine işlendi:
 
-| Alan | Şu anki değer | Neden |
-| --- | --- | --- |
-| `geo` | `38.3697, 26.8806` | Güzelbahçe için yaklaşık koordinat; muayenehanenin tam konumu değil. Google Maps'te pime sağ tıklayıp koordinatları kopyalayabilirsiniz. |
+```
+Yalı Mah. 268. Sk. No: 17, 35310 Güzelbahçe / İzmir
+Pazartesi – Cumartesi, 10:00 – 18:00
+```
 
-Çalışma saatleri (`openingHours`) hekimden alındı: **Pazartesi–Cumartesi
-10:00–18:00**. Profildeki saatleri değiştirirseniz burayı da güncelleyin.
+Saatleri Google Business Profile'da değiştirirseniz `src/i18n/config.js`
+içindeki `openingHours` alanını da aynı şekilde güncelleyin.
+
+### İsteğe bağlı: kesin koordinat
+
+`config.js` içindeki `geo` alanı şu an `null`. Bu hâliyle yapılandırılmış
+veriye koordinat **hiç yazılmaz**; konum yalnızca kesin olan `address` ve
+`hasMap` alanlarıyla bildirilir. Yaklaşık bir koordinat yayınlamak
+Google'a yanlış pim bildireceği için, koordinat yayınlamamaktan kötüdür.
+
+Kesin koordinatı eklemek isterseniz: Google Maps'i **masaüstü tarayıcıda**
+açın, muayenehanenin tam olduğu noktaya **sağ tıklayın**; açılan menünün
+en üstündeki `38.xxxxx, 26.xxxxx` satırına tıklayınca panoya kopyalanır.
+Sonra:
+
+```js
+geo: { lat: 38.12345, lng: 26.67890 },
+```
+
+Alan doldurulduğu anda `GeoCoordinates` düğümü yapılandırılmış veriye
+kendiliğinden geri eklenir. Harita pimi zaten Google Business Profile'dan
+geldiği için bu alan zorunlu değildir.
 
 Ayrıca sitedeki dört dilin metinleri bu taşıma sırasında hazırlandı.
 Hekimlik içeriği olduğu için, İngilizce/Almanca/Fransızca sürümlerin
