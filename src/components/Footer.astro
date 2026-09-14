@@ -12,6 +12,20 @@ const f = t.footer;
  * değilse blok hiç basılmaz (eksikler derleme sonunda bildirilir).
  */
 const L = CONTACT.legal;
+
+/**
+ * Yönetmelik md. 5/1/ı: bilgilendirmenin son güncelleme tarihi ile site
+ * editörüne ulaşılabilecek iletişim bilgisi açıkça belirtilmek zorunda.
+ * Tarih derleme anıdır — içerik her değiştiğinde site yeniden derlenir.
+ */
+const buildDate = new Date();
+const lastUpdated = new Intl.DateTimeFormat(t.htmlLang, {
+  day: '2-digit',
+  month: 'long',
+  year: 'numeric',
+}).format(buildDate);
+const lastUpdatedIso = buildDate.toISOString().slice(0, 10);
+
 const legalRows = [
   [f.legal.officialName, L.officialName],
   [f.legal.facilityType, L.facilityType],
@@ -60,6 +74,20 @@ const legalRows = [
     )}
 
     <div class="crisis" set:html={f.crisisHtml} />
+
+    <div class="foot__meta">
+      <span>
+        {f.legal.lastUpdated}: <time datetime={lastUpdatedIso}>{lastUpdated}</time>
+      </span>
+      {L.editorName && (
+        <span>
+          {f.legal.editor}: {L.editorName}
+          {L.editorEmail && (
+            <> · <a href={`mailto:${L.editorEmail}`}>{L.editorEmail}</a></>
+          )}
+        </span>
+      )}
+    </div>
 
     <div class="foot__base">
       <span>© <span id="yr">{new Date().getFullYear()}</span> {f.rights}</span>

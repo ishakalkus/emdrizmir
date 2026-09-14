@@ -240,29 +240,58 @@ yayından önce ilgili dili bilen biri tarafından okunması önerilir —
 
 ---
 
-## Mevzuat: internet sitesinde bulunması gereken kurum bilgileri
+## Mevzuat: Sağlık Hizmetlerinde Tanıtım ve Bilgilendirme Yönetmeliği
 
-Sağlık Hizmeti Sunucularının Tanıtım ve Bilgilendirme Faaliyetleri
-Hakkında Yönetmelik, sağlık kuruluşunun internet sitesinde kimlik ve
-ruhsat bilgilerinin yer almasını ister. Bu alanlar
-`src/i18n/config.js` → `CONTACT.legal` içindedir ve **şu an boştur**:
+Dayanak: **RG 12/11/2025, sayı 33075.** Yayımı tarihinde yürürlüğe girdi
+(md. 14), geçiş süresi yok. 29/7/2023 tarihli önceki yönetmeliği
+yürürlükten kaldırdı (md. 13).
 
-| Alan | Nereden alınır |
-| --- | --- |
-| `officialName` | Ruhsatta yazan resmî kuruluş adı ("EMDR İzmir" tanıtım adıdır, ruhsat adı değil) |
-| `facilityType` | Kuruluş türü: muayenehane / poliklinik / tıp merkezi |
-| `licenceNo`, `licenceDate` | Ruhsat veya faaliyet izin belgesi sayı ve tarihi |
-| `licenceAuthority` | Belgeyi veren il sağlık müdürlüğü |
-| `responsibleManager` | Mesul müdür adı soyadı |
+### Zorunlu — md. 5/1/ı
 
-Doldurulan alanlar alt bilgide "Kurum bilgileri" başlığı altında dört
-dilde yayınlanır; boş alanlar hiç basılmaz. Her derlemede eksikler
-listelenir:
+> "İnternet sitelerindeki bilgilendirmenin son güncelleme tarihi ile
+> internet sitesi editörüne ulaşılabilecek iletişim bilgileri açıkça
+> belirtilir."
+
+Bu ikisi alt bilgide, dört dilde yayınlanır:
+
+- **Son güncelleme tarihi** her derlemede kendiliğinden yazılır, dilin
+  biçimine göre ("14 Eylül 2026" / "14 septembre 2026") ve makine okunur
+  `<time datetime>` ile birlikte.
+- **Site editörü** `src/i18n/config.js` → `CONTACT.legal.editorName` ve
+  `editorEmail` alanlarından gelir. Şu an muayenehane sahibi ve genel
+  e-posta yazılıdır; **siteyi fiilen kim güncelliyorsa onu yazın.**
+
+Editör bilgisi boş bırakılırsa her derleme uyarır:
 
 ```
-⚠  Kurum bilgileri eksik (6/6) — mevzuat bunları internet sitesinde ister.
-     · Ruhsatta yazan resmî kuruluş adı
-     ...
+⚠  ZORUNLU (Yönetmelik md. 5/1/ı): site editörünün iletişim bilgisi eksik.
 ```
 
-Değerleri **ruhsattan birebir kopyalayın, tahmin etmeyin.**
+### İsteğe bağlı — kurum bilgileri
+
+Ruhsat unvanı, kuruluş türü, ruhsat sayı/tarihi, belgeyi veren müdürlük
+ve mesul müdür alanları **bu yönetmelikte sayılmaz**; kuruluş türüne göre
+kendi mevzuatı (ör. Ayakta Teşhis ve Tedavi Yapılan Özel Sağlık
+Kuruluşları Hakkında Yönetmelik) isteyebilir. `CONTACT.legal` içinde
+dururlar; doldurulanlar alt bilgide "Kurum bilgileri" başlığıyla dört
+dilde yayınlanır, boş kalanlar hiç basılmaz.
+
+### Karara bağlanması gereken konular
+
+Bu üçü kodla çözülemez, hekimin ve hukukçunun kararını gerektirir.
+Ayrıntılı gerekçeleri için oturum kaydına bakın.
+
+| Konu | Madde | Durum |
+| --- | --- | --- |
+| EN/DE/FR sayfaları — sağlık turizmi yetki belgesi ve **ayrı site** şartı | md. 8/1, 8/1/a, 8/1/b | Açık |
+| "uzman, akredite psikoterapistler" — 1219 dışı uzmanlık ünvanı | md. 5/1/d | Açık |
+| "tıbbi hastalıkların tedavisinde etkili" — tedavi iddiası | md. 5/1/ç | Açık |
+| "en kalıcı sonuçlar" — üstünlük algısı | md. 5/1/h | Açık |
+| Konu etiketlerinin randevu formuna bağlanması — yönlendirme | md. 5/1/f, 5/1/g | Açık |
+| "20.000 anı" — kaynaksız istatistik | md. 5/1/ğ | Açık |
+| Görsel içerik uyarı ibaresi | md. 7/1/k | Değerlendirilmeli |
+| Instagram/YouTube paylaşımlarında yorum ve beğeninin kapatılması | md. 7/1/ğ | Site dışı |
+
+Hasta teşekkür ve memnuniyet ifadeleri **md. 5/1/e ile yasaktır**;
+danışan yorumları bölümü bu yüzden kaldırılmıştır.
+

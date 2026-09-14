@@ -136,12 +136,32 @@ console.log(
     : `✓ Yayın adresi: ${SITE_URL} — indekslemeye açık\n`
 );
 
-/* ── mevzuat: internet sitesinde bulunması gereken kurum bilgileri ──
-   Sağlık Hizmeti Sunucularının Tanıtım ve Bilgilendirme Faaliyetleri
-   Hakkında Yönetmelik. Eksik alanlar sessizce geçmesin diye her
-   derlemede hatırlatılır; derleme durdurulmaz çünkü değerleri yalnızca
-   hekim/mesul müdür ruhsattan okuyarak girebilir. */
-const LEGAL_FIELDS = {
+/* ── mevzuat denetimi ───────────────────────────────────────────────
+   Sağlık Hizmetlerinde Tanıtım ve Bilgilendirme Faaliyetleri Hakkında
+   Yönetmelik (RG 12/11/2025, 33075).
+
+   md. 5/1/ı zorunlu tutuyor: son güncelleme tarihi (derlemede otomatik
+   yazılır) ve site editörüne ulaşılabilecek iletişim bilgisi. İkincisi
+   boşsa derleme UYARI verir — mevzuata aykırı bir site sessizce
+   yayınlanmasın diye.
+
+   Ruhsat/mesul müdür alanları bu Yönetmelikte sayılmaz; kuruluş türüne
+   göre kendi mevzuatı isteyebilir. O yüzden yalnızca hatırlatılır. */
+const editorMissing = ['editorName', 'editorEmail'].filter(
+  (k) => !String(CONTACT.legal[k] || '').trim()
+);
+
+if (editorMissing.length) {
+  console.warn(
+    `⚠  ZORUNLU (Yönetmelik md. 5/1/ı): site editörünün iletişim bilgisi eksik.\n` +
+      `   src/i18n/config.js → CONTACT.legal.editorName / editorEmail\n` +
+      `   Son güncelleme tarihi otomatik yazılıyor, editör bilgisi yazılmıyor.\n`
+  );
+} else {
+  console.log('✓ md. 5/1/ı — son güncelleme tarihi ve site editörü bilgisi yayınlanıyor\n');
+}
+
+const OPTIONAL_LEGAL = {
   officialName: 'Ruhsatta yazan resmî kuruluş adı',
   facilityType: 'Kuruluş türü (muayenehane / poliklinik / tıp merkezi …)',
   licenceNo: 'Ruhsat / faaliyet izin belgesi sayısı',
@@ -149,18 +169,12 @@ const LEGAL_FIELDS = {
   licenceAuthority: 'Belgeyi veren il sağlık müdürlüğü',
   responsibleManager: 'Mesul müdür adı soyadı',
 };
-
-const missingLegal = Object.entries(LEGAL_FIELDS)
-  .filter(([key]) => !String(CONTACT.legal[key] || '').trim())
-  .map(([, label]) => label);
-
-if (missingLegal.length) {
+const optionalMissing = Object.entries(OPTIONAL_LEGAL).filter(
+  ([key]) => !String(CONTACT.legal[key] || '').trim()
+);
+if (optionalMissing.length && optionalMissing.length < Object.keys(OPTIONAL_LEGAL).length) {
   console.warn(
-    `⚠  Kurum bilgileri eksik (${missingLegal.length}/${Object.keys(LEGAL_FIELDS).length}) — ` +
-      `mevzuat bunları internet sitesinde ister.\n` +
-      missingLegal.map((l) => `     · ${l}`).join('\n') +
-      `\n   src/i18n/config.js → CONTACT.legal içine girin; dolan alanlar alt bilgide yayınlanır.\n`
+    `⚠  Kurum bilgileri kısmen dolu — eksik kalanlar yayınlanmıyor:\n` +
+      optionalMissing.map(([, l]) => `     · ${l}`).join('\n') + '\n'
   );
-} else {
-  console.log('✓ Kurum bilgileri eksiksiz — alt bilgide yayınlanıyor\n');
 }

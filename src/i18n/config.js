@@ -63,25 +63,31 @@ export const CONTACT = {
   foundingYear: '1999',
 
   /**
-   * Sağlık Hizmeti Sunucularının Tanıtım ve Bilgilendirme Faaliyetleri
-   * Hakkında Yönetmelik uyarınca internet sitesinde bulunması gereken
-   * kurum bilgileri. Doldurulan alanlar alt bilgide yayınlanır; boş
-   * bırakılanlar yazılmaz ve derleme sonunda eksik oldukları bildirilir.
+   * Sağlık Hizmetlerinde Tanıtım ve Bilgilendirme Faaliyetleri Hakkında
+   * Yönetmelik (RG 12/11/2025, 33075) kapsamındaki alanlar.
    *
-   * Değerleri ruhsat/faaliyet izin belgesinden ve Sağlık Bakanlığı
-   * tescil kayıtlarından birebir kopyalayın; tahmin etmeyin.
+   * ZORUNLU — md. 5/1/ı: "İnternet sitelerindeki bilgilendirmenin son
+   * güncelleme tarihi ile internet sitesi editörüne ulaşılabilecek
+   * iletişim bilgileri açıkça belirtilir."
+   * Güncelleme tarihi her derlemede kendiliğinden yazılır; editör
+   * bilgisini aşağıya girmek gerekir.
+   *
+   * İSTEĞE BAĞLI — ruhsat ve mesul müdür alanları bu Yönetmelikte
+   * sayılmaz; kuruluş türüne göre kendi mevzuatı (ör. Ayakta Teşhis ve
+   * Tedavi Yapılan Özel Sağlık Kuruluşları Hakkında Yönetmelik) isteyebilir.
+   * Doldurulursa yayınlanır, boş bırakılırsa hiç basılmaz.
    */
   legal: {
-    // Ruhsatta yazan resmî kuruluş adı ("EMDR İzmir" tanıtım adıdır)
+    // md. 5/1/ı — site editörünün adı ve ulaşılabilir iletişim bilgisi
+    editorName: 'Uzm. Dr. Mehmet Oğuz',
+    editorEmail: 'info@emdrizmir.com',
+
+    // İsteğe bağlı kurum bilgileri
     officialName: '',
-    // Kuruluş türü: muayenehane / poliklinik / tıp merkezi …
     facilityType: '',
-    // Ruhsat veya faaliyet izin belgesi tarih ve sayısı
     licenceNo: '',
     licenceDate: '',
-    // Belgeyi veren makam, ör. 'İzmir İl Sağlık Müdürlüğü'
     licenceAuthority: '',
-    // Mesul müdür adı soyadı
     responsibleManager: '',
   },
   // Pazartesi–Cumartesi 10:00–18:00. Yapılandırılmış veride yayınlanır ve

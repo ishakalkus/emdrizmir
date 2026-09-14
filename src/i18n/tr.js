@@ -474,6 +474,8 @@ export default {
       licence: 'Ruhsat / faaliyet izin belgesi',
       licenceAuthority: 'Belgeyi veren',
       responsibleManager: 'Mesul müdür',
+      lastUpdated: 'Son güncelleme',
+      editor: 'Site editörü',
     },
     rights: 'EMDR İzmir · Tüm hakları saklıdır.',
     kvkk: 'KVKK aydınlatma ve onam metnimiz muayenehanemizde erişilebilirdir.',

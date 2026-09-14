@@ -476,6 +476,8 @@ export default {
       licence: 'Zulassungsnummer',
       licenceAuthority: 'Ausgestellt von',
       responsibleManager: 'Verantwortliche Leitung',
+      lastUpdated: 'Zuletzt aktualisiert',
+      editor: 'Redaktion der Website',
     },
     rights: 'EMDR İzmir · Alle Rechte vorbehalten.',
     kvkk:

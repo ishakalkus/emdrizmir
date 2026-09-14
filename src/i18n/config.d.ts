@@ -25,6 +25,8 @@ export const CONTACT: {
   mapsQuery: string;
   foundingYear: string;
   legal: {
+    editorName: string;
+    editorEmail: string;
     officialName: string;
     facilityType: string;
     licenceNo: string;
