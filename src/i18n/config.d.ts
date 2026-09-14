@@ -24,6 +24,14 @@ export const CONTACT: {
   youtube: string;
   mapsQuery: string;
   foundingYear: string;
+  legal: {
+    officialName: string;
+    facilityType: string;
+    licenceNo: string;
+    licenceDate: string;
+    licenceAuthority: string;
+    responsibleManager: string;
+  };
   openingHours: string;
 };
 

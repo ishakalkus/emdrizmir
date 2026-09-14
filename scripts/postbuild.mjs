@@ -10,7 +10,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import { IS_PREVIEW, SITE_URL } from '../src/i18n/config.js';
+import { IS_PREVIEW, SITE_URL, CONTACT } from '../src/i18n/config.js';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
@@ -135,3 +135,32 @@ console.log(
       `   Gerçek alan adı bağlanınca SITE_URL'i ona çevirin; indeksleme kendiliğinden açılır.\n`
     : `✓ Yayın adresi: ${SITE_URL} — indekslemeye açık\n`
 );
+
+/* ── mevzuat: internet sitesinde bulunması gereken kurum bilgileri ──
+   Sağlık Hizmeti Sunucularının Tanıtım ve Bilgilendirme Faaliyetleri
+   Hakkında Yönetmelik. Eksik alanlar sessizce geçmesin diye her
+   derlemede hatırlatılır; derleme durdurulmaz çünkü değerleri yalnızca
+   hekim/mesul müdür ruhsattan okuyarak girebilir. */
+const LEGAL_FIELDS = {
+  officialName: 'Ruhsatta yazan resmî kuruluş adı',
+  facilityType: 'Kuruluş türü (muayenehane / poliklinik / tıp merkezi …)',
+  licenceNo: 'Ruhsat / faaliyet izin belgesi sayısı',
+  licenceDate: 'Ruhsat / faaliyet izin belgesi tarihi',
+  licenceAuthority: 'Belgeyi veren il sağlık müdürlüğü',
+  responsibleManager: 'Mesul müdür adı soyadı',
+};
+
+const missingLegal = Object.entries(LEGAL_FIELDS)
+  .filter(([key]) => !String(CONTACT.legal[key] || '').trim())
+  .map(([, label]) => label);
+
+if (missingLegal.length) {
+  console.warn(
+    `⚠  Kurum bilgileri eksik (${missingLegal.length}/${Object.keys(LEGAL_FIELDS).length}) — ` +
+      `mevzuat bunları internet sitesinde ister.\n` +
+      missingLegal.map((l) => `     · ${l}`).join('\n') +
+      `\n   src/i18n/config.js → CONTACT.legal içine girin; dolan alanlar alt bilgide yayınlanır.\n`
+  );
+} else {
+  console.log('✓ Kurum bilgileri eksiksiz — alt bilgide yayınlanıyor\n');
+}

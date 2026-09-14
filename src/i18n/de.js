@@ -469,6 +469,14 @@ export default {
     contactTitle: 'Kontakt',
     crisisHtml:
       '<b>Im Notfall:</b> Wenn Sie Gedanken haben, sich selbst oder anderen etwas anzutun, warten Sie bitte nicht — rufen Sie <b>112</b>, den Notruf in der Türkei, oder wenden Sie sich an die nächste Notaufnahme. Diese Website ersetzt keine ärztliche Beratung; Diagnose und Behandlung erfolgen ausschließlich nach persönlicher Untersuchung.',
+    legal: {
+      title: 'Angaben zur Einrichtung',
+      officialName: 'Eingetragener Name',
+      facilityType: 'Art der Einrichtung',
+      licence: 'Zulassungsnummer',
+      licenceAuthority: 'Ausgestellt von',
+      responsibleManager: 'Verantwortliche Leitung',
+    },
     rights: 'EMDR İzmir · Alle Rechte vorbehalten.',
     kvkk:
       'Unsere Datenschutzhinweise und Einwilligungserklärung nach KVKK/DSGVO sind in der Praxis einsehbar.',

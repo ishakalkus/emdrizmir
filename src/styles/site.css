@@ -555,6 +555,22 @@ ul{margin:0;padding:0;list-style:none}
 .foot ul{display:grid;gap:9px}
 .foot ul a{color:var(--ink-2);text-decoration:none;font-size:14.5px}
 .foot ul a:hover{color:var(--accent)}
+/* ── mevzuat gereği kurum bilgileri ───────────────────────── */
+.legal{
+  margin:30px 0 0;padding:20px 22px;
+  border:1px solid var(--line-soft);border-radius:12px;
+  background:var(--ground);
+  display:grid;gap:9px;
+}
+.legal__head{
+  font-size:11px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--muted);font-weight:600;margin-bottom:3px;
+}
+.legal__row{display:grid;gap:2px}
+@media (min-width:620px){.legal__row{grid-template-columns:minmax(0,210px) minmax(0,1fr);gap:14px}}
+.legal dt{font-size:13px;color:var(--muted)}
+.legal dd{margin:0;font-size:13.5px;color:var(--ink-2)}
+
 .crisis{
   margin-top:38px;padding:16px 18px;border-radius:11px;
   background:var(--amber-wash);border:1px solid color-mix(in srgb,var(--amber) 32%,transparent);

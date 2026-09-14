@@ -61,6 +61,29 @@ export const CONTACT = {
   mapsQuery:
     'Yal%C4%B1%20Mah.%20268.%20Sk.%20No%3A17%20G%C3%BCzelbah%C3%A7e%20%C4%B0zmir',
   foundingYear: '1999',
+
+  /**
+   * Sağlık Hizmeti Sunucularının Tanıtım ve Bilgilendirme Faaliyetleri
+   * Hakkında Yönetmelik uyarınca internet sitesinde bulunması gereken
+   * kurum bilgileri. Doldurulan alanlar alt bilgide yayınlanır; boş
+   * bırakılanlar yazılmaz ve derleme sonunda eksik oldukları bildirilir.
+   *
+   * Değerleri ruhsat/faaliyet izin belgesinden ve Sağlık Bakanlığı
+   * tescil kayıtlarından birebir kopyalayın; tahmin etmeyin.
+   */
+  legal: {
+    // Ruhsatta yazan resmî kuruluş adı ("EMDR İzmir" tanıtım adıdır)
+    officialName: '',
+    // Kuruluş türü: muayenehane / poliklinik / tıp merkezi …
+    facilityType: '',
+    // Ruhsat veya faaliyet izin belgesi tarih ve sayısı
+    licenceNo: '',
+    licenceDate: '',
+    // Belgeyi veren makam, ör. 'İzmir İl Sağlık Müdürlüğü'
+    licenceAuthority: '',
+    // Mesul müdür adı soyadı
+    responsibleManager: '',
+  },
   // Pazartesi–Cumartesi 10:00–18:00. Yapılandırılmış veride yayınlanır ve
   // Google Business Profile'daki saatlerle birebir aynı kalmalıdır.
   // Saat aralığı sayfada da görünür: burayı değiştirirseniz dört dildeki

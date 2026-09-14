@@ -5,6 +5,20 @@ import { CONTACT } from '../i18n/config.js';
 interface Props { t: any; }
 const { t } = Astro.props;
 const f = t.footer;
+
+/**
+ * Mevzuatın internet sitesinde istediği kurum bilgileri.
+ * Yalnızca config'te doldurulmuş alanlar yayınlanır; hiçbiri dolu
+ * değilse blok hiç basılmaz (eksikler derleme sonunda bildirilir).
+ */
+const L = CONTACT.legal;
+const legalRows = [
+  [f.legal.officialName, L.officialName],
+  [f.legal.facilityType, L.facilityType],
+  [f.legal.licence, [L.licenceNo, L.licenceDate].filter(Boolean).join(' · ')],
+  [f.legal.licenceAuthority, L.licenceAuthority],
+  [f.legal.responsibleManager, L.responsibleManager],
+].filter(([, value]) => value);
 ---
 <footer class="foot">
   <div class="wrap">
@@ -32,6 +46,18 @@ const f = t.footer;
         </ul>
       </div>
     </div>
+
+    {legalRows.length > 0 && (
+      <dl class="legal">
+        <div class="legal__head">{f.legal.title}</div>
+        {legalRows.map(([label, value]) => (
+          <div class="legal__row">
+            <dt>{label}</dt>
+            <dd>{value}</dd>
+          </div>
+        ))}
+      </dl>
+    )}
 
     <div class="crisis" set:html={f.crisisHtml} />
 

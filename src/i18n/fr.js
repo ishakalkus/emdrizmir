@@ -469,6 +469,14 @@ export default {
     contactTitle: 'Contact',
     crisisHtml:
       '<b>En cas d’urgence :</b> si vous avez des pensées de vous faire du mal ou d’en faire à quelqu’un d’autre, n’attendez pas — appelez le <b>112</b>, numéro d’urgence en Turquie, ou rendez-vous au service d’urgences le plus proche. Ce site ne remplace pas un avis médical ; le diagnostic et le traitement ne sont établis qu’après une évaluation en présentiel.',
+    legal: {
+      title: 'Informations légales',
+      officialName: 'Raison sociale',
+      facilityType: 'Type d’établissement',
+      licence: 'Numéro d’autorisation',
+      licenceAuthority: 'Délivré par',
+      responsibleManager: 'Directeur responsable',
+    },
     rights: 'EMDR İzmir · Tous droits réservés.',
     kvkk:
       'Notre notice d’information et notre formulaire de consentement KVKK/RGPD sont consultables au cabinet.',

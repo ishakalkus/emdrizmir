@@ -237,3 +237,32 @@ Ayrıca sitedeki dört dilin metinleri bu taşıma sırasında hazırlandı.
 Hekimlik içeriği olduğu için, İngilizce/Almanca/Fransızca sürümlerin
 yayından önce ilgili dili bilen biri tarafından okunması önerilir —
 özellikle unvanlar, kurum adları ve tanı terimleri.
+
+---
+
+## Mevzuat: internet sitesinde bulunması gereken kurum bilgileri
+
+Sağlık Hizmeti Sunucularının Tanıtım ve Bilgilendirme Faaliyetleri
+Hakkında Yönetmelik, sağlık kuruluşunun internet sitesinde kimlik ve
+ruhsat bilgilerinin yer almasını ister. Bu alanlar
+`src/i18n/config.js` → `CONTACT.legal` içindedir ve **şu an boştur**:
+
+| Alan | Nereden alınır |
+| --- | --- |
+| `officialName` | Ruhsatta yazan resmî kuruluş adı ("EMDR İzmir" tanıtım adıdır, ruhsat adı değil) |
+| `facilityType` | Kuruluş türü: muayenehane / poliklinik / tıp merkezi |
+| `licenceNo`, `licenceDate` | Ruhsat veya faaliyet izin belgesi sayı ve tarihi |
+| `licenceAuthority` | Belgeyi veren il sağlık müdürlüğü |
+| `responsibleManager` | Mesul müdür adı soyadı |
+
+Doldurulan alanlar alt bilgide "Kurum bilgileri" başlığı altında dört
+dilde yayınlanır; boş alanlar hiç basılmaz. Her derlemede eksikler
+listelenir:
+
+```
+⚠  Kurum bilgileri eksik (6/6) — mevzuat bunları internet sitesinde ister.
+     · Ruhsatta yazan resmî kuruluş adı
+     ...
+```
+
+Değerleri **ruhsattan birebir kopyalayın, tahmin etmeyin.**

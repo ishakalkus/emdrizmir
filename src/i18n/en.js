@@ -469,6 +469,14 @@ export default {
     contactTitle: 'Contact',
     crisisHtml:
       '<b>In an emergency:</b> if you are having thoughts of harming yourself or someone else, please do not wait — call <b>112</b>, the emergency line in Turkey, or go to your nearest emergency department. This site is not a substitute for medical advice; diagnosis and treatment are given only after an in-person assessment.',
+    legal: {
+      title: 'Practice registration',
+      officialName: 'Registered name',
+      facilityType: 'Type of facility',
+      licence: 'Licence number',
+      licenceAuthority: 'Issued by',
+      responsibleManager: 'Responsible manager',
+    },
     rights: 'EMDR İzmir · All rights reserved.',
     kvkk:
       'Our KVKK/GDPR privacy notice and consent form are available at the practice.',

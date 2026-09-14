@@ -467,6 +467,14 @@ export default {
     contactTitle: 'İletişim',
     crisisHtml:
       "<b>Acil durum:</b> Kendinize veya bir başkasına zarar verme düşünceniz varsa lütfen beklemeyin — <b>112 Acil Çağrı Merkezi</b>'ni arayın ya da en yakın acil servise başvurun. Bu site tıbbi tavsiye yerine geçmez; tanı ve tedavi yalnızca yüz yüze değerlendirme ile yapılır.",
+    legal: {
+      title: 'Kurum bilgileri',
+      officialName: 'Ruhsat unvanı',
+      facilityType: 'Kuruluş türü',
+      licence: 'Ruhsat / faaliyet izin belgesi',
+      licenceAuthority: 'Belgeyi veren',
+      responsibleManager: 'Mesul müdür',
+    },
     rights: 'EMDR İzmir · Tüm hakları saklıdır.',
     kvkk: 'KVKK aydınlatma ve onam metnimiz muayenehanemizde erişilebilirdir.',
   },
