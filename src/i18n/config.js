@@ -27,12 +27,18 @@ export const CONTACT = {
   district: 'Güzelbahçe',
   city: 'İzmir',
   country: 'TR',
+  // DOĞRULANMALI: Güzelbahçe merkezi için yaklaşık değerler. Bu koordinatlar
+  // MedicalClinic yapılandırılmış verisinde Google'a bildirildiği için,
+  // yayına almadan önce muayenehanenin gerçek konumuyla değiştirin
+  // (Google Maps'te pime sağ tıklayıp koordinatları kopyalayabilirsiniz).
   geo: { lat: 38.3697, lng: 26.8806 },
   instagram: 'https://instagram.com/dr.mehmetoguz/',
   youtube: 'https://www.youtube.com/channel/UC908HStKWliDLCuiIF4IDxA',
   mapsQuery:
     'Yal%C4%B1%20Mah.%20268.%20Sk.%20No%3A17%20G%C3%BCzelbah%C3%A7e%20%C4%B0zmir',
   foundingYear: '1999',
+  // DOĞRULANMALI: varsayım. Yapılandırılmış veride yayınlanır ve Google
+  // Business Profile'daki saatlerle tutarlı olmalıdır.
   openingHours: 'Mo-Fr 09:00-19:00, Sa 09:00-14:00',
 };
 

@@ -160,3 +160,21 @@ her derlemede satır içi betiklerin sha256 özetleriyle yeniden yazılır
 
 `frame-src` yalnızca `https://www.google.com` içindir; Google Maps
 çerçevesi de ancak ziyaretçi onayıyla eklenir.
+
+---
+
+## Yayından önce doğrulanması gerekenler
+
+`src/i18n/config.js` içinde `DOĞRULANMALI` etiketiyle işaretlenmiş iki
+değer var. İkisi de `MedicalClinic` yapılandırılmış verisinde Google'a
+bildirildiği için, yayına almadan önce gerçek bilgilerle değiştirilmelidir:
+
+| Alan | Şu anki değer | Neden |
+| --- | --- | --- |
+| `geo` | `38.3697, 26.8806` | Güzelbahçe için yaklaşık koordinat; muayenehanenin tam konumu değil. Google Maps'te pime sağ tıklayıp koordinatları kopyalayabilirsiniz. |
+| `openingHours` | `Mo-Fr 09:00-19:00, Sa 09:00-14:00` | Varsayım. Google Business Profile'daki saatlerle birebir aynı olmalı. |
+
+Ayrıca sitedeki dört dilin metinleri bu taşıma sırasında hazırlandı.
+Hekimlik içeriği olduğu için, İngilizce/Almanca/Fransızca sürümlerin
+yayından önce ilgili dili bilen biri tarafından okunması önerilir —
+özellikle unvanlar, kurum adları ve tanı terimleri.
