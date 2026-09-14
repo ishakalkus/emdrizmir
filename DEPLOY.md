@@ -276,21 +276,47 @@ Kuruluşları Hakkında Yönetmelik) isteyebilir. `CONTACT.legal` içinde
 dururlar; doldurulanlar alt bilgide "Kurum bilgileri" başlığıyla dört
 dilde yayınlanır, boş kalanlar hiç basılmaz.
 
-### Karara bağlanması gereken konular
+### Yapılan metin düzeltmeleri
 
-Bu üçü kodla çözülemez, hekimin ve hukukçunun kararını gerektirir.
-Ayrıntılı gerekçeleri için oturum kaydına bakın.
+Hekimin kendi kaleme aldığı "Neden EMDR" mektubuna **dokunulmamıştır**;
+düzeltmeler yalnızca kurum metinlerinde yapılmıştır.
+
+| Madde | Ne değişti |
+| --- | --- |
+| 5/1/d | Ekip başlığı "uzman, akredite psikoterapistler" → "Psikiyatri uzmanı hekimler ve kurum ekibimiz". 1219 sayılı Kanunda ana/yan dal olmayan bir uzmanlık ünvanı artık kullanılmıyor; hekimlerin kendi "Psikiyatri Uzmanı" ünvanı yerinde |
+| 5/1/ç | "tüm kaygı bozukluklarında … tıbbi hastalıkların tedavisinde etkilidir" → EMDR'ın TSSB'de uluslararası kılavuzlarda yer aldığı, diğer tablolarda hekim değerlendirmesiyle tedavi planının parçası olabileceği |
+| 5/1/ç | "bedeniniz artık alarma geçmez" → tepkinin azalmasının *hedeflendiği* ve sonuçların kişiden kişiye değiştiği |
+| 5/1/ğ | "20.000" sayısının ölçülmüş bir veri değil, bilgi işleme modelinde kullanılan yaklaşık bir değer olduğu belirtildi |
+| 5/1/f, g | "Üzerinde Çalıştığımız Konular" etiketleri randevu formuna bağlıydı; artık bağlantı değil, düz liste |
+
+### Dil sürümlerinin kapsamı — md. 8
+
+Hekim, **Türkiye'de yaşayan yabancı danışanlara** hizmet verdiği için
+farklı dillerde site istemiştir. Site bunu kendi metninde açıkça beyan
+eder: iletişim bölümündeki "Görüşme dilleri" satırının altında dört
+dilde "Türkiye'de yaşayan yabancı danışanlarımız için görüşmeler bu
+dillerde yürütülebilir" notu yer alır.
+
+Buna uygun olarak yurt dışına yönelen ifadeler kaldırılmıştır: online
+terapi hizmeti artık "yurt dışından danışanlar" değil, "İzmir dışında
+yaşayan danışanlar" der; "Yurt dışı" etiketi "İzmir dışı" olmuştur.
+
+**Ancak bu, hukuki değerlendirmenin yerine geçmez.** Md. 8, uluslararası
+sağlık turizmi tanıtımını yetki belgesine bağlar ve md. 8/1/a bu
+faaliyetin *ayrı bir internet sitesi* üzerinden yürütülmesini şart koşar.
+Muayenehanenin sağlık turizmi faaliyeti yoksa bu madde kapsam dışıdır;
+ileride böyle bir faaliyet düşünülürse yabancı dil sayfaları ayrı bir
+siteye taşınmalı ve yetki belgesi alınmalıdır. Yayından önce bir sağlık
+hukuku danışmanına teyit ettirin.
+
+### Açık kalan konular
 
 | Konu | Madde | Durum |
 | --- | --- | --- |
-| EN/DE/FR sayfaları — sağlık turizmi yetki belgesi ve **ayrı site** şartı | md. 8/1, 8/1/a, 8/1/b | Açık |
-| "uzman, akredite psikoterapistler" — 1219 dışı uzmanlık ünvanı | md. 5/1/d | Açık |
-| "tıbbi hastalıkların tedavisinde etkili" — tedavi iddiası | md. 5/1/ç | Açık |
-| "en kalıcı sonuçlar" — üstünlük algısı | md. 5/1/h | Açık |
-| Konu etiketlerinin randevu formuna bağlanması — yönlendirme | md. 5/1/f, 5/1/g | Açık |
-| "20.000 anı" — kaynaksız istatistik | md. 5/1/ğ | Açık |
-| Görsel içerik uyarı ibaresi | md. 7/1/k | Değerlendirilmeli |
-| Instagram/YouTube paylaşımlarında yorum ve beğeninin kapatılması | md. 7/1/ğ | Site dışı |
+| Hekimin mektubundaki "en kalıcı sonuçlar", "ispatlanmış" ifadeleri | 5/1/h, 5/1/ç | Hekim kendi metnine dokunulmamasını istedi |
+| Görsel içeriklerde uyarı ibaresi ("Her cerrahi veya girişimsel işlemde…") | 7/1/k | Muayenehanede cerrahi/girişimsel işlem yok; uygulanıp uygulanmayacağı yorum gerektirir |
+| Instagram/YouTube paylaşımlarında yorum, beğeni ve yeniden paylaşımın kapatılması | 7/1/ğ | Site dışı, hesap ayarlarından yapılır |
+| "Online Bireysel Terapi" — uzaktan sağlık hizmeti yetkisi | Ayrı yönetmelik | Teyit edilmeli |
 
 Hasta teşekkür ve memnuniyet ifadeleri **md. 5/1/e ile yasaktır**;
 danışan yorumları bölümü bu yüzden kaldırılmıştır.

@@ -80,6 +80,9 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 img{max-width:100%;display:block}
+/* Almanca'nın uzun bileşik sözcükleri (ör. "Informationsverarbeitungs-
+   modell") dar ekranda kutudan taşıyordu; dört dil için de güvenli. */
+body{overflow-wrap:break-word}
 a{color:var(--accent);text-decoration-color:color-mix(in srgb,var(--accent) 35%,transparent);text-underline-offset:3px}
 a:hover{text-decoration-color:var(--accent)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
@@ -183,7 +186,7 @@ ul{margin:0;padding:0;list-style:none}
 .hero::before{
   content:"";position:absolute;inset:auto 0 0 0;height:1px;background:var(--line-soft);
 }
-.hero__grid{display:grid;gap:clamp(34px,5vw,60px);align-items:start}
+.hero__grid{display:grid;gap:clamp(34px,5vw,60px);align-items:start;grid-template-columns:minmax(0,1fr)}
 @media (min-width:1000px){.hero__grid{grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr)}}
 
 .hero h1{
@@ -265,7 +268,9 @@ ul{margin:0;padding:0;list-style:none}
 .sect__head p{margin-top:16px;color:var(--muted);font-size:17px}
 
 /* ── EMDR nedir ───────────────────────────────────────────── */
-.explain{display:grid;gap:clamp(28px,4vw,56px)}
+/* minmax(0,1fr): tek sütunda parça min-content genişliğine şişip
+   kutudan taşmasın (uzun Almanca bileşik sözcükler). */
+.explain{display:grid;gap:clamp(28px,4vw,56px);grid-template-columns:minmax(0,1fr)}
 @media (min-width:920px){.explain{grid-template-columns:minmax(0,1fr) minmax(280px,360px)}}
 .explain p+p{margin-top:18px}
 .explain p{color:var(--ink-2);font-size:17.5px;line-height:1.72}
@@ -342,12 +347,12 @@ ul{margin:0;padding:0;list-style:none}
 
 /* konular */
 .topics{display:flex;flex-wrap:wrap;gap:9px;margin-top:34px}
-.topics a{
+.topics li{
   font-size:14px;color:var(--ink-2);text-decoration:none;
   border:1px solid var(--line);border-radius:999px;padding:8px 15px;
   transition:border-color .2s,color .2s,background .2s;
 }
-.topics a:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-wash)}
+
 
 /* ── ekip ─────────────────────────────────────────────────── */
 .team{display:grid;gap:20px}
@@ -456,7 +461,7 @@ ul{margin:0;padding:0;list-style:none}
 .paper__auth{font-size:13.8px;color:var(--ink-2);grid-column:1}
 
 /* ── iletişim + form ──────────────────────────────────────── */
-.contact{display:grid;gap:clamp(30px,4vw,54px)}
+.contact{display:grid;gap:clamp(30px,4vw,54px);grid-template-columns:minmax(0,1fr)}
 @media (min-width:940px){.contact{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}}
 .info{display:grid;gap:24px;align-content:start}
 .info__row{display:grid;gap:5px}
@@ -544,7 +549,7 @@ ul{margin:0;padding:0;list-style:none}
 
 /* ── footer ───────────────────────────────────────────────── */
 .foot{background:var(--surface);border-top:1px solid var(--line-soft);padding:clamp(48px,6vw,72px) 0 30px}
-.foot__grid{display:grid;gap:34px}
+.foot__grid{display:grid;gap:34px;grid-template-columns:minmax(0,1fr)}
 @media (min-width:820px){.foot__grid{grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,1fr))}}
 .foot__brand svg{height:30px;width:auto;color:var(--ink)}
 .foot__brand p{margin-top:16px;color:var(--muted);font-size:14.5px;line-height:1.65;max-width:38ch}

@@ -76,18 +76,18 @@ export default {
     eyebrow: 'What is EMDR',
     h2: 'Eye Movement Desensitisation and Reprocessing',
     lead:
-      'It is an effective method across all anxiety disorders, in depression, in personality disorders, and in medical conditions driven by the psychological roots underlying them.',
+      'EMDR is a form of psychotherapy included in international treatment guidelines for post-traumatic stress disorder. In conditions such as anxiety disorders and depression it may also form part of a treatment plan, following assessment by a doctor.',
     parasHtml: [
       'We record roughly twenty thousand memories a day. Some of them are positive, some negative, and a great many are unremarkable and neutral. Positive and neutral memories pass through information processing in the ordinary way and are filed into memory.',
       'Negative and traumatic memories, however, disrupt that process — much like a virus entering a computer. They keep the work of making meaning from running properly. The negative memory does not merely stay in the past; it carries on as vividly as if it were still happening <em>today</em>.',
-      'EMDR therapy does not erase the memory. It releases the charge the memory carries — so that when you remember it, your body no longer sounds the alarm.',
+      'EMDR therapy does not set out to erase the memory. It works on the charge the memory carries, with the aim that the body reacts less strongly when the memory comes to mind. The course and the outcome differ from person to person.',
     ],
     stat: {
       imageAlt:
         'A therapy table holding a bilateral stimulation light bar, a pair of glasses and a glass of water',
       number: '20,000',
       label:
-        'The approximate number of memories the brain records in a single day. The problem is not how many there are, but the ones left unprocessed among them.',
+        'An approximate figure used in the information-processing model behind EMDR to convey the scale of a day\'s memories; it is not a measured statistic. The problem is not how many there are, but the ones left unprocessed among them.',
       scales: [
         {
           dt: 'SUD scale',
@@ -186,8 +186,8 @@ export default {
         image: 'svc-online',
         alt: 'An open laptop and a cup on a desk in front of a window',
         title: 'Online individual therapy',
-        text: 'Individual therapy by video call, for clients outside İzmir or abroad.',
-        tags: ['Video sessions', 'From abroad'],
+        text: 'Individual therapy by video call, for clients living outside İzmir.',
+        tags: ['Video sessions', 'Outside İzmir'],
       },
       {
         image: 'svc-counselling',
@@ -219,7 +219,7 @@ export default {
 
   team: {
     eyebrow: 'Our team',
-    h2: 'Accredited psychotherapists, each a specialist in their field',
+    h2: 'Our consultant psychiatrists and practice team',
     intro:
       'Our priority is to hold what hurts, to walk this road alongside you, and to contribute to your psychological wellbeing.',
     open: 'Full biography',
@@ -409,6 +409,8 @@ export default {
     hoursValue: 'Monday – Saturday · 10:00 – 18:00',
     hoursClosed: 'Closed on Sunday',
     languagesValue: 'Türkçe · English · Deutsch · Français',
+    languagesNote:
+      'Consultations can be held in these languages for foreign nationals living in Türkiye.',
     imageAlt: '',
     form: {
       h3: 'Appointment request',

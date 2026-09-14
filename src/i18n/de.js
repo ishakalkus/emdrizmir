@@ -76,18 +76,18 @@ export default {
     eyebrow: 'Was ist EMDR',
     h2: 'Eye Movement Desensitization and Reprocessing',
     lead:
-      'Es ist ein wirksames Verfahren bei allen Angststörungen, bei Depressionen, bei Persönlichkeitsstörungen sowie bei körperlichen Erkrankungen, die auf die dahinterliegenden psychischen Wurzeln zurückgehen.',
+      'EMDR ist eine Psychotherapieform, die in internationalen Behandlungsleitlinien für die posttraumatische Belastungsstörung geführt wird. Bei Beschwerden wie Angststörungen und Depression kann sie nach ärztlicher Einschätzung ebenfalls Teil eines Behandlungsplans sein.',
     parasHtml: [
       'Wir speichern täglich etwa zwanzigtausend Erinnerungen. Einige davon sind positiv, einige negativ, und sehr viele sind unbedeutend und neutral. Positive und neutrale Erinnerungen durchlaufen die Informationsverarbeitung auf gewöhnlichem Weg und werden im Gedächtnis abgelegt.',
       'Negative und traumatische Erinnerungen aber störten diesen Vorgang — ganz wie ein Virus, der in einen Computer gelangt. Sie verhindern, dass die Arbeit des Bedeutungsgebens richtig abläuft. Die negative Erinnerung bleibt nicht nur in der Vergangenheit; sie wirkt so lebendig weiter, als geschähe sie <em>heute</em> noch.',
-      'Die EMDR-Therapie löscht diese Erinnerung nicht. Sie löst die Ladung, die die Erinnerung trägt — damit Ihr Körper beim Erinnern nicht länger Alarm schlägt.',
+      'Die EMDR-Therapie will diese Erinnerung nicht löschen. Sie arbeitet an der Ladung, die die Erinnerung trägt, mit dem Ziel, dass der Körper beim Erinnern schwächer reagiert. Verlauf und Ergebnis sind von Mensch zu Mensch verschieden.',
     ],
     stat: {
       imageAlt:
         'Ein Therapietisch mit einer Lichtleiste zur bilateralen Stimulation, einer Brille und einem Glas Wasser',
       number: '20.000',
       label:
-        'Die etwaige Zahl der Erinnerungen, die das Gehirn an einem Tag speichert. Das Problem ist nicht ihre Menge, sondern jene, die unverarbeitet zurückbleiben.',
+        'Eine Näherungszahl aus dem Informationsverarbeitungsmodell hinter EMDR, die das Ausmaß eines Erinnerungstages veranschaulichen soll; sie ist kein gemessener Wert. Das Problem ist nicht ihre Menge, sondern jene, die unverarbeitet zurückbleiben.',
       scales: [
         {
           dt: 'SUD-Skala',
@@ -186,8 +186,8 @@ export default {
         image: 'svc-online',
         alt: 'Ein offener Laptop und eine Tasse auf einem Schreibtisch am Fenster',
         title: 'Online-Einzeltherapie',
-        text: 'Einzeltherapie per Videogespräch für Klientinnen und Klienten außerhalb von İzmir oder aus dem Ausland.',
-        tags: ['Videositzung', 'Aus dem Ausland'],
+        text: 'Einzeltherapie per Videogespräch für Klientinnen und Klienten außerhalb von İzmir.',
+        tags: ['Videositzung', 'Außerhalb İzmirs'],
       },
       {
         image: 'svc-counselling',
@@ -219,7 +219,7 @@ export default {
 
   team: {
     eyebrow: 'Unser Team',
-    h2: 'Akkreditierte Psychotherapeuten, jede und jeder Fachperson im eigenen Gebiet',
+    h2: 'Unsere Fachärzte für Psychiatrie und das Praxisteam',
     intro:
       'Unsere erste Aufgabe ist, das Schmerzende aufzunehmen, Sie auf diesem Weg zu begleiten und zu Ihrem seelischen Wohlbefinden beizutragen.',
     open: 'Vollständiger Lebenslauf',
@@ -409,6 +409,8 @@ export default {
     hoursValue: 'Montag – Samstag · 10:00 – 18:00',
     hoursClosed: 'Sonntag geschlossen',
     languagesValue: 'Türkçe · English · Deutsch · Français',
+    languagesNote:
+      'Für in der Türkei lebende ausländische Klientinnen und Klienten können die Gespräche in diesen Sprachen geführt werden.',
     imageAlt: '',
     form: {
       h3: 'Terminanfrage',

@@ -48,7 +48,10 @@ const addressLine2 = `${CONTACT.postalCode} ${CONTACT.district} / ${CONTACT.city
         </div>
         <div class="info__row">
           <span class="info__k">{c.labels.languages}</span>
-          <span class="info__v">{c.languagesValue}</span>
+          <span class="info__v">
+            {c.languagesValue}
+            <span class="info__sub">{c.languagesNote}</span>
+          </span>
         </div>
         <div class="info__row">
           <span class="info__k">{c.labels.social}</span>

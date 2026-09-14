@@ -75,18 +75,18 @@ export default {
     eyebrow: 'EMDR Nedir',
     h2: 'Göz hareketleri ile duyarsızlaştırma ve yeniden işlemleme',
     lead:
-      'Tüm kaygı bozukluklarında, depresyonda, kişilik bozukluklarında ve bunların altında yatan psikolojik köklerin neden olduğu tıbbi hastalıkların tedavisinde etkili bir yöntemdir.',
+      'EMDR; travma sonrası stres bozukluğunda uluslararası tedavi kılavuzlarında yer alan bir psikoterapi yöntemidir. Kaygı bozuklukları ve depresyon gibi tablolarda da, hekimin değerlendirmesiyle tedavi planının bir parçası olarak uygulanabilir.',
     parasHtml: [
       'Günde yaklaşık 20 bin anıyı kaydediyoruz. Bu anıların bazıları olumlu, bazıları olumsuz, birçoğu ise önemsiz ve nötr olanlardan oluşuyor. Olumlu ve nötr anılar, bilgi işleme sürecinden normal bir şekilde geçip hafızaya atılır.',
       'Olumsuz ve travmatik anılar ise, tıpkı bilgisayara giren virüs gibi, bu süreci bozarlar. Bu anılar, anlamlandırma sürecinin normal çalışmasını engeller. Olumsuz anı, sadece geçmişte yaşamakla kalmıyor; etkisini hâlâ <em>bugün</em> yaşanmışçasına canlı olarak sürdürüyor.',
-      'EMDR terapisi, o anıyı silmez. Anının yükünü çözer — böylece hatırladığınızda bedeniniz artık alarma geçmez.',
+      'EMDR terapisi, o anıyı silmeyi amaçlamaz. Anının taşıdığı yükü işlemeyi hedefler — böylece anı hatırlandığında bedenin verdiği tepkinin azalması amaçlanır. Süreç ve sonuçlar kişiden kişiye değişir.',
     ],
     stat: {
       imageAlt:
         'Çift yönlü uyarım çubuğu, gözlük ve bir bardak su bulunan terapi sehpası',
       number: '20.000',
       label:
-        'Beynin bir günde kaydettiği yaklaşık anı sayısı. Sorun anıların çokluğu değil, aralarından işlenemeden kalanlardır.',
+        'EMDR\'ın dayandığı bilgi işleme modelinde, günlük anı akışının büyüklüğünü anlatmak için kullanılan yaklaşık bir sayıdır; ölçülmüş bir veri değildir. Mesele anıların çokluğu değil, aralarından işlenemeden kalanlardır.',
       scales: [
         {
           dt: 'SUD ölçeği',
@@ -185,8 +185,8 @@ export default {
         image: 'svc-online',
         alt: 'Pencere önündeki masada açık dizüstü bilgisayar ve fincan',
         title: 'Online Bireysel Terapi',
-        text: 'İzmir dışından veya yurt dışından danışanlar için görüntülü görüşme ile yürütülen bireysel terapi.',
-        tags: ['Görüntülü seans', 'Yurt dışı'],
+        text: 'İzmir dışında yaşayan danışanlarımız için görüntülü görüşme ile yürütülen bireysel terapi.',
+        tags: ['Görüntülü seans', 'İzmir dışı'],
       },
       {
         image: 'svc-counselling',
@@ -218,7 +218,7 @@ export default {
 
   team: {
     eyebrow: 'Ekibimiz',
-    h2: 'Her biri alanında uzman, akredite psikoterapistler',
+    h2: 'Psikiyatri uzmanı hekimler ve kurum ekibimiz',
     intro:
       'Önceliğimiz acılarınızı kucaklayıp bu yolculukta size eşlik ederken psikolojik iyilik hâlinize katkıda bulunmaktır.',
     open: 'Özgeçmişin tamamı',
@@ -408,6 +408,8 @@ export default {
     hoursValue: 'Pazartesi – Cumartesi · 10:00 – 18:00',
     hoursClosed: 'Pazar kapalı',
     languagesValue: 'Türkçe · English · Deutsch · Français',
+    languagesNote:
+      'Türkiye\'de yaşayan yabancı danışanlarımız için görüşmeler bu dillerde yürütülebilir.',
     imageAlt: '',
     form: {
       h3: 'Randevu talebi',

@@ -76,18 +76,18 @@ export default {
     eyebrow: 'L’EMDR, qu’est-ce que c’est',
     h2: 'Désensibilisation et retraitement par les mouvements oculaires',
     lead:
-      'C’est une méthode efficace dans l’ensemble des troubles anxieux, dans la dépression, dans les troubles de la personnalité, ainsi que dans les maladies somatiques liées aux racines psychologiques qui les sous-tendent.',
+      'L’EMDR est une forme de psychothérapie inscrite dans les recommandations internationales de traitement du trouble de stress post-traumatique. Dans des tableaux comme les troubles anxieux et la dépression, elle peut également s’inscrire dans un plan de traitement, après évaluation médicale.',
     parasHtml: [
       'Nous enregistrons environ vingt mille souvenirs par jour. Certains sont positifs, d’autres négatifs, et un très grand nombre sont anodins et neutres. Les souvenirs positifs et neutres traversent normalement le traitement de l’information et sont rangés en mémoire.',
       'Les souvenirs négatifs et traumatiques, eux, perturbent ce processus — tout comme un virus entré dans un ordinateur. Ils empêchent le travail de mise en sens de fonctionner normalement. Le souvenir négatif ne reste pas seulement au passé ; il continue d’agir aussi vivement que s’il se produisait <em>aujourd’hui</em> encore.',
-      'La thérapie EMDR n’efface pas ce souvenir. Elle dénoue la charge qu’il porte — afin que, lorsque vous vous en souvenez, votre corps ne sonne plus l’alarme.',
+      'La thérapie EMDR ne cherche pas à effacer ce souvenir. Elle travaille la charge qu’il porte, avec pour objectif que le corps réagisse moins fortement lorsque le souvenir revient. Le déroulement et les résultats varient d’une personne à l’autre.',
     ],
     stat: {
       imageAlt:
         'Une table de thérapie avec une barre lumineuse de stimulation bilatérale, une paire de lunettes et un verre d’eau',
       number: '20 000',
       label:
-        'Le nombre approximatif de souvenirs que le cerveau enregistre en une journée. Le problème n’est pas leur quantité, mais ceux qui restent non traités parmi eux.',
+        'Un ordre de grandeur employé dans le modèle de traitement de l’information sur lequel repose l’EMDR, pour donner une idée du flux d’une journée ; ce n’est pas une donnée mesurée. Le problème n’est pas leur quantité, mais ceux qui restent non traités parmi eux.',
       scales: [
         {
           dt: 'Échelle SUD',
@@ -186,8 +186,8 @@ export default {
         image: 'svc-online',
         alt: 'Un ordinateur portable ouvert et une tasse sur un bureau devant une fenêtre',
         title: 'Thérapie individuelle en ligne',
-        text: 'Thérapie individuelle par visioconférence, pour les personnes hors d’İzmir ou à l’étranger.',
-        tags: ['Séance en visio', 'Depuis l’étranger'],
+        text: 'Thérapie individuelle par visioconférence, pour les personnes vivant hors d’İzmir.',
+        tags: ['Séance en visio', 'Hors d’İzmir'],
       },
       {
         image: 'svc-counselling',
@@ -219,7 +219,7 @@ export default {
 
   team: {
     eyebrow: 'Notre équipe',
-    h2: 'Des psychothérapeutes accrédités, spécialistes chacun dans son domaine',
+    h2: 'Nos médecins psychiatres et l’équipe du cabinet',
     intro:
       'Notre priorité est d’accueillir ce qui fait mal, de vous accompagner sur ce chemin et de contribuer à votre bien-être psychique.',
     open: 'Parcours complet',
@@ -409,6 +409,8 @@ export default {
     hoursValue: 'Lundi – Samedi · 10:00 – 18:00',
     hoursClosed: 'Fermé le dimanche',
     languagesValue: 'Türkçe · English · Deutsch · Français',
+    languagesNote:
+      'Pour les personnes de nationalité étrangère vivant en Türkiye, les consultations peuvent se dérouler dans ces langues.',
     imageAlt: '',
     form: {
       h3: 'Demande de rendez-vous',

@@ -31,9 +31,12 @@ const s = t.services;
       ))}
     </div>
 
+    {/* Etiketler bilgilendirme amaçlıdır ve bağlantı değildir: randevu
+        formuna bağlanmaları, Yönetmelik md. 5/1/f ve 5/1/g anlamında
+        hastayı yönlendirme sayılabilirdi. */}
     <p class="eyebrow eyebrow--spaced">{s.topicsLabel}</p>
-    <div class="topics">
-      {s.topics.map((topic: string) => <a href="#iletisim">{topic}</a>)}
-    </div>
+    <ul class="topics">
+      {s.topics.map((topic: string) => <li>{topic}</li>)}
+    </ul>
   </div>
 </section>
