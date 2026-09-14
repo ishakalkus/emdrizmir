@@ -1,7 +1,8 @@
 # Cloudflare Pages başlık kuralları.
-# Aşağıdaki Content-Security-Policy satırındaki yer tutucu, derleme sonrası
-# (scripts/postbuild.mjs) satır içi betiklerin sha256 özetleriyle doldurulur;
-# böylece politikada 'unsafe-inline' açmak gerekmez.
+# İki satır derleme sonrası (scripts/postbuild.mjs) doldurulur:
+#  - Content-Security-Policy: satır içi betiklerin sha256 özetleriyle,
+#    böylece politikada 'unsafe-inline' açmak gerekmez.
+#  - X-Robots-Tag: *.pages.dev gibi geçici adreslerde noindex olur.
 
 /*
   Content-Security-Policy: __CSP__
@@ -11,7 +12,7 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: accelerometer=(), autoplay=(), camera=(), display-capture=(), encrypted-media=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=(), xr-spatial-tracking=(), browsing-topics=()
   Cross-Origin-Opener-Policy: same-origin
-  X-Robots-Tag: index, follow, max-image-preview:large
+  X-Robots-Tag: __XROBOTS__
 
 # Parmak izli varlıklar: içerik değişince ad değişir, süresiz önbelleğe alınabilir
 /_astro/*

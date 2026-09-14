@@ -10,6 +10,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { IS_PREVIEW, SITE_URL } from '../src/i18n/config.js';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
@@ -106,8 +107,18 @@ if (!placeholder.test(headers)) {
 }
 headers = headers.replace(placeholder, `$1${csp}`);
 
-if (headers.includes('__CSP__')) {
-  throw new Error('_headers içinde doldurulmamış __CSP__ yer tutucusu kaldı.');
+// Geçici adreste HTTP başlığı da meta etiketiyle aynı şeyi söylemeli.
+const xRobots = IS_PREVIEW
+  ? 'noindex, nofollow'
+  : 'index, follow, max-image-preview:large';
+const robotsPlaceholder = /^(\s*X-Robots-Tag:\s*)__XROBOTS__\s*$/m;
+if (!robotsPlaceholder.test(headers)) {
+  throw new Error('_headers içinde "X-Robots-Tag: __XROBOTS__" satırı bulunamadı.');
+}
+headers = headers.replace(robotsPlaceholder, `$1${xRobots}`);
+
+if (/__(CSP|XROBOTS)__/.test(headers)) {
+  throw new Error('_headers içinde doldurulmamış yer tutucu kaldı.');
 }
 await fs.writeFile(headersPath, headers);
 
@@ -115,4 +126,12 @@ console.log(
   `\n✓ CSP yazıldı — ${scriptHashes.size} satır içi betik, ${styleHashes.size} satır içi stil özeti` +
     (GA ? ', GA4 açık' : ', analitik kapalı') +
     `\n  ${csp}\n`
+);
+
+console.log(
+  IS_PREVIEW
+    ? `⚠  GEÇİCİ ADRES: ${SITE_URL}\n` +
+      `   Sayfalar noindex, robots.txt her şeyi kapatıyor.\n` +
+      `   Gerçek alan adı bağlanınca SITE_URL'i ona çevirin; indeksleme kendiliğinden açılır.\n`
+    : `✓ Yayın adresi: ${SITE_URL} — indekslemeye açık\n`
 );

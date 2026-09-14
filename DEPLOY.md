@@ -26,6 +26,37 @@ Git bağlamadan elle yüklemek isterseniz:
 npm run deploy      # npx wrangler pages deploy dist
 ```
 
+## 1b. Önce pages.dev, sonra alan adı
+
+Alan adını bağlamadan önce `*.pages.dev` adresinde yayınlamak için **hiçbir
+ayar girmeniz gerekmez.** Cloudflare derleme sırasında `CF_PAGES_URL`
+değişkenini kendiliğinden tanımlar; site onu kanonik adres olarak kullanır.
+
+Bu adreste site kendini **arama motorlarına kapatır**:
+
+- her sayfa `noindex, nofollow` yayınlanır (hem meta etiketi hem
+  `X-Robots-Tag` başlığı),
+- `robots.txt` içeriği `Disallow: /` olur.
+
+Sebebi şudur: geçici adres indekslenirse, gerçek alan adını bağladığınızda
+aynı içerik iki adreste görünür ve kendi sitenizle sıralama yarışına girer.
+
+Gerçek alan adını bağladığınızda tek yapmanız gereken, ortam
+değişkenlerine `SITE_URL=https://www.emdrizmir.com` eklemek ve yeniden
+dağıtmaktır; indeksleme, canonical, hreflang ve sitemap kendiliğinden
+açılıp doğru adrese döner. Derleme çıktısı hangi modda olduğunu yazar:
+
+```
+⚠  GEÇİCİ ADRES: https://emdrizmir.pages.dev
+   Sayfalar noindex, robots.txt her şeyi kapatıyor.
+```
+
+```
+✓ Yayın adresi: https://www.emdrizmir.com — indekslemeye açık
+```
+
+`NOINDEX=1` ile indekslemeyi her adreste elle de kapatabilirsiniz.
+
 ## 2. Ortam değişkenleri
 
 **Settings → Environment variables** altında, *Production* için:
@@ -33,7 +64,7 @@ npm run deploy      # npx wrangler pages deploy dist
 | Değişken | Değer | Zorunlu mu |
 | --- | --- | --- |
 | `NODE_VERSION` | `22` | evet |
-| `SITE_URL` | `https://www.emdrizmir.com` | evet (kanonik adres) |
+| `SITE_URL` | `https://www.emdrizmir.com` | alan adı bağlanınca. Boşsa `CF_PAGES_URL` kullanılır ve site noindex yayınlanır (bkz. 1b) |
 | `GOOGLE_SITE_VERIFICATION` | Search Console'un verdiği kod | hayır |
 | `GA_MEASUREMENT_ID` | `G-XXXXXXXXXX` | hayır (boşsa analitik hiç yüklenmez) |
 

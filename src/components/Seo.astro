@@ -1,6 +1,6 @@
 ---
 import { LOCALES, DEFAULT_LOCALE, localeUrl, HREFLANG, dictionaries } from '../i18n/index.js';
-import { SITE_URL, GOOGLE_SITE_VERIFICATION } from '../i18n/config.js';
+import { SITE_URL, GOOGLE_SITE_VERIFICATION, IS_PREVIEW } from '../i18n/config.js';
 import type { Locale } from '../i18n/config.js';
 
 interface Props {
@@ -11,7 +11,10 @@ interface Props {
   description?: string;
   noindex?: boolean;
 }
-const { locale, t, title, description, noindex = false } = Astro.props;
+const { locale, t, title, description, noindex: noindexProp = false } = Astro.props;
+
+// *.pages.dev gibi geçici adreslerde sayfa hiçbir koşulda indekslenmez.
+const noindex = noindexProp || IS_PREVIEW;
 
 const pageTitle = title ?? t.meta.title;
 const pageDescription = description ?? t.meta.description;
@@ -51,11 +54,15 @@ const ogImage = `${SITE_URL}/og/emdrizmir.jpg`;
 <meta name="twitter:image:alt" content={t.meta.ogImageAlt} />
 
 {/* Tarayıcı ve indeksleme ipuçları */}
+{/* Geçici adreste HTTP başlığındaki X-Robots-Tag ile birebir aynı olmalı;
+    404 ise indekslenmez ama bağlantıları izlenebilir. */}
 <meta
   name="robots"
-  content={noindex
-    ? 'noindex, follow'
-    : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}
+  content={IS_PREVIEW
+    ? 'noindex, nofollow'
+    : noindexProp
+      ? 'noindex, follow'
+      : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}
 />
 <meta name="author" content="EMDR İzmir" />
 <meta name="format-detection" content="telephone=no" />

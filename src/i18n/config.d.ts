@@ -3,6 +3,7 @@
 export type Locale = 'tr' | 'en' | 'de' | 'fr';
 
 export const SITE_URL: string;
+export const IS_PREVIEW: boolean;
 export const GOOGLE_SITE_VERIFICATION: string;
 export const GA_MEASUREMENT_ID: string;
 

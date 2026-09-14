@@ -28,6 +28,11 @@ npm run dev        # http://localhost:4321
 
 Yayına alma adımları ve Google ayarları için **[DEPLOY.md](DEPLOY.md)**.
 
+`*.pages.dev` adresinde site kendini indekslemeye kapatır (noindex +
+`Disallow: /`), böylece geçici adres sonradan gerçek alan adıyla sıralama
+yarışına girmez. `SITE_URL` gerçek alan adına çevrildiğinde indeksleme
+kendiliğinden açılır.
+
 ---
 
 ## Klasör düzeni

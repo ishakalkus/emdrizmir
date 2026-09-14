@@ -4,9 +4,33 @@
  *   SITE_URL=https://www.emdrizmir.com npm run build
  */
 
+/**
+ * Kanonik adres şu sırayla belirlenir:
+ *   1. SITE_URL            — elle verilen adres (gerçek alan adı)
+ *   2. CF_PAGES_URL        — Cloudflare Pages'in derlemede kendiliğinden
+ *                            tanımladığı *.pages.dev adresi
+ *   3. varsayılan alan adı
+ * Böylece Pages'e hiçbir ayar girmeden bağlansa bile canonical, hreflang
+ * ve sitemap sayfanın gerçekten yayında olduğu adresi gösterir.
+ */
 export const SITE_URL = (
-  process.env.SITE_URL || 'https://www.emdrizmir.com'
+  process.env.SITE_URL || process.env.CF_PAGES_URL || 'https://www.emdrizmir.com'
 ).replace(/\/+$/, '');
+
+/**
+ * Geçici (yayın öncesi) adres mi?
+ *
+ * *.pages.dev adresinin arama motorlarınca indekslenmesi istenmez: gerçek
+ * alan adı bağlandığında aynı içerik iki ayrı adreste görünür ve siteyle
+ * yarışır. Bu yüzden pages.dev üzerinde sayfalar noindex yayınlanır,
+ * robots.txt her şeyi kapatır. SITE_URL gerçek alan adına çevrildiği anda
+ * indeksleme kendiliğinden açılır.
+ *
+ * NOINDEX=1 ile elle de zorlanabilir.
+ */
+export const IS_PREVIEW =
+  process.env.NOINDEX === '1' ||
+  /(^|\.)pages\.dev$/i.test(new URL(SITE_URL).hostname);
 
 /** Google Search Console doğrulama etiketi (opsiyonel). */
 export const GOOGLE_SITE_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION || '';
