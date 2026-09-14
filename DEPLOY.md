@@ -73,17 +73,82 @@ yanlış adrese işaret eder; ilk yayından önce doğrulayın.
 
 ## 3. Alan adı ve yönlendirme
 
+Alan adını Cloudflare'e bağlamanın iki yolu var. Hangisini seçeceğiniz,
+alan adının kayıt panelinde ne kadar yetkiniz olduğuna bağlı.
+
+### Yol A — Yalnızca bir CNAME kaydı (nameserver değişmez)
+
+Alan adı başkasının hesabındaysa veya nameserver'ları taşımak
+istemiyorsanız bu yeterlidir. Kayıt sahibinden **tek bir DNS kaydı**
+eklemesini istemeniz kâfi:
+
+```
+Tür   : CNAME
+Ad    : www
+Hedef : <proje-adi>.pages.dev
+TTL   : otomatik / 3600
+```
+
+Sonra Cloudflare Pages → proje → **Custom domains → Set up a domain** →
+`www.emdrizmir.com`. Pages, alan adı Cloudflare'de olmasa da kaydı
+doğrular ve sertifikayı kendisi üretir.
+
+Çıplak alan adı (`emdrizmir.com`) bir CNAME olamaz — DNS standardı buna
+izin vermez. İki seçenek:
+
+- Kayıt panelinde **URL yönlendirme** ("forwarding") varsa:
+  `emdrizmir.com` → `https://www.emdrizmir.com`, kalıcı (301).
+- Panel **ALIAS / ANAME** kaydını destekliyorsa, onu da
+  `<proje-adi>.pages.dev` hedefine yönlendirebilirsiniz.
+
+Bu yolda `_headers` ve `_redirects` çalışmaya devam eder (onları Pages
+servis eder). Yalnızca Cloudflare'in alan adı seviyesindeki özellikleri
+(Redirect Rules, WAF, Always Use HTTPS) kullanılamaz; bu kurulumda
+zaten ihtiyaç duyulmuyor.
+
+### Yol B — Nameserver'ları Cloudflare'e almak
+
+Cloudflare panelinde alan adını ekleyince size iki nameserver verilir
+(`xxx.ns.cloudflare.com` gibi). Bunları kayıt panelinde tanımlatmanız
+gerekir. Ardından:
+
 1. **Custom domains** altında `www.emdrizmir.com` ekleyin.
-2. Çıplak alan adı için `emdrizmir.com` → `www.emdrizmir.com` **301**
-   yönlendirmesi kurun (Cloudflare → Rules → Redirect Rules). Tek bir
-   kanonik ana bilgisayar adı kullanmak, arama motorlarının aynı içeriği
-   iki ayrı site sanmasını önler.
+2. `emdrizmir.com` → `www.emdrizmir.com` **301** yönlendirmesi kurun
+   (Rules → Redirect Rules). Tek bir kanonik ana bilgisayar adı
+   kullanmak, arama motorlarının aynı içeriği iki ayrı site saymasını
+   önler.
 3. SSL/TLS modunu **Full (strict)** yapın.
 4. `Always Use HTTPS` açık olsun.
+
+Bu yol daha kabiliyetlidir; çıplak alan adı da doğrudan çalışır.
+
+### Önemli: nameserver ≠ sahiplik
+
+İki yol da alan adının **kime ait olduğunu değiştirmez.** Kayıt hesabı
+kimdeyse alan adı onun kontrolündedir: nameserver'ları geri alabilir,
+yenilemeyi bırakabilir, devredebilir. Siteyi yayına aldıktan sonra asıl
+yapılması gereken, alan adını muayenehanenin kendi kayıt hesabına
+taşımaktır (bkz. aşağıdaki bölüm).
 
 `public/_headers` dosyası `Strict-Transport-Security` gönderir; HSTS
 preload listesine başvurmadan önce çıplak alan adının da HTTPS'te
 çalıştığından emin olun.
+
+### Alan adını kendi hesabınıza almak
+
+Alan adı muayenehanenin varlığıdır; siteyi yapan kişinin değil.
+
+- **.com** ise: WHOIS kaydındaki *registrant* (tescil sahibi) hekim veya
+  muayenehane görünüyorsa, kayıt kuruluşuna kimlik ve yetki belgesiyle
+  doğrudan başvurup **transfer (EPP/auth) kodunu** talep edebilirsiniz;
+  alan adını kendi seçtiğiniz bir kayıt kuruluşuna taşırsınız. Registrant
+  başkası görünüyorsa önce bunun düzeltilmesi gerekir.
+- **.com.tr / .tr** ise: TRABIS kuralları gereği tahsis, belgeye (vergi
+  levhası, marka, ticaret sicili) bağlıdır. Belge sizin adınızaysa
+  kayıt kuruluşu üzerinden sahiplik devri talep edilebilir.
+
+Her iki durumda da ilk adım WHOIS kaydına bakıp *registrant* ve *kayıt
+kuruluşu* alanlarını görmektir.
 
 ## 4. Google Search Console
 
