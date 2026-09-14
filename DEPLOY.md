@@ -168,8 +168,60 @@ Doğru sıra:
 4. Web için apex `A` / `CNAME` kaydını Pages'e yönlendirin.
 5. **En son** nameserver'ları değiştirin.
 
-Posta sunucusunun `mail.emdrizmir.com` adıyla da posta kabul ettiğini
-önceden teyit ettirin.
+**Posta kutuları taşınmaz.** Kutular, şifreler ve geçmiş yazışmalar
+aynı sunucuda kalır; değişen yalnızca MX kaydının hangi ismi
+gösterdiğidir. Gönderen sunucu `emdrizmir.com` için MX sorar,
+`mail.emdrizmir.com` cevabını alır, o da aynı `5.9.123.99` sunucusuna
+çözülür. Posta sunucusu açısından hiçbir şey değişmez: o zaten
+`emdrizmir.com` alan adına gelen postayı kabul edecek şekilde
+yapılandırılmıştır, MX kaydında hangi ismin yazdığına bakmaz.
+
+#### Geçişten önce yapılacak kontroller
+
+Bu üçü ajanstan bir şey istemeden yapılabilir ve geçişin tek riskli
+noktalarını kapatır.
+
+**1. Posta programının sunucu adı.** Outlook / Mail / telefondaki hesap
+ayarlarında "gelen sunucu" ve "giden sunucu" alanlarına bakın:
+
+- `mail.emdrizmir.com` veya barındırıcıya ait bir ad
+  (`srvXX.birsey.com` gibi) yazıyorsa **sorun yok**, dokunmayın.
+- Düpedüz `emdrizmir.com` yazıyorsa: apex adresi web sitesine
+  geçeceği için bu ayar **geçişten sonra çalışmaz.** Geçişten önce
+  `mail.emdrizmir.com` olarak değiştirin ve postanın geldiğini görün.
+  Sertifika uyarısı çıkarsa, sunucunun TLS sertifikası o adı
+  kapsamıyordur; bu durumda barındırıcıya ait sunucu adını kullanın.
+
+**2. DKIM kaydı var mı.** DNS taraması DKIM'i gösteremez, çünkü kaydın
+adı seçiciye (selector) bağlıdır. who.is veya dnschecker.org üzerinde şu
+adları TXT olarak tek tek sorgulayın:
+
+```
+default._domainkey.emdrizmir.com
+mail._domainkey.emdrizmir.com
+dkim._domainkey.emdrizmir.com
+x._domainkey.emdrizmir.com
+```
+
+Biri sonuç verirse o TXT kaydını **birebir** Cloudflare'e kopyalayın.
+Hiçbiri vermiyorsa DKIM yok demektir, kopyalanacak bir şey de yoktur.
+
+**3. Başka alt alan adları.** Aynı yerden A kaydı olarak sorgulayın:
+`webmail`, `mail`, `autodiscover`, `autoconfig`, `ftp`, `cpanel`.
+Sonuç verenleri Cloudflare'de **proxy kapalı (gri bulut)** olarak
+oluşturun.
+
+#### Geri dönüş
+
+Cloudflare'de kayıtları kurmak alan adını etkilemez; Cloudflare ancak
+nameserver değiştiğinde yetkili olur. Bir şey ters giderse nameserver'ı
+`ns1.izajans.com` / `ns2.izajans.com` olarak geri aldırmak eski duruma
+döndürür. Yayılma saatler sürebileceği için geçişi **hafta içi sabaha**
+alın, gün boyunca posta gidip gelmesini izleyin.
+
+Geçişten hemen sonra sınayın: dışarıdan (Gmail gibi) `info@emdrizmir.com`
+adresine bir posta atın, geldiğini görün; aynı adresten dışarıya bir
+posta gönderin, spam'e düşmediğini görün.
 
 #### Postanın kendisi de ajansta
 
