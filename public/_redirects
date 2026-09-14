@@ -1,10 +1,82 @@
 # Cloudflare Pages yönlendirmeleri.
-# Eski tek sayfalık sürümden gelen bağlantılar ana sayfaya düşsün.
-/index.html      /            301
-/tr              /            301
-/tr/             /            301
+#
+# Eski site /tr/slug, /en/slug, /de/slug yapısındaydı ve ~60 sayfaydı.
+# Yeni site dil başına tek sayfa olduğu için eski adresler bölüm
+# çapalarına yönlendirilir. Amaç 404 vermemek ve gelen bağlantıyı
+# doğru bölüme indirmektir; tek sayfaya toplandığı için eski
+# sayfaların arama sıralaması bu yolla korunamaz.
+#
+# Adresler Google indeksinden çıkarıldı (sitemap.xml yayınlanmıyor).
+# İlk eşleşen kural uygulanır, sıra önemlidir.
 
-# Dil köklerinde sondaki eğik çizgiyi sabitle
-/en              /en/         301
-/de              /de/         301
-/fr              /fr/         301
+# ── Türkçe ────────────────────────────────────────────────────
+/tr/iletisim                                   /#iletisim     301
+/tr/ekibimiz                                   /#ekip         301
+/tr/kurumsal                                   /#ekip         301
+/tr/hakkimizda                                 /#ekip         301
+/tr/neden-emdr                                 /#neden        301
+/tr/blog                                       /#neden        301
+/tr/calisma-alanlarimiz                        /#hizmetler    301
+/tr/makalelerimiz                              /#makaleler    301
+
+# Hizmet sayfaları
+/tr/bireysel-yetiskin-psikoterapisi            /#hizmetler    301
+/tr/cift-aile-terapisi                         /#hizmetler    301
+/tr/online-bireysel-terapi                     /#hizmetler    301
+/tr/cocuk-ve-ergen-terapisi                    /#hizmetler    301
+/tr/psikoterapi-ve-psikolojik-danismanlik      /#hizmetler    301
+
+# Konu sayfaları
+/tr/kaygi-bozukluklari                         /#hizmetler    301
+/tr/panik-atak                                 /#hizmetler    301
+/tr/depresyon                                  /#hizmetler    301
+/tr/travma-sonrasi-stres-bozuklugu             /#hizmetler    301
+/tr/kisilik-bozukluklari                       /#hizmetler    301
+/tr/obsesif--kompulsif-bozukluk                /#hizmetler    301
+/tr/yeme-bozukluklari                          /#hizmetler    301
+/tr/psikosomatik-bozukluklar                   /#hizmetler    301
+/tr/uyum-problemleri                           /#hizmetler    301
+/tr/davranis-bozukluklari                      /#hizmetler    301
+
+# Makale sayfaları
+/tr/bir-olgu-nedeniyle-bebek-bezi-fetisizmi    /#makaleler    301
+/tr/beyin-tumorlerin-neden-oldugu-psikiyatrik-tablolar-iki-olgu-sunumu  /#makaleler  301
+/tr/hayata-baslangic-bos-bir-tahta-midir       /#makaleler    301
+
+# Danışan yorumları sayfası: içerik Yönetmelik md. 5/1/e uyarınca
+# kaldırıldı, çapa yok — ana sayfaya iner.
+/tr/danisan-yorumlari                          /              301
+
+# Kalan bütün /tr/ adresleri (içerik toplandığı için hepsi ana sayfada).
+# Hedef kaynaktan farklı olduğu için döngü riski yoktur.
+/tr/*                                          /              301
+/tr                                            /              301
+
+# ── İngilizce ─────────────────────────────────────────────────
+# Splat kullanılmıyor: "/en/*" kuralı "/en/" adresinin kendisiyle de
+# eşleşip sonsuz yönlendirme döngüsü kurabilirdi. Bilinen adresler tek
+# tek yazıldı; listede olmayan eski bir adres 404 sayfasına düşer ve
+# oradan dört dile de geçilebilir.
+/en/contact          /en/#iletisim    301
+/en/why--emdr        /en/#neden       301
+/en/blog             /en/#neden       301
+/en/our-team         /en/#ekip        301
+/en/about-us         /en/#ekip        301
+/en/corporate        /en/#ekip        301
+/en/articles         /en/#makaleler   301
+/en/study-areas      /en/#hizmetler   301
+/en/client-comments  /en/             301
+/en                  /en/             301
+
+# ── Almanca ───────────────────────────────────────────────────
+/de/kontakt                /de/#iletisim    301
+/de/uber-uns               /de/#ekip        301
+/de/unser-team             /de/#ekip        301
+/de/unsere-artikel         /de/#makaleler   301
+/de/unsere-studienbereiche /de/#hizmetler   301
+/de/unsere-dokumente       /de/             301
+/de/medien                 /de/             301
+/de                        /de/             301
+
+# ── Fransızca (eski sitede yoktu) ─────────────────────────────
+/fr                  /fr/             301

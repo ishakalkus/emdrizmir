@@ -180,3 +180,45 @@ if (optionalMissing.length && optionalMissing.length < Object.keys(OPTIONAL_LEGA
       optionalMissing.map(([, l]) => `     · ${l}`).join('\n') + '\n'
   );
 }
+
+/* ── _redirects tutarlılık denetimi ─────────────────────────────────
+   Yönlendirme hataları sessizdir: yanlış yazılmış bir hedef 404 verir,
+   kaynağıyla aynı hedefi gösteren bir splat sonsuz döngü kurar. Her
+   derlemede kontrol edilir ve sorun varsa derleme durdurulur. */
+const redirectsPath = path.join(DIST, '_redirects');
+const assets = new Set();
+for (const file of await walk(DIST)) {
+  const rel = '/' + path.relative(DIST, file).split(path.sep).join('/');
+  assets.add(rel);
+  if (rel.endsWith('/index.html')) assets.add(rel.slice(0, -'index.html'.length));
+}
+
+const rules = (await fs.readFile(redirectsPath, 'utf8'))
+  .split('\n')
+  .map((l) => l.trim())
+  .filter((l) => l && !l.startsWith('#'))
+  .map((l) => {
+    const [from, to] = l.split(/\s+/);
+    return { from, to };
+  });
+
+const globToRe = (g) =>
+  new RegExp('^' + g.split('*').map((x) => x.replace(/[.+?^${}()|[\]\\]/g, '\\$&')).join('.*') + '$');
+
+const problems = [];
+const seen = new Set();
+for (const { from, to } of rules) {
+  const target = to.split('#')[0];
+  if (seen.has(from)) problems.push(`${from} — aynı kaynak birden çok kez tanımlı`);
+  seen.add(from);
+  if (assets.has(from)) problems.push(`${from} — gerçek bir sayfayı gölgeliyor`);
+  if (!assets.has(target)) problems.push(`${from} → ${to} — hedef yayında yok`);
+  if (from === target) problems.push(`${from} → ${to} — döngü`);
+  else if (from.includes('*') && globToRe(from).test(target))
+    problems.push(`${from} → ${to} — splat kendi hedefiyle eşleşiyor, döngü kurar`);
+}
+
+if (problems.length) {
+  throw new Error('_redirects tutarsız:\n  ' + problems.join('\n  '));
+}
+console.log(`✓ _redirects — ${rules.length} kural tutarlı (gölgeleme, döngü, ölü hedef yok)\n`);
