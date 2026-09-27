@@ -365,7 +365,7 @@ export default {
         title:
           'Beyin Tümörlerinin Neden Olduğu Psikiyatrik Tablolar: İki Olgu Sunumu',
         meta: ['Olgu sunumu'],
-        authors: 'EMDR İzmir',
+        authors: 'Nihan Oğuz, Cem İlnem, Ferhan Yener',
       },
       {
         title:
@@ -387,7 +387,7 @@ export default {
       {
         title: 'Hayata Başlangıç Boş Bir Tahta mıdır?',
         meta: ['Blog yazısı'],
-        authors: 'Uzm. Dr. Mehmet Oğuz',
+        authors: 'Uzm. Dr. Nihan Oğuz',
       },
     ],
   },

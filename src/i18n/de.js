@@ -366,7 +366,7 @@ export default {
         title:
           'Psychiatrische Bilder infolge von Hirntumoren: zwei Falldarstellungen',
         meta: ['Falldarstellung'],
-        authors: 'EMDR İzmir',
+        authors: 'Nihan Oğuz, Cem İlnem, Ferhan Yener',
       },
       {
         title:
@@ -388,7 +388,7 @@ export default {
       {
         title: 'Beginnt das Leben als leere Tafel?',
         meta: ['Blogbeitrag'],
-        authors: 'Dr. med. Mehmet Oğuz',
+        authors: 'Dr. med. Nihan Oğuz',
       },
     ],
   },

@@ -366,7 +366,7 @@ export default {
         title:
           'Tableaux psychiatriques causés par des tumeurs cérébrales : deux présentations de cas',
         meta: ['Présentation de cas'],
-        authors: 'EMDR İzmir',
+        authors: 'Nihan Oğuz, Cem İlnem, Ferhan Yener',
       },
       {
         title:
@@ -388,7 +388,7 @@ export default {
       {
         title: 'Commence-t-on la vie comme une page blanche ?',
         meta: ['Billet de blog'],
-        authors: 'Dr Mehmet Oğuz',
+        authors: 'Dr Nihan Oğuz',
       },
     ],
   },

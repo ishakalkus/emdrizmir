@@ -366,7 +366,7 @@ export default {
         title:
           'Psychiatric Presentations Caused by Brain Tumours: Two Case Reports',
         meta: ['Case report'],
-        authors: 'EMDR İzmir',
+        authors: 'Nihan Oğuz, Cem İlnem, Ferhan Yener',
       },
       {
         title:
@@ -388,7 +388,7 @@ export default {
       {
         title: 'Do We Begin Life as a Blank Slate?',
         meta: ['Blog post'],
-        authors: 'Dr Mehmet Oğuz, MD',
+        authors: 'Dr Nihan Oğuz, MD',
       },
     ],
   },
