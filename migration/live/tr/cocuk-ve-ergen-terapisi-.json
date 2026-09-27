@@ -1,0 +1,169 @@
+{
+  "url": "https://www.emdrizmir.com/tr/cocuk-ve-ergen-terapisi-",
+  "generation": "live",
+  "html_lang": "tr",
+  "title": "ÇOCUK VE ERGEN TERAPİSİ  - EMDR İZMİR",
+  "title_clean": "ÇOCUK VE ERGEN TERAPİSİ - EMDR İZMİR",
+  "meta_description": "",
+  "meta_keywords": "",
+  "og_title": "",
+  "og_description": "",
+  "canonical": "",
+  "hreflang": [],
+  "robots": "",
+  "h1": [
+    "ÇOCUK VE ERGEN TERAPİSİ"
+  ],
+  "h2": [],
+  "h3": [],
+  "breadcrumb": [
+    "Anasayfa",
+    "Çalışma Alanlarımız",
+    "ÇOCUK VE ERGEN TERAPİSİ"
+  ],
+  "body_text": "",
+  "word_count": 0,
+  "content_images": [
+    {
+      "src": "/upload/images/%C3%A7ocuk.jpg",
+      "path": "/upload/images/%C3%A7ocuk.jpg",
+      "alt": ""
+    }
+  ],
+  "content_links": [],
+  "embeds": [],
+  "internal_links": [
+    {
+      "path": "/tr/",
+      "text": "Turkish"
+    },
+    {
+      "path": "/en/",
+      "text": "English"
+    },
+    {
+      "path": "/de/",
+      "text": "Deutsche"
+    },
+    {
+      "path": "/",
+      "text": "ANASAYFA"
+    },
+    {
+      "path": "/tr/hakkimizda",
+      "text": "HAKKIMIZDA"
+    },
+    {
+      "path": "/tr/ekibimiz",
+      "text": "EKİBİMİZ"
+    },
+    {
+      "path": "/tr/belgelerimiz",
+      "text": "BELGELERİMİZ"
+    },
+    {
+      "path": "/tr/medya",
+      "text": "MEDYA"
+    },
+    {
+      "path": "/tr/calisma-alanlarimiz",
+      "text": "ÇALIŞMA ALANLARIMIZ"
+    },
+    {
+      "path": "/tr/makalelerimiz",
+      "text": "MAKALELERİMİZ"
+    },
+    {
+      "path": "/tr/blog",
+      "text": "BLOG"
+    },
+    {
+      "path": "/tr/videolar",
+      "text": "VİDEOLAR"
+    },
+    {
+      "path": "/tr/iletisim",
+      "text": "İLETİŞİM"
+    },
+    {
+      "path": "/tr/neden-emdr/",
+      "text": "Neden EMDR"
+    },
+    {
+      "path": "/tr/neden-emdr",
+      "text": "Neden EMDR"
+    },
+    {
+      "path": "/tr/bireysel-yetiskin-psikoterapisi",
+      "text": "BİREYSEL YETİŞKİN PSİKOTERAPİSİ"
+    },
+    {
+      "path": "/tr/cift-aile-terapisi",
+      "text": "ÇİFT AİLE TERAPİSİ"
+    },
+    {
+      "path": "/tr/sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi",
+      "text": "SANAL GERÇEKLİK (VR) İLE ALIŞTIRMA (EXPOSURE) TEDAVİSİ"
+    },
+    {
+      "path": "/tr/online-bireysel-terapi",
+      "text": "Online Bireysel Terapi"
+    },
+    {
+      "path": "/tr/psikoterapi-ve-psikolojik-danismanlik-hizmetleri",
+      "text": "Psikoterapi ve Psikolojik Danışmanlık Hizmetleri"
+    },
+    {
+      "path": "/tr/cocuk-ve-ergen-terapisi-",
+      "text": "ÇOCUK VE ERGEN TERAPİSİ"
+    },
+    {
+      "path": "/tr/kurumsal",
+      "text": "KURUMSAL"
+    },
+    {
+      "path": "/tr/randevu-formu",
+      "text": "Randevu Al"
+    }
+  ],
+  "documents": [],
+  "page_images": [
+    {
+      "path": "/images/logo.svg",
+      "alt": ""
+    },
+    {
+      "path": "/upload/images/%C3%A7ocuk.jpg",
+      "alt": ""
+    },
+    {
+      "path": "/upload/images/blog/neden-emdr.jpg",
+      "alt": "Neden EMDR"
+    },
+    {
+      "path": "/images/ArrowRight.png",
+      "alt": ""
+    }
+  ],
+  "status": 200,
+  "classification": "page",
+  "variants": {
+    "https_www": [
+      200,
+      ""
+    ],
+    "https_bare": [
+      200,
+      ""
+    ],
+    "http_www": [
+      301,
+      "https://www.emdrizmir.com/tr/cocuk-ve-ergen-terapisi-"
+    ],
+    "http_bare": [
+      301,
+      "https://emdrizmir.com/tr/cocuk-ve-ergen-terapisi-"
+    ]
+  },
+  "archived_at": "2026-09-27T20:55:07Z"
+}

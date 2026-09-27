@@ -1,0 +1,141 @@
+{
+  "url": "https://www.emdrizmir.com/en/personality-disorder",
+  "generation": "live",
+  "html_lang": "en",
+  "title": "Personality Disorder - EMDR IZMIR",
+  "title_clean": "Personality Disorder - EMDR IZMIR",
+  "meta_description": "",
+  "meta_keywords": "",
+  "og_title": "",
+  "og_description": "",
+  "canonical": "",
+  "hreflang": [],
+  "robots": "",
+  "h1": [
+    "Personality Disorder"
+  ],
+  "h2": [],
+  "h3": [],
+  "breadcrumb": [
+    "Homepage",
+    "Study Areas",
+    "Personality Disorder"
+  ],
+  "body_text": "Congenital and environmental factors are types of disorders that can vary. There are different personality disorders under 3 headings.\n\nIt is a wide-reaching area like paranoid, schizoid, schizotypal, antisocial, borderline, histrionic, narcissistic, avoidant, dependent, obsessive compulsive personality disorder. In general, a serious decrease in the functionality of the person and symptoms, which take a long time to complete, is observed.",
+  "word_count": 60,
+  "content_images": [
+    {
+      "src": "/upload/images/calismaalanlarimiz/kisilikbozuklugu.jpg",
+      "path": "/upload/images/calismaalanlarimiz/kisilikbozuklugu.jpg",
+      "alt": ""
+    }
+  ],
+  "content_links": [],
+  "embeds": [],
+  "internal_links": [
+    {
+      "path": "/tr/",
+      "text": "Turkish"
+    },
+    {
+      "path": "/en/",
+      "text": "English"
+    },
+    {
+      "path": "/de/",
+      "text": "Deutsche"
+    },
+    {
+      "path": "/",
+      "text": "HOMEPAGE"
+    },
+    {
+      "path": "/en/about-us",
+      "text": "ABOUT US"
+    },
+    {
+      "path": "/en/our-team",
+      "text": "OUR TEAM"
+    },
+    {
+      "path": "/en/documents",
+      "text": "DOCUMENTS"
+    },
+    {
+      "path": "/en/media",
+      "text": "MEDIA"
+    },
+    {
+      "path": "/en/study-areas",
+      "text": "STUDY AREAS"
+    },
+    {
+      "path": "/en/articles",
+      "text": "ARTICLES"
+    },
+    {
+      "path": "/en/blog",
+      "text": "BLOG"
+    },
+    {
+      "path": "/en/videos",
+      "text": "VIDEOS"
+    },
+    {
+      "path": "/en/contact",
+      "text": "CONTACT"
+    },
+    {
+      "path": "/en/why--emdr",
+      "text": "WHY EMDR"
+    },
+    {
+      "path": "/en/corporate",
+      "text": "CORPORATE"
+    },
+    {
+      "path": "/tr/randevu-formu",
+      "text": "Randevu Al"
+    }
+  ],
+  "documents": [],
+  "page_images": [
+    {
+      "path": "/images/logo.svg",
+      "alt": ""
+    },
+    {
+      "path": "/upload/images/calismaalanlarimiz/kisilikbozuklugu.jpg",
+      "alt": ""
+    },
+    {
+      "path": "/upload/images/blog/neden-emdr.jpg",
+      "alt": "WHY  EMDR"
+    },
+    {
+      "path": "/images/ArrowRight.png",
+      "alt": ""
+    }
+  ],
+  "status": 200,
+  "classification": "page",
+  "variants": {
+    "https_www": [
+      200,
+      ""
+    ],
+    "https_bare": [
+      200,
+      ""
+    ],
+    "http_www": [
+      301,
+      "https://www.emdrizmir.com/en/personality-disorder"
+    ],
+    "http_bare": [
+      301,
+      "https://emdrizmir.com/en/personality-disorder"
+    ]
+  },
+  "archived_at": "2026-09-27T20:55:07Z"
+}

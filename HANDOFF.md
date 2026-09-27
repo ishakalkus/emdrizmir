@@ -104,6 +104,11 @@ da var; slug'ları henüz bilinmiyor:
 
 1. **Eski siteyi eksiksiz arşivle.** Hosting kapanınca içerik kaybolur;
    bu yüzden ilk iş bu.
+   - **Yapıldı (28.09.2026).** Sonuç ve bulgular: `migration/README.md`.
+     Envanter için başlangıç noktası `migration/urls.csv`. Öne çıkanlar:
+     menüden ulaşılamayan 20 EN + 1 DE sayfa; 22 boş eski sayfa; bazı
+     makalelerin yazarı Uz. Dr. Nihan Oğuz; 2017 blog yazılarının tam
+     metni `migration/wayback/wix-2017/` içinde.
    - Şu kombinasyonların hepsini tara: `https`/`http` × `www`/çıplak alan
      adı, üç dil.
    - Her sayfa için kaydet: URL, HTTP durum kodu, `<title>`, meta

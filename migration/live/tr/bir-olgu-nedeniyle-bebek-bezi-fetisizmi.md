@@ -1,0 +1,135 @@
+---
+url: https://www.emdrizmir.com/tr/bir-olgu-nedeniyle-bebek-bezi-fetisizmi
+title: "Bir Olgu Nedeniyle Bebek Bezi Fetişizmi - EMDR İZMİR"
+meta_description: ""
+canonical: ""
+h1: ["Bir Olgu Nedeniyle Bebek Bezi Fetişizmi"]
+status: 200
+archived_at: 2026-09-27T20:55:07Z
+---
+
+![](/upload/images/ekip/uzm-dr-nihan-oguz.jpeg)
+
+Türk Psikiyatri Dergisi 2005; 16(2):133-138
+
+**Bir Olgu Nedeniyle Bebek Bezi Fetişizmi**
+
+[***Dr. Nihan OĞUZ***](https://www.emdrizmir.com/tr/ekibimiz)1
+
+**,**
+
+**Dr. Niyazi UYGUR****2**
+
+**ÖZET**
+
+Bazı insanlar sevişme ve cinsel ilişkiden oluşan olağan cinsel davranıştan doyum sağlayamazlar, sıra dışı cinsel davranış ve nesne seçimini tercih ederler. Bu tür eylemler psikiyatrik terminolojide parafilik eylemler olarak tanımlanır. Bir para- fili türü olan fetişizm, kişinin cansız nesnelere, belirli vücut bölümlerine güçlü ve tekrarlayıcı cinsel çekim duymasıdır. Çoğu fetişist diğer insanlara zarar vermek istemez ama bu davranışlarla karşılaşan ve tedirgin olan diğer insanlar işin içine karıştığında sorunlar yaşanabilir.
+
+Etiolojide, genellikle altta yatan ve kökenleri çocukluğa kadar uzanan bazı kişilik bozuklukları olduğu düşünülür. Genellikle davranışlarını değiştirme isteği içinde değillerdir ve bir tera- piste başvurmayı düşünmezler. Psikolojik konular, parafili tipinin ve cinsel davranışın altında yatan anlamın belirlenme- sinde önemlidir. Bu nedenle, psikodinamik yaklaşımlar (obje ilişkileri, kendilik psikolojisi ve dürtü teorisi) parafilik eylemin anlamına ışık tutabilir.
+
+Bu yazıda 22 yaşında, erkek, bebek bezi fetişizm olgusu su- nulmaktadır. Aile dinamikleri açısından oğlundan psikolojik olarak uzak bir anne göze çarpmaktadır. Fetiş nesnesi ço- cuklukta fark edilip (4 yaş civarı) ergenlikte de cinsel olarak uyarıcı hale gelmektedir. Benzer şekilde Bay B’nin bu davra- nışa 6 yaşında başladığı, sonra durdurabildiği ve 12 yaşında bu davranışının cinsel olarak uyarıcı hale geldiği dikkat çek- mektedir. Bu olgu sunumu bağlamında bebek bezi fetişizm olgusu hastalık öyküsü ve özgeçmiş bilgisi çerçevesinde ele alınmakta, adli ve dinamik açıdan tartışılmaktadır.
+
+**Anahtar Sözcükler:**Fetişizm, bebek bezi, parafili, adli psi- kiyatri
+
+**SUMMARY: A Case of Diaper Fetishism**
+
+Some people cannot obtain satisfaction from ordinary sexual relationships; instead they prefer alternative methods. They are referred to in psychiatric terminology as paraphiliacs. Fetishism is a type of paraphilia in which a person is sexually attracted to objects and some body parts. Most fetishists do not intend to cause harm to other people, but may have problems when others become involved in the problem.
+
+Underlying personality disorders extending through childhood are thought to be the source of the etiology. Perverted people do not wish to change their behavior pattern. They never seek treatment from a therapist. Psychological issues obviously play a crucial role in determining the choice of paraphilia and the underlying meaning of the sexual acts. Psychodynamic models (object relations theory, self psychology, drive theory) can shed light on the meaning of a perversion.
+
+In this case report, a 22- year-old man with diaper fetishism is presented. When family dynamics are considered, the mother has been described as psychologically distant from her son. The fetish object was recognized during childhood at around the age of four. During puberty, the fetish object became sexually attractive. Our patient exhibited his first perverted behavior when he was six years old. Later, he could control this behavior. At the age of twelve, the perverted behavior became sexually arousing. This paper emphasizes the diaper fetishism case through the patient’s past psychiatric and medical history. Diaper fetishism is discussed in the light of forensic, cognitive and psychodynamic theories.
+
+**Key Words:**Fetishism, diaper, paraphilia, forensic psychiatry
+
+1Araş Gör., 7. Psikiyatri Birimi., 2Doç., Adli Psikiyatri Birimi, Bakırköy Mazhar Osman Ruh ve Sinir Hastalıkları Eğitim ve Araştırma Hastanesi, İstanbul.
+
+**GİRİŞ**
+
+Fetişizm, kişinin cansız nesnelere, belirli vü- cut bölümlerine duyulan cinsel istek durumudur. (Juninger 1997). Bu durum ICD-10 cinsel seçim bozuklukları altında, DSM-IV parafili kategori- sinde kodlanmıştır. ICD-10’a göre bozukluk, fe- tiş nesnenin cinsel uyarıda ve yanıtta önemli hale gelmesidir (Mason 1997). Fetişizm çoğunlukla erkeklerde görülen bir bozukluktur. Fetişizmi olanlar, sapkın istekleri günlük yaşamlarını etki- leyinceye kadar tedavi arayışına girmezler. Psiki- yatrik bozukluklar içinde fetişizm oranı % 0.8’dir (Chalkley ve Powell 1983). Fetiş nesneler çoğun- lukla iç giyim, sentetik giysiler, ayak, ayakkabı, ço- rap ve benzeri giyim malzemeleridir. Fetişistlerin % 35.4’ünde bir fetiş nesne, % 45.8’inde üç veya daha fazla fetiş nesne saptanmıştır. Fetiş nesneler ve davranışlar seks forumunda incelenmiş; burada fetiş nesneler iç giyim (külotlu çorap, bebek bezi, sutyen, ipek çoraplar, ipek kombinezon), kauçuk emzik gibi eşyalar, vücut bölümleri, deri giysiler, kateter, ipek mendil, bebek karyolası gibi nesneler olarak sıralanmış; davranışlar ise giyme, bakma, okşama, istifleme, uzanma, rektuma sokma, sür- tünme, emme, çalma, altında yatma, oturma ve içinde uyuma olarak belirtilmiştir (Juninger 1997). Fetişistler, cinsel olarak uyarılmak için cansız nesneleri kullanırlar. Freud, fetişizmin kastrasyon anksiyetesinden kaynaklandığını öne sürmüştür. Fetiş olarak seçilen nesneler kadın penisini simge- ler. Böylelikle kastrasyon hem reddedilir hem de doğrulanır. Fetişizmin kökeninde yaşamın ilk bir- kaç ayında oluşmuş travmatik yaşantıların olduğu düşünülmektedir. Bu nedenle, kendilik bütünlüğü- nün bozulduğu, bütünlüğün cinsellik yoluyla sağ- landığı öne sürülmektedir (Gabbard 2000).
+
+Bu yazıda, ender görülen, adli psikiyatri açısın- dan da incelenmiş olan bebek bezi fetişizmi olgu sunumu yapılmaktadır.
+
+**Olgu**
+
+Bay B hastanemize ilgili Cumhuriyet Başsav- cılığı tarafından sevk edildi. 22 yaşında, bekar, İskenderun doğumlu, ilkokul mezunu, çalışmıyor, ailesiyle yaşıyordu. Bebek bezi hırsızlığına girişim nedeniyle adli psikiyatri biriminde yatırılarak in- celenen Bay B bebek bezi çalmak için girdiği evin balkonunda, yorulduğu için elinde bebek bezleri ile uykuya dalmış olarak ev sahibi tarafından ya- kalanmış ve psikolojik sorunları olduğu için bebek bezlerini çaldığını ifade etmesi üzerine ilgili mah-
+
+keme tarafından psikiyatrik yönden incelenmesine karar verilmiştir.
+
+**Özgeçmiş:**1981 yılında on bir kardeşin ye- dincisi olarak doğmuş, doğumu normal olmuş, bir yaşına kadar anne sütü ile beslenmiş. Geçmiş kişi- sel öyküsünden motor-mental gelişiminin normal olduğu, bir yaşından sonra bakımı ile ablasının il- gilendiği, annesinin kendisinden birer yaş küçük kardeşleriyle ilgilendiği, altı yaşına kadar sadece erkek olan yaşıtlarıyla oynadığı öğrenilmiştir. Altı yaşında arkadaşlarıyla oyun oynuyorken çatıdan düşmüş. Ailesi tarafından hastaneye kaldırılan Bay B’de düşme sonrası yaralanma ve bilinç kay- bı olmamış. Ancak bu olaydan sonra komşularına ait kullanılmış bebek bezi (kumaş veya naylon ve her renk olabilir) bağlama davranışı başlamış. Bay B’nin bu bezleri iki-üç saat kendi bedeniyle ten te- ması olacak şekilde anne ve babanın yatak odasın- da bağladıktan sonra yatağın altında biriktirdiği, kimsenin atmasına izin vermediği, iki-üç ay sonra bu davranışını terk ettiği öğrenildi. Yedi yaşında ilkokula başlamış, okulda sıklıkla kız çocuklarıyla sorun yaşarmış, kardeşlerine kötü davrandığı için babasından sıklıkla dayak yermiş. On iki yaşında kendi tanımıyla “kırmızı elbiseli turist bayanı” gördüğünde kendiliğinden penis sertleşmesi ve meni boşalımı yaşamış. Bu olay tekrar komşula- ra ait kullanılmış bebek bezi bağlama davranışını tetiklemiş. Kendi altını bağlama yoluyla mastür- basyon yapmaksızın iki kez orgazm olduğunu ve beraberinde “kırmızı elbiseli turist bayanı” hayal ettiğini, her gün sürdürdüğü bu davranışını 3-4 ay sonra kendi iradesi ile engelleyebildiğini ifade etmiştir. Daha sonra on yedi yaşında bu davra- nışı tekrarlayıp 4-5 ay sürdürdükten sonra kendi iradesi ile engelleyebilmiş. Bu davranışını asker- lik sırasında da engelleyebilmiş, askerlik dönüşü tekrar bebek bezi çalma ve bağlama davranışına başlamış, ancak hırsızlık nedeniyle tutuklanmış ve bir ay cezaevinde kalmış. Bu davranışı nedeniyle başvurduğu özel doktor tarafından kendisine pi- mozid 4 mg/gün başlanmışsa da bu uygulamadan bir yarar görmediğini bildirmiştir. Bay B bu ilgi- sinden kurtulamadığı için iki kez öz-kıyım girişi- minde bulunduğunu belirtmiştir. Ayrıca, on iki ya- şından itibaren sinirlendiği ya da istekleri yerine getirilmediğinde bayılmalarının yaklaşık ayda bir kez olduğu, bayılma anında tam bilinç yitimi ol- madığı, askerlik yaptığı sırada bayılma şikayetleri nedeniyle anksiyete bozukluğu tanısını aldığı ve EEG’sinde “beta disritminin” (anksiyete bozuklu- ğu ile uyumlu) olduğu öğrenildi. Sünnet yaşı ailesinden ve kendisinden öğreni- lemedi. Sünnetle ilgili bir anısının olmadığını ve hiç cinsel ilişki deneyiminin olmadığını bildirdi.
+
+Fizik ve nörolojik muayenesinde patolojik bul- gu saptanmadı.
+
+Psikiyatrik muayenesinde yaşında gösterdiği, orta boylu, esmer tenli, öz bakımının yeterli oldu- ğu, yöneliminin tam, psikomotor etkinliğinin do- ğal olduğu saptandı. Hastanede bulunma ve ince- lenme nedenini tam olarak değerlendirebiliyordu, sözlü iletişim ve göz teması kuruyordu. Konuşma- sı amaca uygundu, duygulanımı ötimik, duygudu- rumunu kendisi “iyiyim” şeklinde ifade etmektey- di. Bilişsel işlevleri yeterli, çağrışımları düzgündü, varsanı ve sanrı tanımlamadı. Test yargılaması ve soyutlaması yeterli idi. İç görüsü vardı. Cinsel dürtülerinin toplum içinde uyumsuzluklara sebep olduğunu kabul ediyordu. Madde yoksunluk veya entoksikasyon bulgusu saptanmadı. Servis içinde uyumluydu. EEG’leri (uyku deprivasyonlu dahil) ve kafa manyetik rezonans görüntülemesi normal bulundu.
+
+Psikometrik incelemesinde, Weschler Yetişkin Zeka Testinde (WAIS) sözel IQ: 89 “donuk nor- mal” olarak belirlendi. Rorschach protokolüne göre kartları reddetme eğilimi gösterdiği, üretime dönük bir çaba içerisinde olmadığı, katı bir dü- şünce tarzına sahip olduğu, genellemelere sığınıp ayrıntılara girmediği, toplumsal düşünceye katılı- mının yeterli olduğu, ancak uyum yeteneğinin iyi olmadığı, çocuksu bir yapı taşıdığı, gerçeği değer- lendirme yetisinin korunduğu, anksiyetesinin be- lirgin olduğu tespit edilmiştir.
+
+Minnesota Çok Yönlü Kişilik Envanteri (MMPI): Hastanın test yönergesini kavrayamadı- ğı ve bu nedenle tam olarak değerlendirilemediği belirtilmiştir.
+
+DSM-IV Eksen I Bozuklukları için Yapılandı- rılmış Klinik Görüşme Klinik Versiyon (SCID-I): Hafif derecede depresif olduğu, SCID-II’de obse- sif-kompulsif, pasif-agresif, paranoid, şizoid, nar- sisistik, sınır, şizotipal kişilik özellikleri olduğu tespit edilmiştir. Hamilton Depresyon Ölçek puanı 8 (hafif dereceli depresyon ile uyumlu), Hamilton Anksiyete Ölçek puanı 0 olarak saptandı.
+
+Klinik izlemde alkol ve madde kullanmadığını bildirmesine karşılık idrar incelemesinde tetra- hidrokannabinol (THC-50) pozitif bulundu. Ertesi
+
+hafta yapılan idrar incelemesinde THC-50 negatif ancak kan testinde etil alkol pozitif bulundu.
+
+Bay B’nin stresli ortamlarda ortaya çıkan ba- yılmalarına yönelik yapılan nöroloji konsültasyo- nunda epileptik bir durumun düşünülmediği, tüm EEG’lerinin normal olduğu, bayılmalarının kon- versiyon bozukluğuna bağlı olarak değerlendiril- diği, bebek bezi bağlama davranışının ise bebek bezi fetişizmi (parafili) olduğu düşünülmüştür.
+
+Bay B’nin adli psikiyatrik değerlendirilmesin- de bilinç bozukluğu olmadığı, fetişizminin do- yuma yönelik olduğu, davranışını seçme yetisini etkilediği ve bu davranışını iradesinin denetimi altına alma çabalarının yetersiz kaldığı göz önü- ne alınarak TCK.47 maddesinden azami derecede faydalanabileceği belirtilmiştir.
+
+**TARTIŞMA**
+
+Sapkın fanteziler, erişkin cinsel davranışında görülebilir, ancak zorlantı olarak yaşanmadığın- dan sorun olarak algılanmazlar (Gabbard 2000). Parafili, erotik olarak uyarılma durumunu başlat- mak, sürdürmek, orgazma ulaşmak için obsesif şe- kilde garip bir uyarana bağlı olduğundan sapıklık olarak kabul edilir. Otuz farklı parafili tipi tanım- lanmıştır (Money 1984). Fetişizm, seksüel çeşit- lilik sınıflandırılmasında, cinsel olarak uyarılmak için eşe ihtiyaç duymayan parafili grubunda sınıf- landırılmaktadır. Cinsel uyarı için genellikle kadın iç-çamaşırı, kadın ayakkabısı ve kadın vücudunun cinsel olmayan bölümleri kullanılır. Fetişizmde normal bir ilişkiden elde edilen doyuma fetiş nes- nesi ile ulaşılır (Brandon 1980, Gabbard 2000). Çoğunlukla erkeklerde rastlanır. Kadınlarda cinsel tercihler erkeklerden daha kısıtlıdır. Bu durum fe- tişizm için de geçerli olduğundan kadın fetişistlere seyrek rastlanır (Mason 1997).
+
+Fetiş parafililerden bebek bezi fetişizmi (auto- nepiophilia) erken yaşta gelişir (Money 1984).
+
+Chalkey ve Powell’ın 1983’teki çalışmasında olguların % 43.8’inin fetiş kıyafeti giydikleri, % 22.9’unun fetiş kıyafetini başkasının üzerinde gör- mekten hoşlandıkları, % 12.5’inin kauçuk nesne- yi rektuma soktuğu, % 21’inin okşadığı, emdiği, yaktığı belirtilmiştir (Juninger 1997, Money 1984, Brandon 1980).
+
+Bay B’nin bu bezleri 2-3 saat kendi bedeniyle ten teması olacak şekilde anne ve babanın yatak odasında bağladığı dikkat çekmektedir. Fetiş nesnenin çalınması sık görülen bir dav- ranıştır. Fetişistlerin % 25’i fetiş nesneyi çalarlar. Genellikle de iç giyim eşyaları, ayakkabılar çalı- nır. Nadiren de fetişist, fetiş nesneyi giyen insanı izler ve gözetler veya fetiş beden bölgeleri ile te- mas kurmak için saldırabilir. Fetiş nesneye yönelik zorlantı benzeri dürtü, bozukluğun özelliğidir. Bu yönüyle obsesif kompulsif bozukluğa benzer (Ma- son 1997) .
+
+Fetişizmde yasal sorunlar çoğunlukla hırsız- lık nedeniyle olmaktadır (Juninger 1997, Mason 1997). Bay B’nin de bebek bezlerini çalarak elde ettiği, evde kendi kardeşlerine ait bebek bezleri de bulunmasına rağmen komşulara ait bezleri çaldığı dikkat çekmektedir.
+
+Fetişistlerde fetiş olan nesneye tek başına sahip olma itilimi çok belirgindir. Bu kişilerden bazıla- rı koleksiyoncu olarak bilinirler (Fenichel 1945). Bay B’nin de bebek bezlerini benzer şekilde bi- riktirmesi ve kimsenin atmasına izin vermemesi fetişistlerde görülen koleksiyonculuk özelliği ile uyumlu görünmektedir.
+
+Fetiş, kendi değeri önemsiz bir nesne olabi- lir, fakat fetişistin aşırı değerlendirmesiyle büyük önem kazanır. Koku, çoğu kez bu değerlendirme- de belirleyici bir etmendir (Fenichel 1945). Bay B’nin tercih ettiği bebek bezlerinin kullanılmış olması kokunun önemini ve normalde kendi değe- ri önemsiz olan kullanılmış bebek bezlerinin aşırı değerlendirildiğini göstermektedir.
+
+Bay B’nin verdiği bilgi ve test sonuçlarının çelişmesi, Rorschach kartlarını reddetme eğilimi göstermesi, MMPI uygulamasında test yönergesi- ni kavrayamadığını öne sürmesi ve kendisini hafif depresif sunması ile güvenilirliğini azalttığı görül- mektedir. Nitekim böyle bir adli sorun yaşayanlar- da genelde savunucu tutumun gözlendiği ve güve- nilirlik sorununun yaşandığı dikkat çekmektedir.
+
+Genital uyarı ve bebek eşyaları ile erken ço- cukluk deneyimleri, bebek bezi ve emzik türünde eşyalar gibi fetiş nesnelerin oluşmasına yol açabil- mektedir. Fetişizmin, klasik koşullanma sonucu öğrenilmiş bir davranış olduğu öne sürülmektedir. Çalışmalarda fetiş nesnenin çocuklukta fark edilip (4 yaş civarı), ergenlikte de cinsel olarak uyarı- cı hale geldiği dikkat çekmektedir (Mason 1997, Wilson 1981). Bay B’de bebek bezi bağlama dav- ranışının 6 yaşında başladığı ve 12 yaşında da cin- sel olarak uyarıcı hale geldiği görülmüştür.
+
+Freud, fetiş nesnenin seçiminin çocuklukta olan travmatik deneyimlerle ilgili olduğunu belirtmiştir (Fenichel 1945). Başka bir ifade ile sapkınlıkta, çocukluk travmasının erişkin başarısına dönüştü- rüldüğü belirtilmektedir. Hastaların, çocuklukta ol- muş küçük düşürücü travmaların öcünü alma ama- cıyla fanteziler kurdukları düşünülmektedir. Bu öç alma, sapkın davranış sırasında eşi küçük düşürme ve ilişkiden uzak durma şeklinde olabilmektedir (Gabbard 2000). Freud’a göre fetiş nesne penisi temsil eder, erkeği kastrasyon korkusundan korur ve penisi olmayan kadının inkarıdır. Fetişist, kadın genitalini reddeder ama gerçekte kadının penisinin olmadığını bilir. Dolayısıyla ego-bölünmesi geli- şir. Fetiş nesne oluşumunda, anneden ayrılma ve prefallik fazda oluşan anksiyetenin önemli olduğu belirtilmektedir. Fetişistlerin düşük öz güven ve yetersizlik duygusunu aşabilmek için cansız nes- nelere yöneldikleri öne sürülmektedir. Fetiş davra- nışın erken yaşta ebeveynin kötü tutumlarının yol açtığı travmaya yönelik oluştuğu belirtilmektedir. Fetiş nesne oluşumunda 1) birey çocukluğunda ona zarar vermiş olan kişiyi (nesneyi) cezalandırır, 2) nesneyi insandan ayırır, 3) cansız nesneyi çalı- nan insanla birleştirir, 4) fetişi bir zamanlar sevi- len, ihtiyaç duyulan ve travmatize eden kişi yerine tercih eder (Mason 1997).
+
+Kastrasyon anksiyetesi penisi olmayan kadı- nın keşfine yol açar. Fetiş nesnesi yer değiştirme mekanizması ile oluşur. Burada bölme, nesneyi in- sandan ayırma, aşırı değerlendirme savunma me- kanizmaları rol oynar. Başka bir ifade ile yetişkin cinselliği yerine çocuk cinselliği tercih edilir. Bu, gelişimdeki bir duraklamaya ya da bir regresyona bağlı olabilir. Ancak çocuk cinselliğinin belirgin bölümleri bastırılmıştır. Çocuk cinselliği öğesinin hipertrofisi bu bastırmayı pekiştirmek için kulla- nılmaktadır. Fetiş nesne çocukluktan gelen kendi değeri önemsiz bir nesne olabilir. Ancak fetişistin aşırı değerlendirmesiyle büyük bir önem kazanır. Kadın penisini temsil eden bir nesne, ancak kadın vücuduyla ilişkili olmadığı sürece cinsel heyecan uyandırır. Başlangıçtaki obje bastırılır ve sadece onun bir bölümü olan fetiş, abartılmış bir şiddette bilinçli kalır (Mason 1997, Wilson 1981, Fenichel 1945).
+
+Bay B’nin bakımı, 1 yaşından sonra annenin hamileliği nedeniyle abla tarafından yapılmıştır. Bu durum, annenin hamileliğinin ayrılma-birey- selleşme evresinde oluşabilen normal seperasyon anksiyetesini daha da artırdığını; onu terk eden (kötü) annenin cezalandırılıp yerine bebek bezinin geçtiğini düşündürmektedir. Böylelikle bebek bezi bir zamanlar sevilen, ihtiyaç duyulan anne yerini almaktadır. Pek çok fetişist, annelerinin içsel tem- silinden tam olarak ayrılıp bireyleşememişlerdir. Bu nedenle, ayrı bir birey olarak içsel ve dışsal nesneler tarafından yok edilme tehlikesi hisseder- ler. İçselleştirdikleri ezici anne figürü sapkın cin- sel davranış olarak ortaya çıkabilir. Diğer yönden, sapkın cinsel davranış yoluyla içselleştirdikleri anne üzerinde kontrol sağlıyor olabilirler (Gab- bard 2000) .
+
+Fetişizm a) fetiş, kadın bedeninin bir parçasıdır, b) kadın kıyafetinin bir parçasıdır, c) fetiş özel bir materyaldir, d) hayvan fetişizmi olarak sınıflandı- rılmıştır (Mason 1997) .
+
+Fetiş nesnelerin rahmi ve vajinayı temsil eden kap veya oyuk eşyaların olduğu öne sürülmüştür. Bazı yazarlar da fetiş nesneleri, nesnenin maddesi (kauçuk, deri) ve şekli (ayakkabı, kemer) gibi iki ayrı gruba daha kategorize etmişlerdir. Fetiş nesne- ler parlaklığı, yapısı, şekli, kokusuna göre incele- miş ve algısal tercihe göre sınıflandırılmıştır. Ona göre bu özelliklerle anne veya önemli biri arasın- da bağ olduğuna dikkat çekilmiştir. Nesne, arzula- nan kişi ile özdeşleşmeyi temsil eder ve gelişimde kritik bir dönemi belirtir. Örneğin ayakkabının, dişi pubik bölgesine benzediği öne sürülmektedir (Mason 1997).
+
+Bay B’nin de sadece bebek bezi tercih etmesi bu bezin kullanılmış olmasının önemli olduğu, do- layısıyla bebek bezinin annesi ile arasındaki bağı temsil edebileceğini düşündürmektedir. Bebek be- zinin kendisinin de vajinayı temsil edebileceğini düşündürmektedir. Yine bebek bezi geçiş nesnesi olarak düşünüldüğünde, empatik kendilik nesne- lerinin yokluğunda hatalı içselleştirme sürecinin sapkın cinsel etkinliğe yol açabileceği düşünül- mektedir. Böylelikle cinsellik, acı veren ve kendi- likte travmatik hasara yol açan deneyimleri kontrol etmeyi sağlıyor olabilir (Gabbard 2000).
+
+Parafililerle kişilik bozukluğu, psikiyatrik hastalıklar ve suç işleme, sıklıkla birlikte görülür (Wilson 1981). Nörotik organizasyondaki hasta- ların parafilik etkinliği cinsel üstünlük sağlamak için, psikotik sınırda olan hastaların ise kendiliğin dağılmasını engellemek için kullandıkları düşünül- mektedir (Gabbard 2000). Bay B’de fetişistlerde gözlenen sınır kişilik organizasyonu ile şizotipal özellikler dikkat çekmektedir. Buradan Bay B’nin
+
+bebek bezini kendiliğin dağılmasını engellemek için kullandığı düşünülebilir. Bebek bezinin bir geçiş nesnesi olduğu ve bu nesne yoluyla, annesi- nin kendi bakımını bırakmasıyla oluşan travmatik deneyimi kontrol altına aldığı düşünülebilir.
+
+Sapkın erkeklerin çoğunluğunun cinsel olarak kısıtlayıcı ailelerden geldikleri ve bu erkeklerin pornografiyi çocukluklarında görmedikleri be- lirtilmektedir (Wilson 1981). Bay B’nin ailesi de benzer yapıdadır. Kalabalık ve özensiz ortamda olan arka arkaya doğumlar Bay B’nin uygunsuz ve yaşına uymayan biçimde uyarılmasına sebep olmuş olabilir. Öte yandan, cinselliğin ayıp, günah olarak tanımlandığı aile ortamı da Bay B’ye cin- sellikle ilgili çelişkili mesajlar vermiş olabilir. Bü- tün bu çelişkili mesajlar Bay B’de suçluluk duygu- su uyandırmış olabilir.
+
+Ayırıcı tanıda, psikiyatrik öykü ve muayene- sinde sanrılar, varsanılar, dezorganize konuşma, dezorganize davranış olmadığından psikotik bo- zukluklar; depresif, taşkın, kabarmış ya da öfkeli duygudurum olmadığından duygudurum bozuk- lukları dışlandı. Bay B’nin psikiyatrik öyküsün- de askerlik yaptığı sırada bayılma şikayetleri ne- deniyle anksiyete bozukluğu tanısı konduğu ve EEG’sinde “beta disritminin” (anksiyete bozuk- luğu ile uyumlu) olduğu öğrenilmişse de serviste bulunduğu süre içerisinde hiçbir anksiyete, korku, kaçınma ya da artmış uyarılma belirtileri olmadığı ve çekilen tüm EEG’leri normal olduğundan ank- siyete bozuklukları dışlandı. Bütünleşmiş bilinç, bellek, kimlik, çevrenin algılanmasında bozukluk olmadığından disosiyatif bozukluklar dışlandı. Li- teratürde fetişizm ve temporal lob epilepsisi bir- likteliği hakkında olgu sunumları dikkat çekmekle birlikte Bay B’nin çekilen tüm EEG’lerinin nor- mal olduğu görülmüştür; ancak, bebek bezi bağla- ma davranışının 6 yaşında çatıdan düştükten sonra başlaması şüpheli de olsa bir temporal lob patolo- jisini düşündürmektedir. Ancak, Bay B’nin çatıdan düştükten sonra hastaneye götürüldüğü, herhangi bir yaralanma ve bilinç kaybının olmadığı, izle- minde de herhangi bir sorun olmadığı belirtilmiş- tir. Bu durum da bizi temporal lob patolojisinden uzaklaştırmaktadır. Bay B’nin klinik izleminde alkol ve madde kullanmadığını bildirmesine kar- şılık idrar incelemesinde tetrahidrokannabinol (THC-50) ve kan testinde etil alkol pozitif bulun- du. Bay B’de serviste bulunduğu süre içerisinde entoksikasyon ve yoksunluk bulgusu gözlenmedi. Yine ailesinden 12 aylık bir dönem içinde klinik açıdan belirgin bozulma ya da sıkıntıya yol açan uygunsuz bir alkol-madde kullanımının olmadığı öğrenildi. Her ne kadar laboratuvar bulguları pozi- tif olsa da bu, tek başına alkol-madde kötüye kul- lanımı ve bağımlılığı tanılarını koymak için yeterli değildir. Bu nedenle de alkol ve madde ile ilişkili bozukluklar dışlandı.
+
+**KAYNAKLAR**
+
+Brandon S (1980) The range of sexual variations. Clin Obstet Gynaecol, 7: 345-361.
+
+Chalkley AJ, Powell GE (1983) The clinical description of forty- eight cases of sexual fetishism. Br J Psychiatry, 142: 292-295.
+
+Fenichel O (1945) Nevrozların Psikoanalitik Teorisi (Çev. Tuncer S). Ege Üniversitesi Matbaası, Bornova-İzmir, 1974.
+
+Gabbard GO (2000) Psychodynamic Psychiatry in Clinical Practice, 3. baskı, Washington, American Psychiatric Press, s.299- 307.
+
+Juninger J (1997) Fetishism: Assessment and Treatment. Sexual Deviance Theory, Assessment, and Treatment, 1. baskı, D.Richard
+
+Laws, William O’Donohue (Ed), New York. Guilford Publications, s.92-110.
+
+Mason FL (1997) Fetishism: Psychopathology and Theory. Sexual Deviance Theory, Assessment, and Treatment, 1. baskı, D.Richard Laws, William O’Donohue (Ed), New York. Guilford Publications, s. 75-91.
+
+Money J (1984) Paraphilias: Phenomenology and Classification. Am J Psychother, 38: 164-179.
+
+Wilson G D (1981) Sexual deviations. Br J Hosp Med, 8-15.

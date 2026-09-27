@@ -1,0 +1,36 @@
+# Menüden ulaşılamayan ama canlı olan eski adresler.
+#
+# Eski İngilizce "Study Areas" sayfasındaki bütün kutular /en/'e bağlı
+# (bozuk), bu yüzden İngilizce konu sayfalarına sitenin içinden
+# ulaşılamıyor. Google bu sayfaları yine de indekslemiş (27.09.2026,
+# "site:emdrizmir.com/en"). Google sonuç bağlantılarını gizlediği için
+# adresler başlıktan çıkarıldı ve tek tek canlı sitede doğrulandı.
+# Sitenin adres kuralı: küçük harf, her boşluk "-", noktalama silinir
+# ("Consequences - Depression" -> "consequences---depression").
+#
+# Biçim: yol <TAB> kaynak
+
+/en/anxiety-disorders	google
+/en/panic-attack	google
+/en/separation-anxiety	google
+/en/psychosomatic-disorders	google
+/en/personality-disorder	google
+/en/sexual-problems	google
+/en/adaptation-problems	google
+/en/eating-disorders	google
+/en/behaviour-disorders	google
+/en/the-mourning-process	google
+/en/relationship-and-marriage-problems	google
+/en/problems-regarding-business-life	google
+/en/course-failure-and-exam-anxiety	google
+/en/the-pregnancy-process-and-its-consequences---depression	google
+
+# Google'da görünmeyen, başlığın çevirisinden tahmin edilip canlıda
+# doğrulanan adresler.
+/en/post-traumatic-stress-disorder	tahmin
+/en/obsessive-compulsive-disorder	tahmin
+/en/anger-management	tahmin
+/en/coping-with-stress-and-anger-management	tahmin
+/en/family-relations	tahmin
+/en/appointment-form	tahmin
+/de/terminformular	tahmin
