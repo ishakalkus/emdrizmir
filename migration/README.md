@@ -10,6 +10,7 @@ dayanır.
 | Yol | İçerik |
 |---|---|
 | `urls.csv` | Bulunan **bütün** eski adresler, tek tablo (sütunlar aşağıda) |
+| `inventory.csv` | Her eski adres için karar: yeni sayfa mı, 301 mi, hedefi ne (`inventory.py` üretir) |
 | `live/` | Canlı sitedeki her gerçek sayfa: ham `.html`, ayıklanmış `.json`, okunur `.md` |
 | `wayback/` | Canlıda artık olmayan, archive.org'dan alınan eski sayfalar (aynı üç biçim) |
 | `wayback/wix-2017/` | 2017 Wix sürümü: blog yazıları (RSS'ten tam metin), site haritası |
@@ -143,6 +144,44 @@ listesine girmeli.
 - **Danışan yorumları** (`/tr/danisan-yorumlari`, `/en/client-comments`)
   arşivde duruyor; yönetmelik md. 5/1/e gereği yeni sitede
   yayınlanmayacak.
+
+## URL envanteri (`inventory.csv`)
+
+Her eski adres için tek satır. `inventory.py` kararları kendi içindeki
+tablolardan alır; bir karar değişecekse orası düzenlenip betik yeniden
+çalıştırılır (`python3 migration/inventory.py`). Kararı olmayan ya da
+yanlış yazılmış bir adres kalırsa betik durur.
+
+Sütunlar: `eski_adres`, `dil`, `tur`, `karar` (`yeni-sayfa` / `301` /
+`kural-kaldir`), `hedef`, `hreflang_esi`, `gerekce`, eski durum ve kelime
+sayısı, `google`/`duckduckgo`, `simdiki_kural` (şimdiki `_redirects`),
+`degisim` (bu kural için ne yapılacak).
+
+**Varsayılan kural** (Search Console verisi gelene kadar, HANDOFF.md):
+konu sayfaları, makaleler ve KVKK sayfası korunur; gerisi en yakın ilgili
+yere 301 alır.
+
+- **50 yeni sayfa**, eski adresleriyle: 21 TR + 19 EN konu, 5 TR + 4 EN
+  makale, KVKK aydınlatma metni. TR ↔ EN eşleri `hreflang_esi`'nde.
+  Karşılığı olmayanlar: TR `depresyon`, `okula-uyum`,
+  `hayata-baslangic-bos-bir-tahta-midir`.
+- **139 adres 301 alır.** Hepsi aynı dildeki en yakın sayfaya ya da ana
+  sayfa bölümüne gider. Dil ana sayfasına düşen 20 adres, ya eski sitede
+  boş olan sayfalar (Medya, Videolar, Belgeler) ya da yönetmelik gereği
+  kaldırılan danışan yorumları.
+- **Hizmet sayfaları** (6 TR + 6 DE) 301 ile ana sayfanın hizmetler
+  bölümüne gider; eski sayfalar boştu. Bir kısmı Google'da indeksli;
+  Search Console'da tıklama alıyorsa hizmet sayfası olarak yeniden
+  açılmaları düşünülmeli.
+- Eski Almanca site aslında İngilizce metinlerle kurulmuştu; Almanca içerik
+  yalnızca menüdeydi. Korunacak Almanca sayfa yok.
+- `_redirects`'teki `/tr/*` splat'ı kalkacak (yeni `/tr/…` sayfalarını
+  yutuyor). Yerine tekil kurallar gelecek.
+- Eski sürümlerden kalan kök adresler (2017–2021) konusu belliyse o konu
+  sayfasına, değilse ilgili ana sayfa bölümüne gider. 2017 Wix yazıları
+  (`/single-post/…`, Türkçe karakterli adresler) tek kuralla `/#neden`'e.
+- `www`'suz ve `http` hâller `_redirects`'te değil, Cloudflare'de alan adı
+  düzeyinde çözülecek (çıplak → `www` 301, `http` → `https`).
 
 ## Yeniden üretmek
 

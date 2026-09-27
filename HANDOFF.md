@@ -120,6 +120,14 @@ da var; slug'ları henüz bilinmiyor:
 2. **URL envanteri çıkar.** Her eski URL için şu sütunlar olsun: eski
    URL → ne yapılacak (aynı adreste yeni sayfa / en yakın sayfaya 301)
    → hedef. `_redirects`'te olmayan eski adresleri bul.
+   - **Yapıldı (28.09.2026):** `migration/inventory.csv`, kararlar
+     `migration/inventory.py` içinde. 50 yeni sayfa, 139 yönlendirme,
+     `_redirects`'ten kalkacak 2 yanlış kural. Özet: `migration/README.md`.
+   - Yeni sitede iki makalenin yazarı yanlıştı (Hayata Başlangıç → Nihan
+     Oğuz; Beyin Tümörleri → Nihan Oğuz, Cem İlnem, Ferhan Yener);
+     dört dilde düzeltildi. Nihan Oğuz, Dr. Mehmet Oğuz'un eşi ve
+     klinikte birlikte çalışan psikiyatr/terapist; onun metinleri de
+     "hekimin kendi metni" kuralına girer.
 3. **Search Console verisi.** Kullanıcı DNS'i Cloudflare'e aldığında
    (aşağıdaki 1. adım), Domain mülkünü TXT kaydıyla doğrulatacak.
    Doğrulamadan sonra son 16 ayın performans verisi görünür. Sayfa
