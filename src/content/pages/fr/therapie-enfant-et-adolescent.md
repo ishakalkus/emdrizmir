@@ -3,7 +3,6 @@ kind: "hizmet"
 group: "cocuk-ve-ergen-terapisi-"
 title: "Thérapie de l’enfant et de l’adolescent"
 description: "Thérapie de l’enfant et de l’adolescent à İzmir : des séances adaptées à l’âge, menées en collaboration avec la famille."
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı."
 ---
 La thérapie de l’enfant et de l’adolescent s’intéresse aux difficultés émotionnelles, comportementales et développementales des enfants et des jeunes, avec des méthodes adaptées à leur âge. La famille étant l’une des influences les plus importantes dans la vie d’un enfant, le travail se fait en collaboration avec elle.
 

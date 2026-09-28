@@ -3,7 +3,6 @@ kind: "hizmet"
 group: "sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi"
 title: "Thérapie d’exposition en réalité virtuelle (RV)"
 description: "Thérapie d’exposition en réalité virtuelle à İzmir : affronter progressivement et de manière contrôlée les situations redoutées (phobies, évitement)."
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı."
 ---
 Les exercices d’exposition – affronter de manière progressive et contrôlée des situations évitées parce qu’elles suscitent une forte anxiété – font partie des techniques établies de la thérapie cognitive et comportementale. Dans l’exposition en réalité virtuelle, ces situations sont recréées dans un environnement virtuel visualisé à l’aide d’un casque, sans avoir à se rendre dans le lieu réel.
 

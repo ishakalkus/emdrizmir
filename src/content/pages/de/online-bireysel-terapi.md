@@ -4,7 +4,6 @@ group: "online-bireysel-terapi"
 title: "Online-Einzeltherapie"
 description: "Online-Einzeltherapie: Einzelpsychotherapie per Videogespräch für Menschen, die außerhalb von İzmir leben oder schwer in die Praxis kommen können."
 source: "https://www.emdrizmir.com/de/online-bireysel-terapi"
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı. Uzaktan sağlık hizmeti yetkisi ayrıca teyit edilmeli (DEPLOY.md)."
 ---
 Bei der Online-Einzeltherapie finden die Sitzungen der Einzelpsychotherapie per Videogespräch statt. Sie ist eine Möglichkeit für Menschen, die außerhalb von İzmir leben oder denen der Weg in die Praxis schwerfällt.
 

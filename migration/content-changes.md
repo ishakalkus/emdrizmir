@@ -26,15 +26,17 @@ tipi ve boş satırlar kaldırıldı, harf ve noktalama aynen korundu.
 | Hayata Başlangıç Boş Bir Tahta mıdır? (TR) | Uzm. Dr. Nihan Oğuz |
 | Neden EMDR mektubu (TR, EN) | Uzm. Dr. Mehmet Oğuz. Ana sayfadaki metinle aynı kaynaktan gelir. |
 
-**Hekime sorulacak sorunlar.** Kendi başıma düzeltmedim:
+**Hekim onayıyla yapılan düzeltmeler (28.09.2026):**
 
-1. **"PhD Dr" unvanı.** İngilizce makalelerin ikisinde yazar "PhD Dr
-   Nihan Oğuz" ve "PhD Dr Mehmet OĞUZ" olarak geçiyor. Türkçe asıllarında
-   "Uzman Dr." yazıyor; büyük olasılıkla eski ajansın çeviri hatası.
-   Sahip olunmayan bir akademik unvan md. 5/1/d'ye aykırı olur.
-   Önerim: "Dr" ya da "MD" olarak düzeltmek.
-2. **"Cem İlmen".** İngilizce "Beyin tümörleri" makalesinde yazar adı
-   böyle yazılmış; Türkçesinde "Cem İlnem".
+1. **"PhD Dr" → "Dr".** İngilizce makalelerin ikisinde yazar "PhD Dr
+   Nihan Oğuz" ve "PhD Dr Mehmet OĞUZ" olarak geçiyordu. Türkçe
+   asıllarında "Uzman Dr." yazıyor; eski ajansın çeviri hatası.
+   Sahip olunmayan akademik unvan md. 5/1/d'ye aykırı olurdu.
+2. **"Cem İlmen" → "Cem İlnem".** İngilizce "Beyin tümörleri"
+   makalesindeki yazar adı, Türkçe asıl ve dergi kaydıyla aynı yapıldı.
+
+**Açık kalan:**
+
 3. **Viral Ensefalit makalesi (TR) PDF'ten bozuk kopyalanmış.** Bazı
    kelimeler bitişik ("bulgularıçok", "davranışdeğişiklikleri"), bazı
    harfler rastgele kalın ya da italik, satır sonu tireleri kalmış
@@ -48,17 +50,14 @@ tipi ve boş satırlar kaldırıldı, harf ve noktalama aynen korundu.
 "EMDR İzmir" adına görünüyordu. İkisi kaynaktaki imzalara göre dört
 dilde düzeltildi.
 
-## 2. KVKK aydınlatma metni — ONAY BEKLİYOR
+## 2. KVKK aydınlatma metni — güncellendi, onaylandı
 
-`/tr/belgelerimiz/`. Metin harfiyen taşındı ama sayfa **taslak**
-olarak işaretli. Metinde:
+`/tr/belgelerimiz/`. Metin harfiyen taşındı; hekim onayıyla
+(28.09.2026) yalnızca başvuru bilgileri güncellendi:
 
-- eski muayenehane adresi geçiyor: "Kültür Mahallesi Talatpaşa Bulvarı
-  No.2 D.1 Alsancak İZMİR",
-- başvuru e-postası olarak `oguzmd@yahoo.com` yazıyor.
-
-Hekimin güncel adresi (Yalı Mah. 268. Sk. No: 17, Güzelbahçe) ve
-başvuruların hangi e-postaya yapılacağını onaylaması gerekiyor.
+- adres: "Kültür Mahallesi Talatpaşa Bulvarı No.2 D.1 Alsancak İZMİR"
+  → "Yalı Mahallesi 268. Sokak No: 17, 35310 Güzelbahçe İZMİR",
+- e-posta: `oguzmd@yahoo.com` → `info@emdrizmir.com`.
 
 Metnin başındaki başlık satırı, sayfanın başlığıyla aynı olduğu için bir
 kez yazıldı.
@@ -123,12 +122,11 @@ değiştirildi. Aynı yumuşatmalar burada da geçerli. Sayfa başlıkları ve
 adresleri eski sitedekiyle aynı kaldı. **Yayından önce İngilizceyi iyi
 bilen biri tarafından okunması önerilir.**
 
-## 5. Hizmet sayfaları — YENİ METİN, ONAY BEKLİYOR
+## 5. Hizmet sayfaları — yeni metin, hekim onayladı (28.09.2026)
 
 Eski sitede altı hizmet sayfasının içi boştu (yalnızca resim). Yeni
-metinler yazıldı: 6 hizmet × 4 dil = 24 sayfa. Hepsi **taslak** olarak
-işaretli: geçici adreste turuncu uyarı bandıyla görünürler; gerçek alan
-adıyla derleme, taslak kaldığı sürece durur.
+metinler yazıldı: 6 hizmet × 4 dil = 24 sayfa. Hekim onayından sonra
+taslak işaretleri kaldırıldı.
 
 Yazarken uyulan ilkeler:
 
@@ -140,11 +138,11 @@ Yazarken uyulan ilkeler:
 - online terapi sayfasında hangi durumlarda uygun olmadığı ve acil durum
   bilgisi var.
 
-**Onay için:**
+**Hâlâ önerilen:**
 
-1. Hekim Türkçe metinleri okuyup onaylamalı.
-2. Çeviriler dili bilen biri tarafından okunmalı.
-3. Online terapi için uzaktan sağlık hizmeti yetkisi ayrıca teyit
-   edilmeli (DEPLOY.md, "Açık kalan konular").
+1. Çevirilerin (EN, DE, FR) dili iyi bilen biri tarafından okunması.
+2. Online terapi için uzaktan sağlık hizmeti yetkisinin ayrıca teyit
+   edilmesi (DEPLOY.md, "Açık kalan konular").
 
-Onaylanan sayfada dosyanın başındaki `draft:` satırı silinir.
+Yeni bir metin onay beklerken sayfaya `draft: "<neden>"` satırı
+eklenir; o satır durdukça gerçek alan adıyla derleme durur.

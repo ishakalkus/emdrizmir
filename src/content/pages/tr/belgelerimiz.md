@@ -4,7 +4,6 @@ group: "kvkk"
 title: "Kişisel Veriler Aydınlatma ve Onam Metni"
 description: "Dr. Mehmet Oğuz muayenehanesinde kişisel verilerin ve sağlık verilerinin işlenmesine ilişkin KVKK aydınlatma ve onam metni."
 source: "https://www.emdrizmir.com/tr/belgelerimiz"
-draft: "Metinde eski Alsancak adresi ve oguzmd@yahoo.com geçiyor. Güncel adres ve başvuru e-postası hekim tarafından onaylanmalı."
 ---
 
 <p>Dr. Mehmet OĞUZ olarak tarafınıza sunacağım hizmetlerin yürütülebilmesi için kişisel bilgilerinizi ve sağlık verilerinizi öğrenmemiz ve sunulacak hizmetin gerektirdiği sınırlar içinde kalmak kaydıyla</p>
@@ -73,9 +72,9 @@ draft: "Metinde eski Alsancak adresi ve oguzmd@yahoo.com geçiyor. Güncel adres
 
 <p>· Kişisel verilerinizin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme</p>
 
-<p>,<em>( Bu hakkın Kültür Mahallesi Talatpaşa Bulvarı No.2 D.1 Alsancak İZMİR açık adresli muayenehane adresimize bizzat ya da yazılı şekilde başvurmak suretiyle </em></p>
+<p>,<em>( Bu hakkın Yalı Mahallesi 268. Sokak No: 17, 35310 Güzelbahçe İZMİR açık adresli muayenehane adresimize bizzat ya da yazılı şekilde başvurmak suretiyle </em></p>
 
-<p><em>ya da oguzmd@yahoo.com E-mail adresimize aşağıda belirtilen veri sahibine ait kişisel mail adresinden iletilecek bir taleple kullanılabileceği konusunda bilgi verildi. )</em></p>
+<p><em>ya da info@emdrizmir.com E-mail adresimize aşağıda belirtilen veri sahibine ait kişisel mail adresinden iletilecek bir taleple kullanılabileceği konusunda bilgi verildi. )</em></p>
 
 <p>· Bazı verilerinizin gizlenmesini, silinmesini ya da yok edilmesini isteme haklarınız bulunmaktadır.</p>
 

@@ -3,7 +3,6 @@ kind: "hizmet"
 group: "sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi"
 title: "Virtual reality (VR) exposure therapy"
 description: "Virtual reality exposure therapy in İzmir: gradual, controlled facing of feared situations for phobias and avoidance, at the practice."
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı."
 ---
 Exposure work – gradually and safely facing situations a person avoids because they cause intense anxiety – is an established technique of cognitive behavioural therapy. In virtual reality exposure, these situations are recreated in a virtual environment viewed through a headset, without having to go to the real place.
 

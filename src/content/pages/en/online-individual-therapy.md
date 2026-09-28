@@ -3,7 +3,6 @@ kind: "hizmet"
 group: "online-bireysel-terapi"
 title: "Online individual therapy"
 description: "Online individual therapy: individual psychotherapy by video call for clients who live outside İzmir or find it hard to come to the practice."
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı. Uzaktan sağlık hizmeti yetkisi ayrıca teyit edilmeli (DEPLOY.md)."
 ---
 Online individual therapy means holding individual psychotherapy sessions by video call. It is an option for clients who live outside İzmir or who find it difficult to come to the practice.
 

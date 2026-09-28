@@ -3,7 +3,6 @@ kind: "hizmet"
 group: "psikoterapi-ve-psikolojik-danismanlik-hizmetleri"
 title: "Psychotherapy and psychological counselling"
 description: "Psychological counselling in İzmir: shorter, goal-oriented sessions on life events, decisions and difficulties at work."
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı."
 ---
 Psychological counselling consists of shorter, goal-oriented sessions that focus less on treating a specific mental disorder and more on the difficulties a person meets in life and the decisions they need to make.
 

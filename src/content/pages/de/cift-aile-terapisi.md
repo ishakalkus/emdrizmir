@@ -4,7 +4,6 @@ group: "cift-aile-terapisi"
 title: "Paar- und Familientherapie"
 description: "Paar- und Familientherapie in İzmir: Gespräche, in denen wiederkehrende Muster und Kommunikationsschwierigkeiten gemeinsam betrachtet werden."
 source: "https://www.emdrizmir.com/de/cift-aile-terapisi"
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı."
 ---
 Die Paar- und Familientherapie betrachtet Beziehungsprobleme nicht als Problem einer einzelnen Person, sondern als Teil des Zusammenspiels zwischen Menschen. An den Sitzungen nehmen das Paar oder mehrere Familienmitglieder gemeinsam teil; bei Bedarf kommen Einzelgespräche hinzu.
 

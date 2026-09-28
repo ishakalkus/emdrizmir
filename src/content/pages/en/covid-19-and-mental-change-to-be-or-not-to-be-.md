@@ -8,7 +8,7 @@ bylineInBody: true
 source: "https://www.emdrizmir.com/en/covid-19-and-mental-change-to-be-or-not-to-be-"
 ---
 
-<p><em><strong>PhD Dr Mehmet OĞUZ</strong></em></p>
+<p><em><strong>Dr Mehmet OĞUZ</strong></em></p>
 
 <p>In the early days of the Covid-19 caused pandemic, when our agenda completely changed and we, on the other hand, were trying to hold on to our own internal environment, the psychological pressure and uncertainty caused by the pandemic came on and it continues.</p>
 

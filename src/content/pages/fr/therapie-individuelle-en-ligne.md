@@ -3,7 +3,6 @@ kind: "hizmet"
 group: "online-bireysel-terapi"
 title: "Thérapie individuelle en ligne"
 description: "Thérapie individuelle en ligne : psychothérapie individuelle par visioconférence pour les personnes vivant hors d’İzmir ou ne pouvant venir au cabinet."
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı. Uzaktan sağlık hizmeti yetkisi ayrıca teyit edilmeli (DEPLOY.md)."
 ---
 La thérapie individuelle en ligne consiste à mener les séances de psychothérapie individuelle par visioconférence. C’est une possibilité pour les personnes qui vivent en dehors d’İzmir ou pour qui il est difficile de se rendre au cabinet.
 

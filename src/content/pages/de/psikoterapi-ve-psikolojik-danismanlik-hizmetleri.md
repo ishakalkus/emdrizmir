@@ -4,7 +4,6 @@ group: "psikoterapi-ve-psikolojik-danismanlik-hizmetleri"
 title: "Psychotherapie und psychologische Beratung"
 description: "Psychologische Beratung in İzmir: kürzere, zielgerichtete Gespräche zu Lebensereignissen, Entscheidungen und Schwierigkeiten im Beruf."
 source: "https://www.emdrizmir.com/de/psikoterapi-ve-psikolojik-danismanlik-hizmetleri"
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı."
 ---
 Die psychologische Beratung besteht aus kürzeren, zielgerichteten Gesprächen. Im Vordergrund steht weniger die Behandlung einer bestimmten psychischen Erkrankung als die Schwierigkeiten, denen man im Leben begegnet, und die Entscheidungen, die zu treffen sind.
 

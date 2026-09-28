@@ -4,7 +4,6 @@ group: "cocuk-ve-ergen-terapisi-"
 title: "Kinder- und Jugendlichentherapie"
 description: "Kinder- und Jugendlichentherapie in İzmir: Gespräche mit Kindern und Jugendlichen mit altersgerechten Methoden, in Zusammenarbeit mit der Familie."
 source: "https://www.emdrizmir.com/de/cocuk-ve-ergen-terapisi-"
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı."
 ---
 Die Kinder- und Jugendlichentherapie befasst sich mit emotionalen, verhaltensbezogenen und entwicklungsbedingten Schwierigkeiten von Kindern und Jugendlichen – mit Methoden, die ihrem Alter entsprechen. Da die Familie zu den wichtigsten Einflüssen im Leben eines Kindes gehört, erfolgt die Arbeit in Zusammenarbeit mit der Familie.
 

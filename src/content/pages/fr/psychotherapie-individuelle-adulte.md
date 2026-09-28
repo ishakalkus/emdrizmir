@@ -3,7 +3,6 @@ kind: "hizmet"
 group: "bireysel-yetiskin-psikoterapisi"
 title: "Psychothérapie individuelle de l’adulte"
 description: "Psychothérapie individuelle de l’adulte à İzmir : évaluation, objectifs définis ensemble et séances individuelles (EMDR, thérapie psychodynamique, TCC)."
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı."
 ---
 La psychothérapie individuelle de l’adulte repose sur des séances régulières en tête-à-tête avec le ou la thérapeute. Elle vise à donner du sens aux difficultés rencontrées, à développer des moyens d’y faire face et à soutenir le fonctionnement au quotidien.
 

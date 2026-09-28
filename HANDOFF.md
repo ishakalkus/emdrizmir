@@ -171,10 +171,12 @@ da var; slug'ları henüz bilinmiyor:
      - `python3 migration/check_urls.py <adres>` eski adreslerin hepsini
        dener. Wrangler ile yerelde 195/195 doğru.
      - Metin değişiklikleri: `migration/content-changes.md`.
-   - **Onay bekleyen 25 taslak sayfa:** 24 hizmet sayfası (yeni metin) ve
-     KVKK (eski adres/e-posta). Taslak varken gerçek alan adıyla derleme
-     durur. Yerelde `NOINDEX=1 npm run build` kullan; Pages önizlemesi
-     pages.dev adresiyle derlendiği için etkilenmez.
+   - Hizmet metinleri ve KVKK güncellemesi (adres Güzelbahçe, başvuru
+     e-postası info@emdrizmir.com) hekim tarafından onaylandı
+     (28.09.2026); taslak kalmadı. İngilizce makalelerde "PhD Dr" → "Dr",
+     "Cem İlmen" → "İlnem" düzeltildi. Yeni metin onay beklerken
+     frontmatter'a `draft: "<neden>"` yazılır; o durdukça gerçek alan
+     adıyla derleme durur (yerelde `NOINDEX=1 npm run build`).
 5. **Kalan eski adresler** için 301'i en yakın **ilgili** sayfaya ver,
    ana sayfaya değil.
 

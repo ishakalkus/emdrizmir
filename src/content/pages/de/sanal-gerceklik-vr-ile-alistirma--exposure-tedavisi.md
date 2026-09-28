@@ -4,7 +4,6 @@ group: "sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi"
 title: "Expositionstherapie mit Virtual Reality (VR)"
 description: "Expositionstherapie mit Virtual Reality in İzmir: schrittweise, kontrollierte Konfrontation mit gefürchteten Situationen bei Phobien und Vermeidung."
 source: "https://www.emdrizmir.com/de/sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi"
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı."
 ---
 Expositionsübungen – das schrittweise und kontrollierte Sich-Stellen gegenüber Situationen, die starke Angst auslösen und deshalb vermieden werden – gehören zu den etablierten Techniken der kognitiven Verhaltenstherapie. Bei der VR-Exposition werden diese Situationen in einer virtuellen Umgebung nachgestellt, die über eine Brille betrachtet wird, ohne dass man sich an den realen Ort begeben muss.
 

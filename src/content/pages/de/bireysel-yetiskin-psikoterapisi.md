@@ -4,7 +4,6 @@ group: "bireysel-yetiskin-psikoterapisi"
 title: "Einzelpsychotherapie für Erwachsene"
 description: "Einzelpsychotherapie für Erwachsene in İzmir: Abklärung, gemeinsam festgelegte Ziele und Einzelsitzungen mit EMDR, psychodynamischer Therapie oder KVT."
 source: "https://www.emdrizmir.com/de/bireysel-yetiskin-psikoterapisi"
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı."
 ---
 Die Einzelpsychotherapie für Erwachsene besteht aus regelmäßigen Einzelgesprächen mit der Therapeutin oder dem Therapeuten. Ziel ist es, die Schwierigkeiten, mit denen jemand konfrontiert ist, zu verstehen, Wege des Umgangs damit zu entwickeln und die Bewältigung des Alltags zu unterstützen.
 

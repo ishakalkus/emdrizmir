@@ -3,7 +3,6 @@ kind: "hizmet"
 group: "cocuk-ve-ergen-terapisi-"
 title: "Child and adolescent therapy"
 description: "Child and adolescent therapy in İzmir: sessions with children and young people using age-appropriate methods, in cooperation with the family."
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı."
 ---
 Child and adolescent therapy works with children’s and young people’s emotional, behavioural and developmental difficulties, using methods suited to their age. Because the family is one of the most important influences in a child’s life, the process is carried out in cooperation with the family.
 

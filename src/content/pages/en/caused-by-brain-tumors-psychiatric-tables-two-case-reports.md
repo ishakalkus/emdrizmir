@@ -8,7 +8,7 @@ bylineInBody: true
 source: "https://www.emdrizmir.com/en/caused-by-brain-tumors-psychiatric-tables-two-case-reports"
 ---
 
-<p><em><strong>PhD Dr Nihan Oğuz</strong></em>1, Cem İlmen2, Ferhan Yener3</p>
+<p><em><strong>Dr Nihan Oğuz</strong></em>1, Cem İlnem2, Ferhan Yener3</p>
 
 <p><strong>INTRODUCTION</strong></p>
 

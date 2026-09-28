@@ -4,7 +4,6 @@ group: "psikoterapi-ve-psikolojik-danismanlik-hizmetleri"
 title: "Psikoterapi ve Psikolojik Danışmanlık"
 description: "Psikolojik danışmanlık: yaşam olayları, karar süreçleri ve iş yaşamına ilişkin güçlükler üzerine kısa süreli, amaca yönelik görüşmeler. İzmir."
 source: "https://www.emdrizmir.com/tr/psikoterapi-ve-psikolojik-danismanlik-hizmetleri"
-draft: "Yeni yazılan hizmet metni; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b)."
 ---
 Psikolojik danışmanlık, belirli bir ruhsal bozukluğun tedavisinden çok, kişinin yaşamında karşılaştığı güçlüklerle ve vermesi gereken kararlarla ilgilenen, daha kısa süreli ve amaca yönelik görüşmelerdir.
 

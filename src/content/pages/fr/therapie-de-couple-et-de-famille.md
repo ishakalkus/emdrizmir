@@ -3,7 +3,6 @@ kind: "hizmet"
 group: "cift-aile-terapisi"
 title: "Thérapie de couple et de famille"
 description: "Thérapie de couple et de famille à İzmir : des séances pour examiner ensemble les cycles qui se répètent et les difficultés de communication."
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı."
 ---
 La thérapie de couple et de famille aborde les difficultés relationnelles non comme le problème d’une seule personne, mais comme une partie des interactions entre les personnes. Le couple ou plusieurs membres de la famille participent ensemble aux séances ; des entretiens individuels sont ajoutés si nécessaire.
 

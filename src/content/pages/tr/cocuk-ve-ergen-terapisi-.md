@@ -4,7 +4,6 @@ group: "cocuk-ve-ergen-terapisi-"
 title: "Çocuk ve Ergen Terapisi"
 description: "Çocuk ve ergen terapisi: çocuk ve gençlerle yaşa uygun yöntemlerle, aileyle iş birliği içinde yürütülen görüşmeler. İzmir, Güzelbahçe."
 source: "https://www.emdrizmir.com/tr/cocuk-ve-ergen-terapisi-"
-draft: "Yeni yazılan hizmet metni; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b)."
 ---
 Çocuk ve ergen terapisi, çocukların ve gençlerin duygusal, davranışsal ve gelişimsel güçlükleriyle, yaşlarına uygun yöntemlerle çalışmayı amaçlar. Çocuğun yaşamındaki en önemli etkenlerden biri aile olduğu için süreç aileyle iş birliği içinde yürütülür.
 

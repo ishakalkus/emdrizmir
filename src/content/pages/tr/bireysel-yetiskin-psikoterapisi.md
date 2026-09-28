@@ -4,7 +4,6 @@ group: "bireysel-yetiskin-psikoterapisi"
 title: "Bireysel Yetişkin Psikoterapisi"
 description: "Bireysel yetişkin psikoterapisi: değerlendirme, hedeflerin birlikte belirlenmesi ve EMDR, psikodinamik terapi, BDT gibi yöntemlerle bire bir görüşmeler."
 source: "https://www.emdrizmir.com/tr/bireysel-yetiskin-psikoterapisi"
-draft: "Yeni yazılan hizmet metni; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b)."
 ---
 Bireysel yetişkin psikoterapisi, danışan ile terapistin bire bir ve düzenli aralıklarla yaptığı görüşmelerden oluşur. Amaç, kişinin yaşadığı zorlukları anlamlandırmak, bunlarla baş etme yollarını geliştirmek ve gündelik yaşamdaki işlevselliğini desteklemektir.
 

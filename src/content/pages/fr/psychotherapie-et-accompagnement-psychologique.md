@@ -3,7 +3,6 @@ kind: "hizmet"
 group: "psikoterapi-ve-psikolojik-danismanlik-hizmetleri"
 title: "Psychothérapie et accompagnement psychologique"
 description: "Accompagnement psychologique à İzmir : des entretiens plus courts et ciblés sur les événements de vie, les décisions et les difficultés au travail."
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı."
 ---
 L’accompagnement psychologique consiste en des entretiens plus courts et ciblés, centrés moins sur le traitement d’un trouble psychique précis que sur les difficultés rencontrées dans la vie et les décisions à prendre.
 

@@ -4,7 +4,6 @@ group: "cift-aile-terapisi"
 title: "Çift ve Aile Terapisi"
 description: "Çift ve aile terapisi: ilişkide tekrar eden döngüleri ve iletişim güçlüklerini birlikte ele alan görüşmeler. İzmir, Güzelbahçe."
 source: "https://www.emdrizmir.com/tr/cift-aile-terapisi"
-draft: "Yeni yazılan hizmet metni; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b)."
 ---
 Çift ve aile terapisi, ilişkideki sorunları tek bir kişinin sorunu olarak değil, kişiler arasındaki etkileşimin bir parçası olarak ele alır. Görüşmelere çiftin ya da ailenin birden fazla üyesi birlikte katılır; gerektiğinde bireysel görüşmeler de yapılır.
 

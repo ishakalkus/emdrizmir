@@ -3,7 +3,6 @@ kind: "hizmet"
 group: "bireysel-yetiskin-psikoterapisi"
 title: "Individual adult psychotherapy"
 description: "Individual adult psychotherapy in İzmir: an initial assessment, goals agreed together, and one-to-one sessions using EMDR, psychodynamic therapy or CBT."
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı."
 ---
 Individual adult psychotherapy consists of regular one-to-one sessions between the client and the therapist. Its aim is to make sense of the difficulties the person is facing, to develop ways of coping with them and to support day-to-day functioning.
 

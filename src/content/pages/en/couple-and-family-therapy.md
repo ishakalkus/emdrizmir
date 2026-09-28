@@ -3,7 +3,6 @@ kind: "hizmet"
 group: "cift-aile-terapisi"
 title: "Couple and family therapy"
 description: "Couple and family therapy in İzmir: sessions that look together at recurring cycles and communication difficulties in a relationship."
-draft: "Yeni yazılan hizmet metni ve çevirisi; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b). Çeviri, dili bilen biri tarafından okunmalı."
 ---
 Couple and family therapy approaches relationship problems not as one person’s problem, but as part of the interaction between people. Sessions are attended jointly by the couple or by several family members; individual sessions are added when needed.
 

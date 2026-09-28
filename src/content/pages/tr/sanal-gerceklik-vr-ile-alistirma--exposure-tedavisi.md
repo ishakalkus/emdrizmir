@@ -4,7 +4,6 @@ group: "sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi"
 title: "Sanal Gerçeklik (VR) ile Alıştırma Tedavisi"
 description: "Sanal gerçeklik ile alıştırma (exposure): fobiler ve kaçınma davranışlarında korkulan durumla kontrollü ve kademeli karşılaşma. İzmir."
 source: "https://www.emdrizmir.com/tr/sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi"
-draft: "Yeni yazılan hizmet metni; yayından önce hekim onayı gerekiyor (Yönetmelik md. 5/1/b)."
 ---
 Alıştırma (maruz bırakma, İngilizcesiyle *exposure*) çalışmaları, kişinin kaçındığı ve yoğun kaygı duyduğu durumlarla kontrollü ve kademeli biçimde karşılaşmasına dayanan, bilişsel davranışçı terapinin yerleşik tekniklerindendir. Sanal gerçeklik ile alıştırmada bu durumlar, gerçek ortama gitmeden, özel bir gözlükle görüntülenen sanal bir ortamda canlandırılır.
 
