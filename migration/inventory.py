@@ -22,8 +22,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 
-# ── Korunacak sayfalar: TR ↔ EN eşleri (hreflang) ──────────────────────
-# Eşi olmayan taraf None. Eşleşme başlıkların çevirisine göre yapıldı.
+# ── Korunacak sayfalar ve dil eşleri (hreflang) ────────────────────────
+# Her satır bir sayfanın dillerdeki adresleri; olmayan dil None.
+# TR ↔ EN eşleşmesi başlıkların çevirisine göre yapıldı.
 TOPICS = [
     ("kaygi-bozukluklari", "anxiety-disorders"),
     ("panik-atak", "panic-attack"),
@@ -55,14 +56,28 @@ ARTICLES = [
     ("hayata-baslangic-bos-bir-tahta-midir", None),
 ]
 KVKK = [("belgelerimiz", None)]
+# Hekimin mektubu. Kullanıcı kararı (28.09.2026): Google'da indeksli ve
+# metin hazır; ayrı sayfa olur, ana sayfada kısa bölüm ve bağlantı kalır.
+LETTER = [("neden-emdr", "why--emdr")]
 
-KEEP = {}  # yol -> (tür, hreflang eşi)
-for kind, pairs in (("konu", TOPICS), ("makale", ARTICLES), ("kvkk", KVKK)):
-    for tr, en in pairs:
-        if tr:
-            KEEP[f"/tr/{tr}"] = (kind, f"/en/{en}/" if en else "")
-        if en:
-            KEEP[f"/en/{en}"] = (kind, f"/tr/{tr}/" if tr else "")
+# Hizmet sayfaları. Eski sitede içleri boştu ama Google'da indeksliler;
+# kullanıcı kararı (28.09.2026): TR ve DE aynı adreste, yeni metinle
+# yayınlanır. DE eski adresleri Türkçe slug'lıydı ve öyle kalır. EN/FR
+# için karar bekleniyor (eski sitede EN hizmet sayfası hiç olmadı).
+SERVICES = ["bireysel-yetiskin-psikoterapisi", "cift-aile-terapisi", "cocuk-ve-ergen-terapisi-",
+            "online-bireysel-terapi", "psikoterapi-ve-psikolojik-danismanlik-hizmetleri",
+            "sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi"]
+
+GROUPS = []  # (tür, {dil: slug})
+for kind, pairs in (("konu", TOPICS), ("makale", ARTICLES), ("kvkk", KVKK), ("mektup", LETTER)):
+    GROUPS += [(kind, {"tr": tr, "en": en}) for tr, en in pairs]
+GROUPS += [("hizmet", {"tr": s, "de": s}) for s in SERVICES]
+
+KEEP = {}  # yol -> (tür, hreflang eşleri)
+for kind, langs in GROUPS:
+    urls = {lang: f"/{lang}/{slug}" for lang, slug in langs.items() if slug}
+    for lang, url in urls.items():
+        KEEP[url] = (kind, " ".join(u + "/" for l, u in urls.items() if l != lang))
 
 # ── Yönlendirmeler: yol -> (tür, hedef, gerekçe) ──────────────────────
 R = {}
@@ -86,14 +101,9 @@ rd("makale", "/tr/viral-ensefalite-bagli-deliryum-bir-olgu-sunumu/",
 rd("makale", "/tr/covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak/",
    "Aynı yazının sonu tireli eski adresi.", "/tr/covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak-")
 
-# Hizmet sayfaları: eski sitede içleri boş (yalnızca resim). Yeni ana
-# sayfanın hizmetler bölümü altı hizmeti açıklamalarıyla anlatıyor.
-SERVICES = ["bireysel-yetiskin-psikoterapisi", "cift-aile-terapisi", "cocuk-ve-ergen-terapisi-",
-            "online-bireysel-terapi", "psikoterapi-ve-psikolojik-danismanlik-hizmetleri",
-            "sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi"]
-why_svc = "Eski sayfa boştu; hizmet yeni ana sayfanın hizmetler bölümünde anlatılıyor."
-rd("hizmet", "/#hizmetler", why_svc, *[f"/tr/{s}" for s in SERVICES])
-rd("hizmet", "/de/#hizmetler", why_svc, *[f"/de/{s}" for s in SERVICES])
+# Eski Almanca menü hizmetlere /en/ altında Türkçe slug'la bağlanıyordu;
+# bu adreslerde hiç sayfa olmadı. EN hizmet sayfası kararı verilirse
+# hedefleri o sayfalar olur.
 rd("kirik-baglanti", "/en/#hizmetler",
    "Eski Almanca menüdeki kırık bağlantı; hiç sayfa olmadı.",
    *[f"/en/{s}" for s in SERVICES])
@@ -105,12 +115,12 @@ rd("kurumsal", "/en/#ekip", why_team, "/en/corporate", "/en/about-us", "/en/our-
 rd("kurumsal", "/de/#ekip", why_team, "/de/uber-uns", "/de/unser-team")
 rd("kirik-baglanti", "/en/#ekip", "Eski Almanca menüdeki kırık bağlantı.", "/en/institution")
 
-# Hekimin "Neden EMDR" mektubu yeni ana sayfada tam metin duruyor.
-why_why = "Mektubun tamamı yeni ana sayfanın 'Neden EMDR' bölümünde."
-rd("mektup", "/#neden", why_why, "/tr/neden-emdr", "/tr/neden-emdr/", "/tr/blog")
-rd("mektup", "/en/#neden", why_why, "/en/why--emdr", "/en/blog")
-rd("mektup", "/de/#neden", why_why, "/de/blog")
-rd("kirik-baglanti", "/en/#neden", "Eski Almanca menüdeki kırık bağlantı.", "/en/neden-emdr")
+# Blog sayfalarında yalnızca hekimin "Neden EMDR" mektubu vardı.
+why_blog = "Eski blogda yalnızca 'Neden EMDR' mektubu vardı."
+rd("mektup", "/tr/neden-emdr/", why_blog, "/tr/blog")
+rd("mektup", "/en/why--emdr/", why_blog, "/en/blog")
+rd("mektup", "/de/#neden", why_blog + " Almanca mektup ana sayfada.", "/de/blog")
+rd("kirik-baglanti", "/en/why--emdr/", "Eski Almanca menüdeki kırık bağlantı.", "/en/neden-emdr")
 
 # Liste sayfaları
 rd("liste", "/#makaleler", "Makale listesi; yeni ana sayfada makaleler bölümü.", "/tr/makalelerimiz")
@@ -174,7 +184,8 @@ old("/tr/uyum-problemleri/", "Aynı konu.", "/uyum-bozukluklari")
 old("/#hizmetler", "Konu listesinde var ya da en yakın bölüm hizmetler.",
     "/hizmetlerimiz", "/bipolar-bozukluk", "/dikkat-eksikligi-hiperaktivite-bozu",
     "/sizofreni-ve-psikotik-bozukluklar", "/alkol-ve-madde-bagimliligi",
-    "/internet-ve-oyun-bagimliligi", "/kumar-bagimliligi",
+    "/internet-ve-oyun-bagimliligi", "/kumar-bagimliligi")
+old("/tr/bireysel-yetiskin-psikoterapisi/", "Şema terapi bireysel psikoterapide kullanılan bir yöntem.",
     "/sema-terapisi-nedir-nasil-uygulanir-", "/sema-terapisi-nedir-nasil-uygulanir/")
 old("/#emdr", "EMDR'yi anlatan yazılar; yeni ana sayfada 'EMDR nedir' bölümü.",
     "/emdr-nedir", "/emdr-nedir/",
@@ -184,7 +195,7 @@ old("/#emdr", "EMDR'yi anlatan yazılar; yeni ana sayfada 'EMDR nedir' bölümü
     "/madde-ve-alkol-bagimliligi-icin-yeni-populer-yontem-emdr-psikoterapisi/")
 old("/#protokol", "Seans süresi ve sıklığı; yeni ana sayfada seans akışı bölümü.",
     "/seans-sureleri-ve-sikligi", "/seans-sureleri-ve-sikligi/")
-old("/#neden", "Hekimin mektubu.", "/neden-emdr", "/neden-emdr/")
+old("/tr/neden-emdr/", "Hekimin mektubu.", "/neden-emdr", "/neden-emdr/")
 old("/#ekip", "Hekim ve ekip tanıtımı.", "/hakkimda", "/hakkimizda/", "/ekibimiz", "/ekibimiz/",
     "/psikiyatri-nedir-psikiyatrist-kimdir/", "/psikiyatri-2")
 old("/#ekip", "2018'de hekimin belgeleri (sertifika görselleri) vardı; KVKK metni değil.",
@@ -199,7 +210,7 @@ old("/", "İçeriği hiçbir kaynakta kalmamış.", "/daha-iyi-hissediyorum/")
 
 # 2017 Wix blogu: yazıların hepsi hekimin kişisel yazıları. Adresler
 # Türkçe karakterli olduğundan tek tek değil, tek kuralla yakalanır.
-SPLATS = {"/single-post/*": ("eski-surum", "/#neden", "2017 blog yazıları; en yakın yer hekimin mektubu.")}
+SPLATS = {"/single-post/*": ("eski-surum", "/tr/neden-emdr/", "2017 blog yazıları; en yakın yer hekimin mektubu.")}
 
 # _redirects'te olup eski sitede hiç var olmamış adresler (önceki
 # oturumda Google'daki kısaltılmış görünümden yanlış çıkarılmış).
@@ -254,7 +265,9 @@ def main():
             rec.update(tur=kind, karar="yeni-sayfa", hedef=norm + "/", hreflang_esi=pair,
                        gerekce=("Aynı sayfanın sonu / ile biten hâli. " if p != norm else "")
                        + {"konu": "Konu sayfası korunur.", "makale": "Makale korunur.",
-                          "kvkk": "KVKK aydınlatma metni; yasal olarak gerekli."}[kind])
+                          "kvkk": "KVKK aydınlatma metni; yasal olarak gerekli.",
+                          "mektup": "Hekimin mektubu; Google'da indeksli, metin hazır.",
+                          "hizmet": "Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak."}[kind])
         elif p in R:
             kind, target, why = R[p]
             rec.update(tur=kind, karar="301", hedef=target, hreflang_esi="", gerekce=why)

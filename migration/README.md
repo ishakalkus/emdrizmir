@@ -157,22 +157,33 @@ Sütunlar: `eski_adres`, `dil`, `tur`, `karar` (`yeni-sayfa` / `301` /
 sayısı, `google`/`duckduckgo`, `simdiki_kural` (şimdiki `_redirects`),
 `degisim` (bu kural için ne yapılacak).
 
-**Varsayılan kural** (Search Console verisi gelene kadar, HANDOFF.md):
-konu sayfaları, makaleler ve KVKK sayfası korunur; gerisi en yakın ilgili
-yere 301 alır.
+**Kural:** konu sayfaları, makaleler ve KVKK sayfası korunur (HANDOFF.md
+varsayılanı). Kullanıcı kararıyla (28.09.2026) hizmet sayfaları ve
+"Neden EMDR" mektubu da eklendi. Gerisi en yakın ilgili yere 301 alır.
 
-- **50 yeni sayfa**, eski adresleriyle: 21 TR + 19 EN konu, 5 TR + 4 EN
-  makale, KVKK aydınlatma metni. TR ↔ EN eşleri `hreflang_esi`'nde.
-  Karşılığı olmayanlar: TR `depresyon`, `okula-uyum`,
-  `hayata-baslangic-bos-bir-tahta-midir`.
-- **139 adres 301 alır.** Hepsi aynı dildeki en yakın sayfaya ya da ana
+- **64 yeni sayfa**, eski adresleriyle:
+  - 21 TR + 19 EN konu sayfası.
+  - 5 TR + 4 EN makale.
+  - 6 TR + 6 DE hizmet sayfası. Eski sayfalar boştu, **yeni metin
+    yazılacak**; yayından önce hekim onayı alınmalı (tanıtım
+    yönetmeliği). DE adresleri eskisi gibi Türkçe slug'lı kalır.
+  - "Neden EMDR" mektubu (TR + EN): hekimin metni, ana sayfada kısa bölüm
+    ve bu sayfaya bağlantı kalır.
+  - KVKK aydınlatma metni (TR).
+  - Dil eşleri `hreflang_esi`'nde. Karşılığı olmayanlar: TR `depresyon`,
+    `okula-uyum`, `hayata-baslangic-bos-bir-tahta-midir`.
+- **124 adres 301 alır.** Hepsi aynı dildeki en yakın sayfaya ya da ana
   sayfa bölümüne gider. Dil ana sayfasına düşen 20 adres, ya eski sitede
   boş olan sayfalar (Medya, Videolar, Belgeler) ya da yönetmelik gereği
   kaldırılan danışan yorumları.
-- **Hizmet sayfaları** (6 TR + 6 DE) 301 ile ana sayfanın hizmetler
-  bölümüne gider; eski sayfalar boştu. Bir kısmı Google'da indeksli;
-  Search Console'da tıklama alıyorsa hizmet sayfası olarak yeniden
-  açılmaları düşünülmeli.
+- İçeriği yeni ana sayfada birebir bulunan sayfalar (İletişim, Randevu
+  Formu, Ekibimiz, Hakkımızda, Kurumsal, liste sayfaları) ayrı sayfa
+  olmaz; ilgili bölüme 301 alır. Bunlara gelen aramalar isim aramaları
+  ve ana sayfa bu aramalarda zaten çıkıyor.
+- **Karar bekleyen:** EN ve FR hizmet sayfaları. Eski sitede EN hizmet
+  sayfası hiç olmadı (Almanca menüdeki `/en/<türkçe-slug>` bağlantıları
+  kırıktı); açılırsa yeni adres ve kırık adreslerin hedefi o sayfalar
+  olur.
 - Eski Almanca site aslında İngilizce metinlerle kurulmuştu; Almanca içerik
   yalnızca menüdeydi. Korunacak Almanca sayfa yok.
 - `_redirects`'teki `/tr/*` splat'ı kalkacak (yeni `/tr/…` sayfalarını

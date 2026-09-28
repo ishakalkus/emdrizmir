@@ -121,8 +121,13 @@ da var; slug'ları henüz bilinmiyor:
    URL → ne yapılacak (aynı adreste yeni sayfa / en yakın sayfaya 301)
    → hedef. `_redirects`'te olmayan eski adresleri bul.
    - **Yapıldı (28.09.2026):** `migration/inventory.csv`, kararlar
-     `migration/inventory.py` içinde. 50 yeni sayfa, 139 yönlendirme,
+     `migration/inventory.py` içinde. 64 yeni sayfa, 124 yönlendirme,
      `_redirects`'ten kalkacak 2 yanlış kural. Özet: `migration/README.md`.
+   - Kullanıcı kararları (28.09.2026): 6 TR + 6 DE hizmet sayfası ve
+     "Neden EMDR" mektubu (TR + EN) ayrı sayfa olacak. Hizmet sayfaları
+     için yeni metin yazılacak, hekim onayı alınacak. İçeriği ana sayfada
+     olan sayfalar (iletişim, ekip, listeler) 301'de kalır. EN/FR hizmet
+     sayfaları için karar bekleniyor.
    - Yeni sitede iki makalenin yazarı yanlıştı (Hayata Başlangıç → Nihan
      Oğuz; Beyin Tümörleri → Nihan Oğuz, Cem İlnem, Ferhan Yener);
      dört dilde düzeltildi. Nihan Oğuz, Dr. Mehmet Oğuz'un eşi ve
