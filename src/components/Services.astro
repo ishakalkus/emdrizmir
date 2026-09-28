@@ -1,10 +1,19 @@
 ---
 import { Image } from 'astro:assets';
 import { image } from '../assets/images.js';
+import { groupHref, pagePath, pagesOf } from '../lib/pages';
+import type { Locale } from '../i18n/config.js';
 
-interface Props { t: any; }
-const { t } = Astro.props;
+interface Props { t: any; locale: Locale; }
+const { t, locale } = Astro.props;
 const s = t.services;
+
+// Her hizmetin o dildeki ayrıntı sayfası (yoksa bağlantı verilmez).
+const items = await Promise.all(
+  s.items.map(async (item: any) => ({ ...item, page: await groupHref(item.page, locale, []) }))
+);
+// Konu sayfaları: yalnızca o dilde olanlar listelenir.
+const topicPages = await pagesOf(locale, 'konu');
 ---
 <section class="sect sect--tint" id="hizmetler">
   <div class="wrap">
@@ -15,13 +24,13 @@ const s = t.services;
     </div>
 
     <div class="svcs">
-      {s.items.map((item: any) => (
+      {items.map((item: any) => (
         <article class="svc">
           <figure class="shot svc__ph">
             <Image src={image(item.image)} alt={item.alt} widths={[380, 760]} sizes="(min-width: 900px) 360px, (min-width: 600px) 50vw, 100vw" loading="lazy" />
           </figure>
           <div class="svc__body">
-            <h3>{item.title}</h3>
+            <h3>{item.page ? <a href={item.page.href}>{item.title}</a> : item.title}</h3>
             <p>{item.text}</p>
             <ul>
               {item.tags.map((tag: string) => <li>{tag}</li>)}
@@ -38,5 +47,16 @@ const s = t.services;
     <ul class="topics">
       {s.topics.map((topic: string) => <li>{topic}</li>)}
     </ul>
+
+    {/* Eski siteden taşınan konu sayfaları. Bilgilendirme sayfalarıdır;
+        randevu formuna değil, konunun kendi sayfasına gider. */}
+    {topicPages.length > 0 && (
+      <>
+        <p class="eyebrow eyebrow--spaced">{t.pages.topicsLabel}</p>
+        <ul class="topics">
+          {topicPages.map((p) => <li><a href={pagePath(p)}>{p.data.title}</a></li>)}
+        </ul>
+      </>
+    )}
   </div>
 </section>

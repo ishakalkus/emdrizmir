@@ -158,6 +158,7 @@ export default {
     items: [
       {
         image: 'svc-individual',
+        page: 'bireysel-yetiskin-psikoterapisi',
         alt: 'Deux fauteuils placés face à face avec une petite table entre eux',
         title: 'Psychothérapie individuelle de l’adulte',
         text: 'Psychothérapie de l’adulte en séances individuelles régulières. Nous décidons de la méthode avec vous.',
@@ -170,6 +171,7 @@ export default {
       },
       {
         image: 'svc-couple-family',
+        page: 'cift-aile-terapisi',
         alt: 'Un ensemble de sièges pour trois personnes, canapé et fauteuil',
         title: 'Thérapie de couple et de famille',
         text: 'Le travail consiste à rendre visibles ensemble les cycles qui se répètent dans la relation et à en reconstruire le langage.',
@@ -177,6 +179,7 @@ export default {
       },
       {
         image: 'svc-vr',
+        page: 'sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi',
         alt: 'Un casque de réalité virtuelle et un carnet posés sur une table en bois',
         title: 'Thérapie d’exposition en réalité virtuelle (RV)',
         text: 'Rencontrer la situation redoutée dans une pièce sûre, de manière contrôlée et progressive. Utilisée dans les phobies comme l’avion, la hauteur ou la foule.',
@@ -184,6 +187,7 @@ export default {
       },
       {
         image: 'svc-online',
+        page: 'online-bireysel-terapi',
         alt: 'Un ordinateur portable ouvert et une tasse sur un bureau devant une fenêtre',
         title: 'Thérapie individuelle en ligne',
         text: 'Thérapie individuelle par visioconférence, pour les personnes vivant hors d’İzmir.',
@@ -191,6 +195,7 @@ export default {
       },
       {
         image: 'svc-counselling',
+        page: 'psikoterapi-ve-psikolojik-danismanlik-hizmetleri',
         alt: 'Vu d’en haut : un carnet ouvert, un stylo-plume et une paire de lunettes',
         title: 'Psychothérapie et accompagnement psychologique',
         text: 'Entretiens d’accompagnement non centrés sur le diagnostic, portant sur les événements de vie et les processus de décision.',
@@ -198,6 +203,7 @@ export default {
       },
       {
         image: 'svc-child-adolescent',
+        page: 'cocuk-ve-ergen-terapisi-',
         alt: 'Un bac à sable, des figurines en bois et des pastels secs sur une table d’enfant',
         title: 'Thérapie de l’enfant et de l’adolescent',
         text: 'Entretiens avec des enfants et des adolescents selon des méthodes adaptées à l’âge, en collaboration avec la famille.',
@@ -353,39 +359,46 @@ export default {
     h2: 'Publications et articles',
     items: [
       {
+        page: 'bir-olgu-nedeniyle-bebek-bezi-fetisizmi',
         title: 'Fétichisme de la couche : à propos d’un cas',
         meta: ['Türk Psikiyatri Dergisi', '2005 · 16(2):133–138'],
         authors: 'Dr Nihan Oğuz, Dr Niyazi Uygur',
       },
       {
+        page: 'viral-ensefalite-bagli-deliryum-bir-olgu-sunumu',
         title: 'Delirium lié à une encéphalite virale : présentation d’un cas',
         meta: ['Présentation de cas'],
         authors: 'Nihan Oğuz, Cem İlnem, Ferhan Yener',
       },
       {
+        page: 'beyin-tumorlerin-neden-oldugu-psikiyatrik-tablolar-iki-olgu-sunumu',
         title:
           'Tableaux psychiatriques causés par des tumeurs cérébrales : deux présentations de cas',
         meta: ['Présentation de cas'],
         authors: 'Nihan Oğuz, Cem İlnem, Ferhan Yener',
       },
       {
+        page: '',
         title:
           'The Relationship Between Comorbid Psychiatric Illnesses and Psychopathy Levels On Male Individuals with Antisocial Personality Disorder in the Turkish Community',
         meta: ['European Psychiatry', '2015'],
         authors: 'R. Tütüncü, M. Oğuz, A. Ateş, S. Ümit Başar, C. Başoğlu',
       },
       {
+        page: '',
         title:
           'Temperament and Personality Traits of Bipolar Disorder I Patients Comorbid with Adult ADHD',
         meta: ['Anadolu Psikiyatri Dergisi', '2014'],
         authors: 'Nihan Oğuz, Timuçin Oral, Mehmet Oğuz',
       },
       {
+        page: 'covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak',
         title: 'Covid-19 et changement psychique : être ou ne pas être !',
         meta: ['Billet de blog'],
         authors: 'Dr Mehmet Oğuz',
       },
       {
+        page: 'hayata-baslangic-bos-bir-tahta-midir',
         title: 'Commence-t-on la vie comme une page blanche ?',
         meta: ['Billet de blog'],
         authors: 'Dr Nihan Oğuz',
@@ -482,7 +495,30 @@ export default {
       editor: 'Éditeur du site',
     },
     rights: 'EMDR İzmir · Tous droits réservés.',
-    kvkk:
-      'Notre notice d’information et notre formulaire de consentement KVKK/RGPD sont consultables au cabinet.',
+  },
+
+  /** Libellés communs aux pages hors page d’accueil (src/content/pages). */
+  pages: {
+    home: 'Accueil',
+    crumbs: {
+      konu: 'Nos domaines d’intervention',
+      hizmet: 'Nos domaines d’intervention',
+      makale: 'Articles',
+      mektup: 'Pourquoi l’EMDR',
+      kvkk: 'KVKK',
+    },
+    back: {
+      konu: 'Tous les thèmes',
+      hizmet: 'Tous nos services',
+      makale: 'Tous les articles',
+      mektup: 'Retour à l’accueil',
+      kvkk: 'Retour à l’accueil',
+    },
+    authors: 'Auteurs',
+    draft: 'Brouillon — ce texte attend une validation avant publication.',
+    topicsLabel: 'Informations par thème',
+    more: 'En savoir plus',
+    readLetter: 'Lire la lettre en entier',
+    kvkkLink: 'Notice KVKK et formulaire de consentement (en turc)',
   },
 };

@@ -158,6 +158,7 @@ export default {
     items: [
       {
         image: 'svc-individual',
+        page: 'bireysel-yetiskin-psikoterapisi',
         alt: 'Zwei einander gegenüberstehende Sessel mit einem kleinen Tisch dazwischen',
         title: 'Einzelpsychotherapie für Erwachsene',
         text: 'Psychotherapie für Erwachsene in regelmäßigen Einzelsitzungen. Über das Verfahren entscheiden wir gemeinsam mit Ihnen.',
@@ -170,6 +171,7 @@ export default {
       },
       {
         image: 'svc-couple-family',
+        page: 'cift-aile-terapisi',
         alt: 'Eine Sitzgruppe für drei Personen aus Sofa und Sessel',
         title: 'Paar- und Familientherapie',
         text: 'Die Arbeit besteht darin, die sich wiederholenden Kreisläufe in der Beziehung gemeinsam sichtbar zu machen und die Sprache darin neu aufzubauen.',
@@ -177,6 +179,7 @@ export default {
       },
       {
         image: 'svc-vr',
+        page: 'sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi',
         alt: 'Ein Virtual-Reality-Headset und ein Notizbuch auf einem Holztisch',
         title: 'Expositionstherapie mit Virtual Reality (VR)',
         text: 'Der gefürchteten Situation in einem sicheren Raum kontrolliert und in Schritten begegnen. Eingesetzt bei Phobien wie Flug-, Höhen- oder Menschenmengenangst.',
@@ -184,6 +187,7 @@ export default {
       },
       {
         image: 'svc-online',
+        page: 'online-bireysel-terapi',
         alt: 'Ein offener Laptop und eine Tasse auf einem Schreibtisch am Fenster',
         title: 'Online-Einzeltherapie',
         text: 'Einzeltherapie per Videogespräch für Klientinnen und Klienten außerhalb von İzmir.',
@@ -191,6 +195,7 @@ export default {
       },
       {
         image: 'svc-counselling',
+        page: 'psikoterapi-ve-psikolojik-danismanlik-hizmetleri',
         alt: 'Von oben gesehen: ein offenes Notizbuch, ein Füllfederhalter und eine Brille',
         title: 'Psychotherapie und psychologische Beratung',
         text: 'Nicht diagnosegeleitete Beratungsgespräche zu Lebensereignissen und Entscheidungsprozessen.',
@@ -198,6 +203,7 @@ export default {
       },
       {
         image: 'svc-child-adolescent',
+        page: 'cocuk-ve-ergen-terapisi-',
         alt: 'Ein Sandkasten, Holzfiguren und Trockenpastelle auf einem Kindertisch',
         title: 'Kinder- und Jugendlichentherapie',
         text: 'Gespräche mit Kindern und Jugendlichen mit altersgerechten Verfahren, in Zusammenarbeit mit der Familie.',
@@ -353,39 +359,46 @@ export default {
     h2: 'Publikationen und Beiträge',
     items: [
       {
+        page: 'bir-olgu-nedeniyle-bebek-bezi-fetisizmi',
         title: 'Windelfetischismus anhand eines Falles',
         meta: ['Türk Psikiyatri Dergisi', '2005 · 16(2):133–138'],
         authors: 'Dr. Nihan Oğuz, Dr. Niyazi Uygur',
       },
       {
+        page: 'viral-ensefalite-bagli-deliryum-bir-olgu-sunumu',
         title: 'Delir infolge viraler Enzephalitis: eine Falldarstellung',
         meta: ['Falldarstellung'],
         authors: 'Nihan Oğuz, Cem İlnem, Ferhan Yener',
       },
       {
+        page: 'beyin-tumorlerin-neden-oldugu-psikiyatrik-tablolar-iki-olgu-sunumu',
         title:
           'Psychiatrische Bilder infolge von Hirntumoren: zwei Falldarstellungen',
         meta: ['Falldarstellung'],
         authors: 'Nihan Oğuz, Cem İlnem, Ferhan Yener',
       },
       {
+        page: '',
         title:
           'The Relationship Between Comorbid Psychiatric Illnesses and Psychopathy Levels On Male Individuals with Antisocial Personality Disorder in the Turkish Community',
         meta: ['European Psychiatry', '2015'],
         authors: 'R. Tütüncü, M. Oğuz, A. Ateş, S. Ümit Başar, C. Başoğlu',
       },
       {
+        page: '',
         title:
           'Temperament and Personality Traits of Bipolar Disorder I Patients Comorbid with Adult ADHD',
         meta: ['Anadolu Psikiyatri Dergisi', '2014'],
         authors: 'Nihan Oğuz, Timuçin Oral, Mehmet Oğuz',
       },
       {
+        page: 'covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak',
         title: 'Covid-19 und seelischer Wandel: Sein oder Nichtsein!',
         meta: ['Blogbeitrag'],
         authors: 'Dr. med. Mehmet Oğuz',
       },
       {
+        page: 'hayata-baslangic-bos-bir-tahta-midir',
         title: 'Beginnt das Leben als leere Tafel?',
         meta: ['Blogbeitrag'],
         authors: 'Dr. med. Nihan Oğuz',
@@ -482,7 +495,30 @@ export default {
       editor: 'Redaktion der Website',
     },
     rights: 'EMDR İzmir · Alle Rechte vorbehalten.',
-    kvkk:
-      'Unsere Datenschutzhinweise und Einwilligungserklärung nach KVKK/DSGVO sind in der Praxis einsehbar.',
+  },
+
+  /** Gemeinsame Texte für Seiten außerhalb der Startseite (src/content/pages). */
+  pages: {
+    home: 'Startseite',
+    crumbs: {
+      konu: 'Unsere Leistungen',
+      hizmet: 'Unsere Leistungen',
+      makale: 'Artikel',
+      mektup: 'Warum EMDR',
+      kvkk: 'KVKK',
+    },
+    back: {
+      konu: 'Alle Themen',
+      hizmet: 'Alle Leistungen',
+      makale: 'Alle Artikel',
+      mektup: 'Zurück zur Startseite',
+      kvkk: 'Zurück zur Startseite',
+    },
+    authors: 'Autoren',
+    draft: 'Entwurf — dieser Text wartet vor der Veröffentlichung auf Freigabe.',
+    topicsLabel: 'Informationen nach Thema',
+    more: 'Mehr erfahren',
+    readLetter: 'Den ganzen Brief lesen',
+    kvkkLink: 'KVKK-Datenschutzhinweis und Einwilligung (auf Türkisch)',
   },
 };

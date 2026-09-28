@@ -4,10 +4,17 @@ import Icon from './Icon.astro';
 import { languageLinks, localePath } from '../i18n/index.js';
 import type { Locale } from '../i18n/config.js';
 
-interface Props { locale: Locale; t: any; }
-const { locale, t } = Astro.props;
-const langs = languageLinks(locale);
+interface Props {
+  locale: Locale;
+  t: any;
+  /** Alt sayfada ana sayfanın yolu; "#bolum" bağlantılarının önüne eklenir. */
+  anchorBase?: string;
+  alternates?: Partial<Record<Locale, string>>;
+}
+const { locale, t, anchorBase = '', alternates } = Astro.props;
+const langs = languageLinks(locale, alternates);
 const home = localePath(locale);
+const link = (href: string) => (href.startsWith('#') ? anchorBase + href : href);
 ---
 <header class="top" id="top">
   <div class="wrap top__in">
@@ -16,7 +23,7 @@ const home = localePath(locale);
     </a>
 
     <nav class="nav" aria-label={t.a11y.mainNav}>
-      {t.nav.map((item: any) => <a href={item.href}>{item.label}</a>)}
+      {t.nav.map((item: any) => <a href={link(item.href)}>{item.label}</a>)}
     </nav>
 
     <div class="top__cta">
@@ -52,7 +59,7 @@ const home = localePath(locale);
         <Icon name="moon" />
       </button>
 
-      <a class="btn btn--solid btn--sm" href="#iletisim">{t.cta.appointment}</a>
+      <a class="btn btn--solid btn--sm" href={link('#iletisim')}>{t.cta.appointment}</a>
 
       <button
         class="iconbtn menubtn"
@@ -69,7 +76,7 @@ const home = localePath(locale);
 
   <div class="drawer" id="drawer" data-open="false">
     <div class="wrap drawer__in">
-      {t.drawer.map((item: any) => <a href={item.href}>{item.label}</a>)}
+      {t.drawer.map((item: any) => <a href={link(item.href)}>{item.label}</a>)}
       <div class="drawer__langs">
         {langs.map((l) => (
           <a

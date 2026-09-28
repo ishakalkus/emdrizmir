@@ -2,7 +2,7 @@
 """Eski adres envanteri: her eski adres için yeni sitede ne olacağı.
 
 Girdi: urls.csv (archive.py çıktısı) ve public/_redirects.
-Çıktı: inventory.csv.
+Çıktı: inventory.csv ve public/_redirects (elle düzenlenmez, buradan üretilir).
 
 Karar türleri:
   yeni-sayfa  Aynı adreste, yeni tasarımla ayrı sayfa olarak yayınlanır.
@@ -102,9 +102,6 @@ def rd(kind, target, why, *paths):
 
 # Dil kökleri
 rd("ana-sayfa", "/", "Yeni sitede Türkçe ana sayfa kökte.", "/tr/", "/tr")
-rd("ana-sayfa", "/en/", "Sonda / eksik.", "/en")
-rd("ana-sayfa", "/de/", "Sonda / eksik.", "/de")
-rd("ana-sayfa", "/fr/", "Sonda / eksik.", "/fr")
 
 # Aynı sayfanın yazım farkları
 rd("makale", "/tr/viral-ensefalite-bagli-deliryum-bir-olgu-sunumu/",
@@ -267,6 +264,9 @@ def main():
         if p == "/":
             rec.update(tur="ana-sayfa", karar="yeni-sayfa", hedef="/", hreflang_esi="",
                        gerekce="Türkçe ana sayfa.")
+        elif p in ("/en", "/de", "/fr"):
+            rec.update(tur="ana-sayfa", karar="yeni-sayfa", hedef=p + "/", hreflang_esi="",
+                       gerekce="Sonda / eksik; Cloudflare Pages kendi 308'iyle ana sayfaya götürür.")
         elif p in ("/en/", "/de/", "/fr/"):
             rec.update(tur="ana-sayfa", karar="yeni-sayfa", hedef=p, hreflang_esi="",
                        gerekce="Dil ana sayfası." + (" Eski sitede Fransızca yoktu." if p == "/fr/" else ""))
@@ -335,11 +335,71 @@ def main():
         w.writeheader()
         w.writerows(out)
 
+    write_redirects(out)
+
     from collections import Counter
     print(len(out), "adres")
     print("karar:", dict(Counter(r["karar"] for r in out)))
     print("değişim:", dict(Counter(r["degisim"] for r in out)))
     print("yeni sayfa:", dict(Counter((r["dil"], r["tur"]) for r in out if r["karar"] == "yeni-sayfa")))
+
+
+LANG_TITLES = {"tr": "Türkçe", "en": "İngilizce", "de": "Almanca", "fr": "Fransızca",
+               "": "Eski sürümlerden kalan kök adresler (2017–2021)"}
+KIND_TITLES = {
+    "ana-sayfa": "Dil kökleri", "makale": "Makalelerin eski yazımları", "hizmet": "Hizmetler",
+    "kurumsal": "Kurumsal ve ekip", "mektup": "Neden EMDR / blog", "liste": "Liste sayfaları",
+    "iletisim": "İletişim ve randevu", "medya": "Boş sayfalar (medya, videolar, belgeler)",
+    "yorum": "Danışan yorumları (Yönetmelik md. 5/1/e gereği kaldırıldı)",
+    "kirik-baglanti": "Eski Almanca menünün /en/ altındaki kırık bağlantıları",
+    "eski-surum": "Eski sürüm adresleri",
+}
+
+
+def write_redirects(rows):
+    """public/_redirects'i envanterden üretir."""
+    lines = [
+        "# Cloudflare Pages yönlendirmeleri — ELLE DÜZENLEMEYİN.",
+        "#",
+        "# migration/inventory.py tarafından migration/inventory.csv'den üretilir.",
+        "# Bir kararı değiştirmek için inventory.py'deki tabloyu düzenleyip",
+        "# `python3 migration/inventory.py` çalıştırın. Her derlemede",
+        "# scripts/postbuild.mjs bu dosyayı envanterle karşılaştırır.",
+        "#",
+        "# Eski sitenin korunacak sayfaları (konu, makale, hizmet, KVKK, Neden",
+        "# EMDR) yeni sitede aynı adreste yayında; onlar için kural YOKTUR. Sonu",
+        "# \"/\" olmayan eski adres, Pages'in kendi 308'iyle sayfaya ulaşır.",
+        "# Aşağıdakiler yeni sitede karşılığı başka yerde olan eski adreslerdir;",
+        "# hepsi aynı dildeki en yakın ilgili sayfaya ya da ana sayfa bölümüne",
+        "# gider. www'suz ve http hâller burada değil, Cloudflare'de alan adı",
+        "# düzeyinde çözülür (DEPLOY.md).",
+        "#",
+        "# İlk eşleşen kural uygulanır; splat'lar en sonda.",
+    ]
+    rules = [r for r in rows if r["karar"] == "301" and "(kural: " not in r["gerekce"]]
+    order = ["tr", "en", "de", "fr", ""]
+    kinds = list(KIND_TITLES)
+    for lang in order:
+        group = [r for r in rules if r["dil"] == lang]
+        if not group:
+            continue
+        lines += ["", f"# ── {LANG_TITLES[lang]} " + "─" * max(4, 60 - len(LANG_TITLES[lang]))]
+        for kind in kinds:
+            sub = sorted((r for r in group if r["tur"] == kind), key=lambda r: r["eski_adres"])
+            if not sub:
+                continue
+            if lang:
+                lines.append(f"# {KIND_TITLES[kind]}")
+            width = max(len(r["eski_adres"]) for r in sub) + 2
+            lines += [f"{r['eski_adres']:<{width}}{r['hedef']}  301" for r in sub]
+            if lang:
+                lines.append("")
+        if lines[-1] == "":
+            lines.pop()
+    lines += ["", "# ── Splat'lar " + "─" * 50]
+    for src, (_, target, why) in SPLATS.items():
+        lines += [f"# {why}", f"{src}  {target}  301"]
+    (ROOT.parent / "public" / "_redirects").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

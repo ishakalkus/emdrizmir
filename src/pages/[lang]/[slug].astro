@@ -1,0 +1,18 @@
+---
+/**
+ * Ana sayfa dışındaki bütün sayfalar: /<dil>/<slug>/.
+ * İçerik: src/content/pages/<dil>/<slug>.md (bkz. src/content.config.ts).
+ */
+import DocPage from '../../components/DocPage.astro';
+import { allPages, parts } from '../../lib/pages';
+
+export async function getStaticPaths() {
+  return (await allPages()).map((entry) => ({
+    params: parts(entry),
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+---
+<DocPage entry={entry} />

@@ -1,0 +1,161 @@
+---
+/**
+ * Ana sayfa dışındaki sayfaların şablonu: konu, hizmet, makale, KVKK ve
+ * hekimin mektubu. Metin src/content/pages içindeki dosyadan gelir;
+ * mektup sayfası ise ana sayfadakiyle aynı metni i18n sözlüğünden okur
+ * (tek kaynak).
+ */
+import { Image } from 'astro:assets';
+import { render } from 'astro:content';
+import signImage from '../assets/img/dr-mehmet-oguz.jpg';
+import Base from '../layouts/Base.astro';
+import { t as dict, localePath } from '../i18n/index.js';
+import { SITE_URL, IS_PREVIEW } from '../i18n/config.js';
+import { alternatesOf, pagePath, pagesOf, parts, sectionOf, type PageEntry } from '../lib/pages';
+
+interface Props { entry: PageEntry; }
+const { entry } = Astro.props;
+const { lang } = parts(entry);
+const t = dict(lang);
+const p = t.pages;
+const d = entry.data;
+
+const path = pagePath(entry);
+const alternates = await alternatesOf(entry);
+const { Content } = await render(entry);
+const section = sectionOf(d.kind, lang);
+
+// Aynı türdeki diğer sayfalar: sayfalar arası bağlantı, hiçbir sayfa
+// sitede bağlantısız kalmasın.
+const related = d.kind === 'kvkk' || d.kind === 'mektup'
+  ? []
+  : (await pagesOf(lang, d.kind)).filter((other) => other.id !== entry.id);
+
+const url = SITE_URL + path;
+const orgId = `${SITE_URL}/#organization`;
+const crumbs = [
+  { name: p.home, href: localePath(lang) },
+  ...(d.kind === 'kvkk' ? [] : [{ name: p.crumbs[d.kind], href: section }]),
+  { name: d.title, href: path },
+];
+
+const people = (d.authors ?? '')
+  .split(',')
+  .map((name) => name.trim())
+  .filter(Boolean)
+  .map((name) => ({ '@type': 'Person', name }));
+
+const mainNode =
+  d.kind === 'makale'
+    ? {
+        '@type': d.publication ? 'ScholarlyArticle' : 'Article',
+        '@id': `${url}#article`,
+        headline: d.title,
+        description: d.description,
+        inLanguage: t.htmlLang,
+        url,
+        mainEntityOfPage: url,
+        ...(people.length ? { author: people } : {}),
+        publisher: { '@id': orgId },
+      }
+    : {
+        '@type': d.kind === 'konu' || d.kind === 'hizmet' ? 'MedicalWebPage' : 'WebPage',
+        '@id': `${url}#webpage`,
+        name: d.title,
+        description: d.description,
+        inLanguage: t.htmlLang,
+        url,
+        isPartOf: { '@id': `${SITE_URL}/#website` },
+        publisher: { '@id': orgId },
+        ...(d.kind === 'konu' ? { about: { '@type': 'MedicalCondition', name: d.title } } : {}),
+        ...(d.kind === 'hizmet' ? { about: { '@type': 'MedicalTherapy', name: d.title } } : {}),
+      };
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    mainNode,
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: crumbs.map((c, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: c.name,
+        item: SITE_URL + c.href.replace(/#.*$/, ''),
+      })),
+    },
+  ],
+};
+
+const w = t.why;
+---
+<Base
+  locale={lang}
+  title={`${d.title} — EMDR İzmir`}
+  description={d.description}
+  path={path}
+  alternates={alternates}
+  ogType={d.kind === 'makale' ? 'article' : 'website'}
+  jsonLd={jsonLd}
+>
+  <article class="sect doc" data-kind={d.kind}>
+    <div class="wrap">
+      <nav class="crumbs" aria-label={p.home}>
+        <ol>
+          {crumbs.slice(0, -1).map((c) => <li><a href={c.href}>{c.name}</a></li>)}
+          <li aria-current="page">{d.title}</li>
+        </ol>
+      </nav>
+
+      {d.draft && (
+        <p class="draft" data-draft={d.draft}>
+          <b>{p.draft}</b>
+          {IS_PREVIEW && <span> {d.draft}</span>}
+        </p>
+      )}
+
+      <header class="doc__head">
+        <h1>{d.title}</h1>
+        {d.publication && !d.bylineInBody && <p class="doc__pub">{d.publication}</p>}
+        {d.authors && !d.bylineInBody && (
+          <p class="doc__auth"><span class="visually-hidden">{p.authors}: </span>{d.authors}</p>
+        )}
+      </header>
+
+      {d.kind === 'mektup' ? (
+        <div class="letter doc__letter">
+          <span class="letter__mark" aria-hidden="true">“</span>
+          <blockquote>
+            {[...w.intro, ...w.body].map((para: string) => <p>{para}</p>)}
+          </blockquote>
+          <div class="letter__sign">
+            <Image src={signImage} alt="" width={52} height={52} densities={[1, 2]} loading="lazy" />
+            <div>
+              <b>{w.sign.name}</b>
+              <span>{w.sign.role}</span>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div class="doc__body">
+          <Content />
+        </div>
+      )}
+
+      {d.kind === 'mektup' && <blockquote class="prose closing">{w.closing}</blockquote>}
+
+      <footer class="doc__foot">
+        {related.length > 0 && (
+          <ul class="topics">
+            {related.map((other) => (
+              <li><a href={pagePath(other)}>{other.data.title}</a></li>
+            ))}
+          </ul>
+        )}
+        <p class="stack-lg">
+          <a class="doc__back" href={section}>{p.back[d.kind]}</a>
+        </p>
+      </footer>
+    </div>
+  </article>
+</Base>

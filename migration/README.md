@@ -21,6 +21,10 @@ dayanır.
 | `wayback-cdx.json` | archive.org'un bu alan adı için tuttuğu bütün kayıtların listesi |
 | `extra-seeds.txt` | Menüden ulaşılamayan, elle bulunan adresler ve nasıl bulunduğu |
 | `archive.py`, `screenshots.py` | Arşivi yeniden üreten betikler |
+| `inventory.py` | Karar tablosu; `inventory.csv` ve `public/_redirects`'i üretir |
+| `make_content.py`, `topics_edit.py`, `services_draft.py` | `src/content/pages/` dosyalarını ilk kez üreten betikler (bir kez çalıştı; var olan dosyaya dokunmaz) |
+| `content-changes.md` | Taşınan metinlerde neyin neden değiştiği |
+| `check_urls.py` | Eski adreslerin hepsini yeni sitede dener (yerelde ya da yayında) |
 
 `.json` dosyasındaki alanlar: `title`, `meta_description`, `canonical`,
 `hreflang`, `h1`/`h2`/`h3`, `breadcrumb`, `body_text` (gövde metninin

@@ -157,6 +157,7 @@ export default {
     items: [
       {
         image: 'svc-individual',
+        page: 'bireysel-yetiskin-psikoterapisi',
         alt: 'Karşılıklı yerleştirilmiş iki koltuk ve aralarındaki küçük sehpa',
         title: 'Bireysel Yetişkin Psikoterapisi',
         text: 'Bire bir, düzenli seanslarla yürütülen yetişkin psikoterapisi. Yönteme sizinle birlikte karar veriyoruz.',
@@ -169,6 +170,7 @@ export default {
       },
       {
         image: 'svc-couple-family',
+        page: 'cift-aile-terapisi',
         alt: 'Kanepe ve koltuktan oluşan üç kişilik oturma düzeni',
         title: 'Çift ve Aile Terapisi',
         text: 'İlişki içindeki tekrar eden döngüleri birlikte görünür kılmak ve dili yeniden kurmak üzerine çalışılır.',
@@ -176,6 +178,7 @@ export default {
       },
       {
         image: 'svc-vr',
+        page: 'sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi',
         alt: 'Ahşap masada duran sanal gerçeklik başlığı ve not defteri',
         title: 'Sanal Gerçeklik (VR) ile Alıştırma Tedavisi',
         text: 'Korkulan durumla, güvenli bir odada, kontrollü ve kademeli olarak karşılaşma. Uçak, yükseklik, kalabalık gibi fobilerde kullanılır.',
@@ -183,6 +186,7 @@ export default {
       },
       {
         image: 'svc-online',
+        page: 'online-bireysel-terapi',
         alt: 'Pencere önündeki masada açık dizüstü bilgisayar ve fincan',
         title: 'Online Bireysel Terapi',
         text: 'İzmir dışında yaşayan danışanlarımız için görüntülü görüşme ile yürütülen bireysel terapi.',
@@ -190,6 +194,7 @@ export default {
       },
       {
         image: 'svc-counselling',
+        page: 'psikoterapi-ve-psikolojik-danismanlik-hizmetleri',
         alt: 'Üstten görünüm: açık not defteri, dolma kalem ve gözlük',
         title: 'Psikoterapi ve Psikolojik Danışmanlık',
         text: 'Tanı odaklı olmayan, yaşam olayları ve karar süreçleri üzerine yürütülen danışmanlık görüşmeleri.',
@@ -197,6 +202,7 @@ export default {
       },
       {
         image: 'svc-child-adolescent',
+        page: 'cocuk-ve-ergen-terapisi-',
         alt: 'Çocuk masasında kum tepsisi, ahşap figürler ve kuru boyalar',
         title: 'Çocuk ve Ergen Terapisi',
         text: 'Yaşa uygun yöntemlerle, aile ile iş birliği içinde yürütülen çocuk ve ergen görüşmeleri.',
@@ -352,39 +358,46 @@ export default {
     h2: 'Yayınlar ve yazılar',
     items: [
       {
+        page: 'bir-olgu-nedeniyle-bebek-bezi-fetisizmi',
         title: 'Bir Olgu Nedeniyle Bebek Bezi Fetişizmi',
         meta: ['Türk Psikiyatri Dergisi', '2005 · 16(2):133–138'],
         authors: 'Dr. Nihan Oğuz, Dr. Niyazi Uygur',
       },
       {
+        page: 'viral-ensefalite-bagli-deliryum-bir-olgu-sunumu',
         title: 'Viral Ensefalite Bağlı Deliryum: Bir Olgu Sunumu',
         meta: ['Olgu sunumu'],
         authors: 'Nihan Oğuz, Cem İlnem, Ferhan Yener',
       },
       {
+        page: 'beyin-tumorlerin-neden-oldugu-psikiyatrik-tablolar-iki-olgu-sunumu',
         title:
           'Beyin Tümörlerinin Neden Olduğu Psikiyatrik Tablolar: İki Olgu Sunumu',
         meta: ['Olgu sunumu'],
         authors: 'Nihan Oğuz, Cem İlnem, Ferhan Yener',
       },
       {
+        page: '',
         title:
           'The Relationship Between Comorbid Psychiatric Illnesses and Psychopathy Levels On Male Individuals with Antisocial Personality Disorder in the Turkish Community',
         meta: ['European Psychiatry', '2015'],
         authors: 'R. Tütüncü, M. Oğuz, A. Ateş, S. Ümit Başar, C. Başoğlu',
       },
       {
+        page: '',
         title:
           'Temperament and Personality Traits of Bipolar Disorder I Patients Comorbid with Adult ADHD',
         meta: ['Anadolu Psikiyatri Dergisi', '2014'],
         authors: 'Nihan Oğuz, Timuçin Oral, Mehmet Oğuz',
       },
       {
+        page: 'covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak',
         title: 'Covid-19 ve Ruhsal Değişim: Olmak ya da Olmamak!',
         meta: ['Blog yazısı'],
         authors: 'Uzm. Dr. Mehmet Oğuz',
       },
       {
+        page: 'hayata-baslangic-bos-bir-tahta-midir',
         title: 'Hayata Başlangıç Boş Bir Tahta mıdır?',
         meta: ['Blog yazısı'],
         authors: 'Uzm. Dr. Nihan Oğuz',
@@ -480,6 +493,30 @@ export default {
       editor: 'Site editörü',
     },
     rights: 'EMDR İzmir · Tüm hakları saklıdır.',
-    kvkk: 'KVKK aydınlatma ve onam metnimiz muayenehanemizde erişilebilirdir.',
+  },
+
+  /** Ana sayfa dışındaki sayfalar (src/content/pages) için ortak metinler. */
+  pages: {
+    home: 'Ana sayfa',
+    crumbs: {
+      konu: 'Çalışma Alanlarımız',
+      hizmet: 'Çalışma Alanlarımız',
+      makale: 'Makaleler',
+      mektup: 'Neden EMDR',
+      kvkk: 'KVKK',
+    },
+    back: {
+      konu: 'Tüm çalışma alanları',
+      hizmet: 'Tüm hizmetlerimiz',
+      makale: 'Tüm makaleler',
+      mektup: 'Ana sayfaya dön',
+      kvkk: 'Ana sayfaya dön',
+    },
+    authors: 'Yazarlar',
+    draft: 'Taslak — bu metin yayından önce onay bekliyor.',
+    topicsLabel: 'Konulara göre bilgi',
+    more: 'Ayrıntılı bilgi',
+    readLetter: 'Mektubun tamamı',
+    kvkkLink: 'KVKK aydınlatma ve onam metni',
   },
 };

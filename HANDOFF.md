@@ -158,6 +158,23 @@ da var; slug'ları henüz bilinmiyor:
      sonda `/` olmadan (`/tr/panik-atak`). Pages bu durumda tek bir 308
      yönlendirmesi yapar. Bu kabul edilebilir; yine de canonical'ın
      tutarlı olduğunu doğrula.
+   - **Yapıldı (28.09.2026), 4. ve 5. adım birlikte.**
+     - Sayfalar: `src/content/pages/<dil>/<slug>.md`, şablon
+       `src/components/DocPage.astro`, yol `src/pages/[lang]/[slug].astro`.
+     - `public/_redirects` artık elle yazılmıyor:
+       `python3 migration/inventory.py` envanterden üretir.
+     - `postbuild.mjs` şunları denetler: splat'ın ya da tekil kuralın
+       sayfayı yutması, envanterdeki her eski adresin yerinde olması,
+       bağlantısız sayfa, gerçek alan adında taslak.
+     - Site haritası artık `src/pages/sitemap.xml.ts`;
+       `@astrojs/sitemap` kaldırıldı.
+     - `python3 migration/check_urls.py <adres>` eski adreslerin hepsini
+       dener. Wrangler ile yerelde 195/195 doğru.
+     - Metin değişiklikleri: `migration/content-changes.md`.
+   - **Onay bekleyen 25 taslak sayfa:** 24 hizmet sayfası (yeni metin) ve
+     KVKK (eski adres/e-posta). Taslak varken gerçek alan adıyla derleme
+     durur. Yerelde `NOINDEX=1 npm run build` kullan; Pages önizlemesi
+     pages.dev adresiyle derlendiği için etkilenmez.
 5. **Kalan eski adresler** için 301'i en yakın **ilgili** sayfaya ver,
    ana sayfaya değil.
 

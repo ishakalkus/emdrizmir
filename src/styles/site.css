@@ -699,3 +699,54 @@ ul{margin:0;padding:0;list-style:none}
 
 /* 404 ve benzeri kısa sayfalarda blok arası boşluk */
 .stack-lg{margin-top:26px}
+
+/* ── alt sayfalar: konu, hizmet, makale, KVKK, mektup ──────── */
+.doc .wrap{max-width:calc(760px + 2 * var(--gutter))}
+.crumbs ol{display:flex;flex-wrap:wrap;gap:4px 0;margin:0;padding:0;list-style:none;font-size:13.5px;color:var(--muted)}
+.crumbs li+li::before{content:"›";margin:0 9px;color:var(--line)}
+.crumbs a{color:var(--muted);text-decoration:none}
+.crumbs a:hover{color:var(--accent)}
+.doc__head{margin:26px 0 clamp(28px,4vw,40px)}
+.doc__head h1{
+  font-size:clamp(30px,4.4vw,46px);
+  font-variation-settings:"SOFT" 20,"opsz" 72;font-weight:450;
+}
+.doc__pub{margin-top:14px;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.doc__auth{margin-top:6px;font-size:15px;color:var(--ink-2)}
+.doc__body{color:var(--ink-2);font-size:17.5px;line-height:1.75}
+.doc__body > * + *{margin-top:1.05em}
+.doc__body h2,.doc__body h3{color:var(--ink);margin-top:1.8em}
+.doc__body h2{font-size:clamp(22px,2.6vw,28px)}
+.doc__body h3{font-size:clamp(19px,2.1vw,22px)}
+.doc__body strong,.doc__body b{color:var(--ink);font-weight:600}
+.doc__body ul{list-style:disc;padding-inline-start:1.3em}
+.doc__body ol{padding-inline-start:1.5em}
+.doc__body li+li{margin-top:.35em}
+.doc__letter{margin-top:8px}
+.doc__foot{margin-top:clamp(40px,6vw,64px);padding-top:26px;border-top:1px solid var(--line-soft)}
+.doc__foot .topics{margin-top:0}
+.topics a{
+  display:inline-block;font-size:14px;color:var(--ink-2);text-decoration:none;
+  border:1px solid var(--line);border-radius:999px;padding:8px 15px;
+  transition:border-color .2s,color .2s,background .2s;
+}
+.topics a:hover,.topics a:focus-visible{border-color:var(--accent);color:var(--accent)}
+.topics li:has(> a){border:0;padding:0}
+.doc__back{font-size:14.5px;font-weight:600;text-decoration:none}
+.doc__back::before{content:"← "}
+
+/* onay bekleyen metin — gerçek alan adında derleme durur */
+.draft{
+  margin-top:22px;padding:14px 18px;border-radius:12px;
+  background:var(--amber-wash);color:var(--ink);font-size:14.5px;line-height:1.55;
+  border:1px solid color-mix(in srgb,var(--amber) 40%,transparent);
+}
+
+/* ana sayfadan alt sayfalara */
+.svc h3 a,.paper h3 a{color:inherit;text-decoration:none}
+.svc h3 a:hover,.paper h3 a:hover{color:var(--accent);text-decoration:underline}
+.svc h3 a::after{content:"";position:absolute;inset:0}
+.svc{position:relative}
+.letter .letter__more{font-family:var(--sans);font-size:13.5px;font-weight:600;margin-top:20px}
+.letter__more a{text-decoration:none}
+.letter__more a::after{content:" →"}

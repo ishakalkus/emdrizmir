@@ -6,6 +6,10 @@
  *     Böylece CSP'de 'unsafe-inline' açmak gerekmez.
  *  2. dist/_headers dosyasındaki __CSP__ yer tutucusunu doldurur.
  *  3. Kaçak satır içi style="" niteliği kaldıysa uyarır (CSP'yi bozar).
+ *  4. _redirects'i denetler: gerçek sayfayı gölgeleyen kural, döngü,
+ *     ölü hedef; eski adres envanteriyle (migration/inventory.csv) uyum.
+ *  5. Sitede bağlantısız kalan sayfa ve gerçek alan adında taslak sayfa
+ *     varsa derlemeyi durdurur.
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -40,9 +44,11 @@ for (const file of files) {
   const html = await fs.readFile(file, 'utf8');
   const rel = path.relative(DIST, file);
 
-  // src'siz <script> blokları
+  // src'siz <script> blokları. JSON-LD veri bloğudur, çalıştırılmaz; CSP
+  // onu engellemez, özetini eklemek başlığı sayfa sayısı kadar şişirir.
   for (const m of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)) {
     if (/\bsrc\s*=/i.test(m[1])) continue;
+    if (/type\s*=\s*["']?application\/ld\+json/i.test(m[1])) continue;
     if (m[2].length === 0) continue;
     scriptHashes.add(sha256(m[2]));
   }
@@ -205,20 +211,95 @@ const rules = (await fs.readFile(redirectsPath, 'utf8'))
 const globToRe = (g) =>
   new RegExp('^' + g.split('*').map((x) => x.replace(/[.+?^${}()|[\]\\]/g, '\\$&')).join('.*') + '$');
 
+// Yayındaki sayfalar (klasör + index.html). Cloudflare Pages kuralları,
+// aynı adreste dosya olsa bile uygular; sonu "/" olmayan eski adres de
+// sayfaya ancak kural yoksa (tek bir 308 ile) ulaşır.
+const pages = [...assets].filter((a) => a.endsWith('/') && a !== '/404/');
+
 const problems = [];
 const seen = new Set();
 for (const { from, to } of rules) {
   const target = to.split('#')[0];
   if (seen.has(from)) problems.push(`${from} — aynı kaynak birden çok kez tanımlı`);
   seen.add(from);
-  if (assets.has(from)) problems.push(`${from} — gerçek bir sayfayı gölgeliyor`);
+  if (from.includes('*')) {
+    const re = globToRe(from);
+    const eaten = pages.filter((p) => re.test(p) || re.test(p.slice(0, -1)));
+    if (eaten.length)
+      problems.push(`${from} — gerçek sayfaları yutuyor: ${eaten.slice(0, 4).join(', ')}${eaten.length > 4 ? ' …' : ''}`);
+  } else if (assets.has(from) || assets.has(from + '/') || (from.endsWith('/') && assets.has(from.slice(0, -1)))) {
+    problems.push(`${from} — gerçek bir sayfayı gölgeliyor`);
+  }
   if (!assets.has(target)) problems.push(`${from} → ${to} — hedef yayında yok`);
   if (from === target) problems.push(`${from} → ${to} — döngü`);
   else if (from.includes('*') && globToRe(from).test(target))
     problems.push(`${from} → ${to} — splat kendi hedefiyle eşleşiyor, döngü kurar`);
 }
 
+/* Eski adres envanteri: her eski adres ya aynı yerde yayında ya da
+   envanterdeki hedefe yönlendiriliyor mu? (migration/inventory.csv) */
+const inventoryPath = path.join(ROOT, 'migration', 'inventory.csv');
+let inventoryCount = 0;
+try {
+  const [head, ...lines] = (await fs.readFile(inventoryPath, 'utf8')).trim().split('\n');
+  const cols = head.split(',');
+  const col = (name) => cols.indexOf(name);
+  const byFrom = new Map(rules.map((r) => [r.from, r.to]));
+  for (const line of lines) {
+    // Envanterde virgül içeren alan tırnaklı; ilk beş sütunda virgül yok.
+    const cells = line.split(',');
+    const [oldPath, karar, hedef] = [cells[col('eski_adres')], cells[col('karar')], cells[col('hedef')]];
+    inventoryCount++;
+    if (karar === 'yeni-sayfa') {
+      if (!assets.has(hedef)) problems.push(`envanter: ${oldPath} → ${hedef} yeni sayfa olarak yayında değil`);
+    } else if (karar === '301') {
+      const splat = rules.find((r) => r.from.includes('*') && globToRe(r.from).test(oldPath));
+      const to = byFrom.get(oldPath) ?? splat?.to;
+      if (to !== hedef) problems.push(`envanter: ${oldPath} → ${hedef} bekleniyordu, _redirects: ${to ?? 'kural yok'}`);
+    } else if (karar === 'kural-kaldir') {
+      if (byFrom.has(oldPath)) problems.push(`envanter: ${oldPath} için kural kaldırılmalıydı`);
+    }
+  }
+} catch (err) {
+  if (err.code !== 'ENOENT') throw err;
+}
+
 if (problems.length) {
   throw new Error('_redirects tutarsız:\n  ' + problems.join('\n  '));
 }
-console.log(`✓ _redirects — ${rules.length} kural tutarlı (gölgeleme, döngü, ölü hedef yok)\n`);
+console.log(
+  `✓ _redirects — ${rules.length} kural tutarlı (gölgeleme, döngü, ölü hedef yok)` +
+    (inventoryCount ? `; ${inventoryCount} eski adresin hepsi yerinde ya da doğru hedefe gidiyor` : '') +
+    '\n'
+);
+
+/* ── bağlantısız sayfa ve taslak denetimi ───────────────────────────
+   Her sayfaya en az bir başka sayfadan bağlantı verilmeli; aksi hâlde
+   ziyaretçi de arama motoru da ona site içinden ulaşamaz. Onay bekleyen
+   (taslak) metin gerçek alan adında yayınlanamaz. */
+const linkedFrom = new Map(pages.map((p) => [p, 0]));
+const drafts = [];
+for (const file of files) {
+  const html = await fs.readFile(file, 'utf8');
+  const self = '/' + path.relative(DIST, path.dirname(file)).split(path.sep).join('/') + '/';
+  const selfPath = self === '//' ? '/' : self;
+  if (/\bdata-draft=/.test(html)) drafts.push(selfPath);
+  for (const m of html.matchAll(/<a\b[^>]*\shref="([^"#?]*)(?:[#?][^"]*)?"/gi)) {
+    let href = m[1];
+    if (!href.startsWith('/') || href.startsWith('//')) continue;
+    if (!href.endsWith('/') && !path.extname(href)) href += '/';
+    if (href !== selfPath && linkedFrom.has(href)) linkedFrom.set(href, linkedFrom.get(href) + 1);
+  }
+}
+const orphans = [...linkedFrom].filter(([, n]) => n === 0).map(([p]) => p);
+if (orphans.length) {
+  throw new Error('Sitede hiçbir sayfadan bağlantı verilmeyen sayfalar var:\n  ' + orphans.join('\n  '));
+}
+console.log(`✓ ${pages.length} sayfanın hepsine site içinden bağlantı var\n`);
+
+if (drafts.length) {
+  const msg =
+    `${drafts.length} sayfa onay bekleyen taslak içeriyor:\n  ` + drafts.join('\n  ');
+  if (!IS_PREVIEW) throw new Error(msg + '\nGerçek alan adıyla yayından önce onaylanıp taslak işareti kaldırılmalı.');
+  console.warn(`⚠  ${msg}\n   Geçici adreste uyarı bandıyla yayınlanıyor; gerçek alan adında derleme durur.\n`);
+}

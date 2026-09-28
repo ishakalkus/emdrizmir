@@ -7,7 +7,7 @@ import JsonLd from '../components/JsonLd.astro';
 import Analytics from '../components/Analytics.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { t as dict, assertParity, assertHours } from '../i18n/index.js';
+import { t as dict, assertParity, assertHours, localePath } from '../i18n/index.js';
 import type { Locale } from '../i18n/config.js';
 
 interface Props {
@@ -15,8 +15,19 @@ interface Props {
   title?: string;
   description?: string;
   noindex?: boolean;
+  /** Alt sayfanın yolu. Verilmezse sayfa dilin ana sayfasıdır. */
+  path?: string;
+  /** Alt sayfanın var olan dil eşleri (hreflang ve dil seçici). */
+  alternates?: Partial<Record<Locale, string>>;
+  ogType?: 'website' | 'article';
+  /** Sayfaya özgü ek yapılandırılmış veri (Article, BreadcrumbList …). */
+  jsonLd?: Record<string, unknown>;
 }
-const { locale, title, description, noindex = false } = Astro.props;
+const { locale, title, description, noindex = false, path, alternates, ogType, jsonLd } = Astro.props;
+
+// Menüdeki "#bolum" bağlantıları ana sayfanın bölümleri; alt sayfada
+// ana sayfanın adresiyle birlikte yazılmalı.
+const anchorBase = path ? localePath(locale) : '';
 
 // Bir dile çeviri eklenip diğerleri unutulursa derleme burada durur.
 assertParity();
@@ -43,7 +54,16 @@ const themeBoot =
 
     <script is:inline set:html={themeBoot} />
 
-    <Seo locale={locale} t={t} title={title} description={description} noindex={noindex} />
+    <Seo
+      locale={locale}
+      t={t}
+      title={title}
+      description={description}
+      noindex={noindex}
+      path={path}
+      alternates={alternates}
+      ogType={ogType}
+    />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
@@ -55,19 +75,22 @@ const themeBoot =
     <link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-latin-opsz-normal.woff2" crossorigin />
 
     {!noindex && <JsonLd locale={locale} t={t} />}
+    {!noindex && jsonLd && (
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
+    )}
     <Analytics />
   </head>
 
   <body>
     <a class="skip" href="#main">{t.a11y.skip}</a>
 
-    <Header locale={locale} t={t} />
+    <Header locale={locale} t={t} anchorBase={anchorBase} alternates={alternates} />
 
     <main id="main">
       <slot />
     </main>
 
-    <Footer t={t} />
+    <Footer t={t} anchorBase={anchorBase} />
 
     <script src="../scripts/site.js"></script>
   </body>

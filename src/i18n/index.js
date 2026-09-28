@@ -14,12 +14,15 @@ export function t(locale) {
   return dict;
 }
 
-/** Dil seçici için her dilin adı ve kök yolu. */
-export function languageLinks(current) {
+/**
+ * Dil seçici için her dilin adı ve adresi. Alt sayfada o sayfanın dil
+ * eşleri verilir; eşi olmayan dil kendi ana sayfasına gider.
+ */
+export function languageLinks(current, alternates = {}) {
   return LOCALES.map((code) => ({
     code,
     name: dictionaries[code].name,
-    href: localePath(code),
+    href: alternates[code] ?? localePath(code),
     current: code === current,
   }));
 }

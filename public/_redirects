@@ -1,82 +1,180 @@
-# Cloudflare Pages yönlendirmeleri.
+# Cloudflare Pages yönlendirmeleri — ELLE DÜZENLEMEYİN.
 #
-# Eski site /tr/slug, /en/slug, /de/slug yapısındaydı ve ~60 sayfaydı.
-# Yeni site dil başına tek sayfa olduğu için eski adresler bölüm
-# çapalarına yönlendirilir. Amaç 404 vermemek ve gelen bağlantıyı
-# doğru bölüme indirmektir; tek sayfaya toplandığı için eski
-# sayfaların arama sıralaması bu yolla korunamaz.
+# migration/inventory.py tarafından migration/inventory.csv'den üretilir.
+# Bir kararı değiştirmek için inventory.py'deki tabloyu düzenleyip
+# `python3 migration/inventory.py` çalıştırın. Her derlemede
+# scripts/postbuild.mjs bu dosyayı envanterle karşılaştırır.
 #
-# Adresler Google indeksinden çıkarıldı (sitemap.xml yayınlanmıyor).
-# İlk eşleşen kural uygulanır, sıra önemlidir.
+# Eski sitenin korunacak sayfaları (konu, makale, hizmet, KVKK, Neden
+# EMDR) yeni sitede aynı adreste yayında; onlar için kural YOKTUR. Sonu
+# "/" olmayan eski adres, Pages'in kendi 308'iyle sayfaya ulaşır.
+# Aşağıdakiler yeni sitede karşılığı başka yerde olan eski adreslerdir;
+# hepsi aynı dildeki en yakın ilgili sayfaya ya da ana sayfa bölümüne
+# gider. www'suz ve http hâller burada değil, Cloudflare'de alan adı
+# düzeyinde çözülür (DEPLOY.md).
+#
+# İlk eşleşen kural uygulanır; splat'lar en sonda.
 
-# ── Türkçe ────────────────────────────────────────────────────
-/tr/iletisim                                   /#iletisim     301
-/tr/ekibimiz                                   /#ekip         301
-/tr/kurumsal                                   /#ekip         301
-/tr/hakkimizda                                 /#ekip         301
-/tr/neden-emdr                                 /#neden        301
-/tr/blog                                       /#neden        301
-/tr/calisma-alanlarimiz                        /#hizmetler    301
-/tr/makalelerimiz                              /#makaleler    301
+# ── Türkçe ──────────────────────────────────────────────────────
+# Dil kökleri
+/tr   /  301
+/tr/  /  301
 
-# Hizmet sayfaları
-/tr/bireysel-yetiskin-psikoterapisi            /#hizmetler    301
-/tr/cift-aile-terapisi                         /#hizmetler    301
-/tr/online-bireysel-terapi                     /#hizmetler    301
-/tr/cocuk-ve-ergen-terapisi                    /#hizmetler    301
-/tr/psikoterapi-ve-psikolojik-danismanlik      /#hizmetler    301
+# Makalelerin eski yazımları
+/tr/covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak-  /tr/covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak/  301
+/tr/viral-ensefalite-baglideliryum-bir-olgu-sunumu   /tr/viral-ensefalite-bagli-deliryum-bir-olgu-sunumu/  301
 
-# Konu sayfaları
-/tr/kaygi-bozukluklari                         /#hizmetler    301
-/tr/panik-atak                                 /#hizmetler    301
-/tr/depresyon                                  /#hizmetler    301
-/tr/travma-sonrasi-stres-bozuklugu             /#hizmetler    301
-/tr/kisilik-bozukluklari                       /#hizmetler    301
-/tr/obsesif--kompulsif-bozukluk                /#hizmetler    301
-/tr/yeme-bozukluklari                          /#hizmetler    301
-/tr/psikosomatik-bozukluklar                   /#hizmetler    301
-/tr/uyum-problemleri                           /#hizmetler    301
-/tr/davranis-bozukluklari                      /#hizmetler    301
+# Kurumsal ve ekip
+/tr/ekibimiz    /#ekip  301
+/tr/hakkimizda  /#ekip  301
+/tr/kurumsal    /#ekip  301
 
-# Makale sayfaları
-/tr/bir-olgu-nedeniyle-bebek-bezi-fetisizmi    /#makaleler    301
-/tr/beyin-tumorlerin-neden-oldugu-psikiyatrik-tablolar-iki-olgu-sunumu  /#makaleler  301
-/tr/hayata-baslangic-bos-bir-tahta-midir       /#makaleler    301
+# Neden EMDR / blog
+/tr/blog  /tr/neden-emdr/  301
 
-# Danışan yorumları sayfası: içerik Yönetmelik md. 5/1/e uyarınca
-# kaldırıldı, çapa yok — ana sayfaya iner.
-/tr/danisan-yorumlari                          /              301
+# Liste sayfaları
+/tr/calisma-alanlarimiz  /#hizmetler  301
+/tr/makalelerimiz        /#makaleler  301
 
-# Kalan bütün /tr/ adresleri (içerik toplandığı için hepsi ana sayfada).
-# Hedef kaynaktan farklı olduğu için döngü riski yoktur.
-/tr/*                                          /              301
-/tr                                            /              301
+# İletişim ve randevu
+/tr/iletisim       /#iletisim  301
+/tr/randevu-formu  /#iletisim  301
 
-# ── İngilizce ─────────────────────────────────────────────────
-# Splat kullanılmıyor: "/en/*" kuralı "/en/" adresinin kendisiyle de
-# eşleşip sonsuz yönlendirme döngüsü kurabilirdi. Bilinen adresler tek
-# tek yazıldı; listede olmayan eski bir adres 404 sayfasına düşer ve
-# oradan dört dile de geçilebilir.
-/en/contact          /en/#iletisim    301
-/en/why--emdr        /en/#neden       301
-/en/blog             /en/#neden       301
-/en/our-team         /en/#ekip        301
-/en/about-us         /en/#ekip        301
-/en/corporate        /en/#ekip        301
-/en/articles         /en/#makaleler   301
-/en/study-areas      /en/#hizmetler   301
-/en/client-comments  /en/             301
-/en                  /en/             301
+# Boş sayfalar (medya, videolar, belgeler)
+/tr/medya     /  301
+/tr/videolar  /  301
 
-# ── Almanca ───────────────────────────────────────────────────
-/de/kontakt                /de/#iletisim    301
-/de/uber-uns               /de/#ekip        301
-/de/unser-team             /de/#ekip        301
-/de/unsere-artikel         /de/#makaleler   301
-/de/unsere-studienbereiche /de/#hizmetler   301
-/de/unsere-dokumente       /de/             301
-/de/medien                 /de/             301
-/de                        /de/             301
+# Danışan yorumları (Yönetmelik md. 5/1/e gereği kaldırıldı)
+/tr/danisan-yorumlari  /  301
 
-# ── Fransızca (eski sitede yoktu) ─────────────────────────────
-/fr                  /fr/             301
+# ── İngilizce ───────────────────────────────────────────────────
+# Kurumsal ve ekip
+/en/about-us   /en/#ekip  301
+/en/corporate  /en/#ekip  301
+/en/our-team   /en/#ekip  301
+
+# Neden EMDR / blog
+/en/blog  /en/why--emdr/  301
+
+# Liste sayfaları
+/en/articles     /en/#makaleler  301
+/en/study-areas  /en/#hizmetler  301
+
+# İletişim ve randevu
+/en/appointment-form  /en/#iletisim  301
+/en/contact           /en/#iletisim  301
+
+# Boş sayfalar (medya, videolar, belgeler)
+/en/documents  /en/  301
+/en/media      /en/  301
+/en/videos     /en/  301
+
+# Danışan yorumları (Yönetmelik md. 5/1/e gereği kaldırıldı)
+/en/client-comments  /en/  301
+
+# Eski Almanca menünün /en/ altındaki kırık bağlantıları
+/en/bireysel-yetiskin-psikoterapisi                      /en/individual-adult-psychotherapy/  301
+/en/cift-aile-terapisi                                   /en/couple-and-family-therapy/  301
+/en/cocuk-ve-ergen-terapisi-                             /en/child-and-adolescent-therapy/  301
+/en/institution                                          /en/#ekip  301
+/en/kontakt                                              /en/#iletisim  301
+/en/neden-emdr                                           /en/why--emdr/  301
+/en/online-bireysel-terapi                               /en/online-individual-therapy/  301
+/en/psikoterapi-ve-psikolojik-danismanlik-hizmetleri     /en/psychotherapy-and-psychological-counselling/  301
+/en/sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi  /en/virtual-reality-exposure-therapy/  301
+/en/unsere-artikel                                       /en/#makaleler  301
+/en/unsere-studienbereiche                               /en/#hizmetler  301
+
+# ── Almanca ─────────────────────────────────────────────────────
+# Kurumsal ve ekip
+/de/uber-uns    /de/#ekip  301
+/de/unser-team  /de/#ekip  301
+
+# Neden EMDR / blog
+/de/blog  /de/#neden  301
+
+# Liste sayfaları
+/de/unsere-artikel          /de/#makaleler  301
+/de/unsere-studienbereiche  /de/#hizmetler  301
+
+# İletişim ve randevu
+/de/kontakt         /de/#iletisim  301
+/de/terminformular  /de/#iletisim  301
+
+# Boş sayfalar (medya, videolar, belgeler)
+/de/medien            /de/  301
+/de/unsere-dokumente  /de/  301
+/de/videos            /de/  301
+
+# Danışan yorumları (Yönetmelik md. 5/1/e gereği kaldırıldı)
+/de/client-comments  /de/  301
+
+# ── Eski sürümlerden kalan kök adresler (2017–2021) ─────────────
+/alkol-ve-madde-bagimliligi                                                               /#hizmetler  301
+/bedensel-belirtilerle-giden-psikiyatrik-bozukluklarda-emdr-tedavisi                      /tr/psikosomatik-bozukluklar/  301
+/bedensel-belirtilerle-giden-psikiyatrik-bozukluklarda-emdr-tedavisi-emdr/                /tr/psikosomatik-bozukluklar/  301
+/belgelerimiz                                                                             /#ekip  301
+/belgelerimiz/                                                                            /#ekip  301
+/bipolar-bozukluk                                                                         /#hizmetler  301
+/bir-soru-ustune                                                                          /  301
+/bir-soru-uzerine/                                                                        /  301
+/blog                                                                                     /#makaleler  301
+/blog/                                                                                    /#makaleler  301
+/cinsel-islev-bozukluklari                                                                /tr/cinsel-sorunlar/  301
+/cinsel-istismara-bagli-travmalarda-emdr-terapisinin-basarisi/                            /tr/travma-sonrasi-stres-bozuklugu/  301
+/cinsel-sorunlar-ve-cinsel-terapi/                                                        /tr/cinsel-sorunlar/  301
+/daha-iyi-hissediyorum/                                                                   /  301
+/depresyonla-yasamak-zorunda-degiliz/                                                     /tr/depresyon/  301
+/dikkat-eksikligi-hiperaktivite-bozu                                                      /#hizmetler  301
+/ekibimiz                                                                                 /#ekip  301
+/ekibimiz/                                                                                /#ekip  301
+/emdr-nedir                                                                               /#emdr  301
+/emdr-nedir/                                                                              /#emdr  301
+/emdr-nin-tanimi-ve-1980-lerden-gunumuze-dunyadaki-yeri                                   /#emdr  301
+/emdr-nin-tanimi-ve-1980-lerden-gunumuze-dunyadaki-yeri/                                  /#emdr  301
+/emdr-tedavisinin-ruhsal-travmalardaki-etkisi                                             /tr/travma-sonrasi-stres-bozuklugu/  301
+/emdr-tedavisinin-ruhsal-travmalardaki-etkisi-emdr/                                       /tr/travma-sonrasi-stres-bozuklugu/  301
+/emdr-terapisinde-grup-tedavisi-mumkun-mu-                                                /#emdr  301
+/emdr-terapisinde-grup-tedavisi-mumkun-mu/                                                /#emdr  301
+/hakkimda                                                                                 /#ekip  301
+/hakkimizda/                                                                              /#ekip  301
+/hizmetlerimiz                                                                            /#hizmetler  301
+/iletisim                                                                                 /#iletisim  301
+/iletisim/                                                                                /#iletisim  301
+/internet-ve-oyun-bagimliligi                                                             /#hizmetler  301
+/kaygi-anksiyete-bozukluklari/                                                            /tr/kaygi-bozukluklari/  301
+/kaygi-bozukluklari                                                                       /tr/kaygi-bozukluklari/  301
+/kumar-bagimliligi                                                                        /#hizmetler  301
+/madde-ve-alkol-bagimliligi-icin-yeni-populer-yontem-emdr-psikoterapisi/                  /#emdr  301
+/makaleler                                                                                /#makaleler  301
+/medya                                                                                    /  301
+/medya/                                                                                   /  301
+/neden-emdr                                                                               /tr/neden-emdr/  301
+/neden-emdr/                                                                              /tr/neden-emdr/  301
+/obsesif-kompulsif-bozukluk                                                               /tr/obsesif--kompulsif-bozukluk/  301
+/oegrenme-bozukluklari                                                                    /tr/ders-basarisizligi-ve-sinav-kaygisi/  301
+/online-randevu-al                                                                        /#iletisim  301
+/panik-atak/                                                                              /tr/panik-atak/  301
+/panik-bozukluk                                                                           /tr/panik-atak/  301
+/psikiyatri-2                                                                             /#ekip  301
+/psikiyatri-nedir-psikiyatrist-kimdir/                                                    /#ekip  301
+/randevu                                                                                  /#iletisim  301
+/seans-sureleri-ve-sikligi                                                                /#protokol  301
+/seans-sureleri-ve-sikligi/                                                               /#protokol  301
+/sema-terapisi-nedir-nasil-uygulanir-                                                     /tr/bireysel-yetiskin-psikoterapisi/  301
+/sema-terapisi-nedir-nasil-uygulanir/                                                     /tr/bireysel-yetiskin-psikoterapisi/  301
+/sizofreni-ve-psikotik-bozukluklar                                                        /#hizmetler  301
+/soner-yalcin-in-karakutu-isimli-kitabina-psikiyatri-ve-psikoloji-bilimi-adina-tepkimiz/  /#makaleler  301
+/sorulafr                                                                                 /#iletisim  301
+/sosyal-fobi-tedavisinde-emdr-gucu                                                        /tr/kaygi-bozukluklari/  301
+/sosyal-fobi-tedavisinde-emdr-gucu-emdr/                                                  /tr/kaygi-bozukluklari/  301
+/travma-sonrasi-stres-bozuklugiu                                                          /tr/travma-sonrasi-stres-bozuklugu/  301
+/tssb                                                                                     /tr/travma-sonrasi-stres-bozuklugu/  301
+/uyum-bozukluklari                                                                        /tr/uyum-problemleri/  301
+/yeme-bozukluklari                                                                        /tr/yeme-bozukluklari/  301
+/yuksek-duzeydeki-sinav-kaygisi-ile-bas-etmenin-yollari                                   /tr/ders-basarisizligi-ve-sinav-kaygisi/  301
+/yuksek-duzeydeki-sinav-kaygisi-ile-bas-etmenin-yollari-ve-emdr-emdr/                     /tr/ders-basarisizligi-ve-sinav-kaygisi/  301
+
+# ── Splat'lar ──────────────────────────────────────────────────
+# 2017 blog yazıları; en yakın yer hekimin mektubu.
+/single-post/*  /tr/neden-emdr/  301

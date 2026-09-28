@@ -22,7 +22,7 @@ const body = IS_PREVIEW
       '# Derleme çıktısındaki iç varlıklar taranmasın',
       'Disallow: /_astro/',
       '',
-      `Sitemap: ${SITE_URL}/sitemap-index.xml`,
+      `Sitemap: ${SITE_URL}/sitemap.xml`,
       '',
     ];
 

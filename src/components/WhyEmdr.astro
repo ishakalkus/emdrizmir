@@ -2,9 +2,16 @@
 import { Image } from 'astro:assets';
 import signImage from '../assets/img/dr-mehmet-oguz.jpg';
 
-interface Props { t: any; }
-const { t } = Astro.props;
+import { groupHref } from '../lib/pages';
+import type { Locale } from '../i18n/config.js';
+
+interface Props { t: any; locale: Locale; }
+const { t, locale } = Astro.props;
 const w = t.why;
+
+// Mektubun ayrı sayfası olan dillerde ana sayfa yalnızca girişi gösterir
+// ve sayfaya bağlanır; aynı metin iki adreste tam olarak durmasın.
+const letter = await groupHref('neden-emdr', locale, []);
 ---
 <section class="sect sect--tint" id="neden">
   <div class="wrap">
@@ -18,15 +25,19 @@ const w = t.why;
       <blockquote>
         {w.intro.map((p: string) => <p>{p}</p>)}
 
-        <details>
-          <summary>
-            <span class="lbl-open">{w.open}</span>
-            <span class="lbl-close">{w.close}</span>
-          </summary>
-          <div class="bio letter__body">
-            {w.body.map((p: string) => <p>{p}</p>)}
-          </div>
-        </details>
+        {letter ? (
+          <p class="letter__more"><a href={letter.href}>{t.pages.readLetter}</a></p>
+        ) : (
+          <details>
+            <summary>
+              <span class="lbl-open">{w.open}</span>
+              <span class="lbl-close">{w.close}</span>
+            </summary>
+            <div class="bio letter__body">
+              {w.body.map((p: string) => <p>{p}</p>)}
+            </div>
+          </details>
+        )}
       </blockquote>
 
       <div class="letter__sign">

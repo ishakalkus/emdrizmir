@@ -1,7 +1,18 @@
 ---
-interface Props { t: any; }
-const { t } = Astro.props;
+import { groupHref } from '../lib/pages';
+import type { Locale } from '../i18n/config.js';
+
+interface Props { t: any; locale: Locale; }
+const { t, locale } = Astro.props;
 const a = t.articles;
+
+// Yazının o dildeki sayfası; yoksa İngilizce ya da Türkçe aslı.
+const items = await Promise.all(
+  a.items.map(async (item: any) => ({
+    ...item,
+    page: item.page ? await groupHref(item.page, locale) : undefined,
+  }))
+);
 ---
 <section class="sect" id="makaleler">
   <div class="wrap">
@@ -11,9 +22,17 @@ const a = t.articles;
     </div>
 
     <div class="papers">
-      {a.items.map((item: any) => (
+      {items.map((item: any) => (
         <article class="paper">
-          <h3>{item.title}</h3>
+          <h3>
+            {item.page ? (
+              <a href={item.page.href} hreflang={item.page.lang !== locale ? item.page.lang : undefined}>
+                {item.title}
+              </a>
+            ) : (
+              item.title
+            )}
+          </h3>
           <p class="paper__meta">
             {item.meta.map((line: string, i: number) => (
               <>{i > 0 && <br />}{line}</>

@@ -1,6 +1,5 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import sitemap from '@astrojs/sitemap';
 import { SITE_URL, LOCALES, DEFAULT_LOCALE } from './src/i18n/config.js';
 
 export default defineConfig({
@@ -23,17 +22,8 @@ export default defineConfig({
     },
   },
 
-  integrations: [
-    sitemap({
-      i18n: {
-        defaultLocale: DEFAULT_LOCALE,
-        locales: { tr: 'tr-TR', en: 'en', de: 'de', fr: 'fr' },
-      },
-      changefreq: 'monthly',
-      priority: 0.8,
-      lastmod: new Date(),
-    }),
-  ],
+  // Site haritası src/pages/sitemap.xml.ts'te üretilir: alt sayfaların dil
+  // eşleri adres benzerliğinden değil, içerikteki `group` alanından gelir.
 
   image: {
     // Yalnızca kendi varlıklarımız işlenir; uzak kaynak yok.

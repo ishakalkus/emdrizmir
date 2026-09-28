@@ -158,6 +158,7 @@ export default {
     items: [
       {
         image: 'svc-individual',
+        page: 'bireysel-yetiskin-psikoterapisi',
         alt: 'Two armchairs facing one another with a small table between them',
         title: 'Individual adult psychotherapy',
         text: 'One-to-one adult psychotherapy in regular sessions. We decide on the method together with you.',
@@ -170,6 +171,7 @@ export default {
       },
       {
         image: 'svc-couple-family',
+        page: 'cift-aile-terapisi',
         alt: 'A seating arrangement for three, made up of a sofa and an armchair',
         title: 'Couple and family therapy',
         text: 'The work is about making the repeating cycles within a relationship visible together, and rebuilding the language used inside it.',
@@ -177,6 +179,7 @@ export default {
       },
       {
         image: 'svc-vr',
+        page: 'sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi',
         alt: 'A virtual reality headset and a notebook on a wooden table',
         title: 'Virtual reality (VR) exposure therapy',
         text: 'Meeting the feared situation in a safe room, in a controlled and graded way. Used in phobias such as flying, heights and crowds.',
@@ -184,6 +187,7 @@ export default {
       },
       {
         image: 'svc-online',
+        page: 'online-bireysel-terapi',
         alt: 'An open laptop and a cup on a desk in front of a window',
         title: 'Online individual therapy',
         text: 'Individual therapy by video call, for clients living outside İzmir.',
@@ -191,6 +195,7 @@ export default {
       },
       {
         image: 'svc-counselling',
+        page: 'psikoterapi-ve-psikolojik-danismanlik-hizmetleri',
         alt: 'Seen from above: an open notebook, a fountain pen and a pair of glasses',
         title: 'Psychotherapy and psychological counselling',
         text: 'Counselling sessions that are not diagnosis-led, working on life events and decision-making.',
@@ -198,6 +203,7 @@ export default {
       },
       {
         image: 'svc-child-adolescent',
+        page: 'cocuk-ve-ergen-terapisi-',
         alt: "A sand tray, wooden figures and dry pastels on a child's table",
         title: 'Child and adolescent therapy',
         text: 'Sessions for children and adolescents using age-appropriate methods, in collaboration with the family.',
@@ -353,39 +359,46 @@ export default {
     h2: 'Publications and articles',
     items: [
       {
+        page: 'bir-olgu-nedeniyle-bebek-bezi-fetisizmi',
         title: 'Diaper Fetishism: A Case Report',
         meta: ['Turkish Journal of Psychiatry', '2005 · 16(2):133–138'],
         authors: 'Dr Nihan Oğuz, Dr Niyazi Uygur',
       },
       {
+        page: 'viral-ensefalite-bagli-deliryum-bir-olgu-sunumu',
         title: 'Delirium Due to Viral Encephalitis: A Case Report',
         meta: ['Case report'],
         authors: 'Nihan Oğuz, Cem İlnem, Ferhan Yener',
       },
       {
+        page: 'beyin-tumorlerin-neden-oldugu-psikiyatrik-tablolar-iki-olgu-sunumu',
         title:
           'Psychiatric Presentations Caused by Brain Tumours: Two Case Reports',
         meta: ['Case report'],
         authors: 'Nihan Oğuz, Cem İlnem, Ferhan Yener',
       },
       {
+        page: '',
         title:
           'The Relationship Between Comorbid Psychiatric Illnesses and Psychopathy Levels On Male Individuals with Antisocial Personality Disorder in the Turkish Community',
         meta: ['European Psychiatry', '2015'],
         authors: 'R. Tütüncü, M. Oğuz, A. Ateş, S. Ümit Başar, C. Başoğlu',
       },
       {
+        page: '',
         title:
           'Temperament and Personality Traits of Bipolar Disorder I Patients Comorbid with Adult ADHD',
         meta: ['Anadolu Journal of Psychiatry', '2014'],
         authors: 'Nihan Oğuz, Timuçin Oral, Mehmet Oğuz',
       },
       {
+        page: 'covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak',
         title: 'Covid-19 and Mental Change: To Be or Not To Be!',
         meta: ['Blog post'],
         authors: 'Dr Mehmet Oğuz, MD',
       },
       {
+        page: 'hayata-baslangic-bos-bir-tahta-midir',
         title: 'Do We Begin Life as a Blank Slate?',
         meta: ['Blog post'],
         authors: 'Dr Nihan Oğuz, MD',
@@ -482,7 +495,30 @@ export default {
       editor: 'Site editor',
     },
     rights: 'EMDR İzmir · All rights reserved.',
-    kvkk:
-      'Our KVKK/GDPR privacy notice and consent form are available at the practice.',
+  },
+
+  /** Shared labels for pages outside the home page (src/content/pages). */
+  pages: {
+    home: 'Home',
+    crumbs: {
+      konu: 'Our services',
+      hizmet: 'Our services',
+      makale: 'Articles',
+      mektup: 'Why EMDR',
+      kvkk: 'KVKK',
+    },
+    back: {
+      konu: 'All topics',
+      hizmet: 'All services',
+      makale: 'All articles',
+      mektup: 'Back to the home page',
+      kvkk: 'Back to the home page',
+    },
+    authors: 'Authors',
+    draft: 'Draft — this text is awaiting approval before publication.',
+    topicsLabel: 'Information by topic',
+    more: 'More information',
+    readLetter: 'Read the whole letter',
+    kvkkLink: 'KVKK privacy notice and consent form (in Turkish)',
   },
 };

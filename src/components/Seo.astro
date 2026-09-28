@@ -1,5 +1,5 @@
 ---
-import { LOCALES, DEFAULT_LOCALE, localeUrl, HREFLANG, dictionaries } from '../i18n/index.js';
+import { LOCALES, localePath, HREFLANG, dictionaries } from '../i18n/index.js';
 import { SITE_URL, GOOGLE_SITE_VERIFICATION, IS_PREVIEW } from '../i18n/config.js';
 import type { Locale } from '../i18n/config.js';
 
@@ -10,29 +10,54 @@ interface Props {
   title?: string;
   description?: string;
   noindex?: boolean;
+  /** Kanonik yol (ör. /tr/panik-atak/). Verilmezse dilin ana sayfası. */
+  path?: string;
+  /**
+   * Sayfanın gerçekten var olan dil eşleri. Verilmezse dört dilin ana
+   * sayfası. hreflang yalnızca bunlar arasında kurulur.
+   */
+  alternates?: Partial<Record<Locale, string>>;
+  ogType?: 'website' | 'article';
 }
-const { locale, t, title, description, noindex: noindexProp = false } = Astro.props;
+const {
+  locale,
+  t,
+  title,
+  description,
+  noindex: noindexProp = false,
+  path,
+  alternates,
+  ogType = 'website',
+} = Astro.props;
 
 // *.pages.dev gibi geçici adreslerde sayfa hiçbir koşulda indekslenmez.
 const noindex = noindexProp || IS_PREVIEW;
 
 const pageTitle = title ?? t.meta.title;
 const pageDescription = description ?? t.meta.description;
-const canonical = localeUrl(locale);
+const canonical = SITE_URL + (path ?? localePath(locale));
+const alt: Partial<Record<Locale, string>> =
+  alternates ?? Object.fromEntries(LOCALES.map((code) => [code, localePath(code)]));
+const altCodes = LOCALES.filter((code) => alt[code]);
+// x-default: Türkçe varsa o, yoksa İngilizce, yoksa var olan ilk dil.
+const xDefault = alt.tr ?? alt.en ?? alt[altCodes[0]];
 const ogImage = `${SITE_URL}/og/emdrizmir.jpg`;
 ---
 <title>{pageTitle}</title>
 <meta name="description" content={pageDescription} />
 {!noindex && <link rel="canonical" href={canonical} />}
 
-{/* Her dil, diğer üçünü ve x-default'u işaret eder — Google'ın istediği karşılıklı bağ. */}
-{!noindex && LOCALES.map((code) => (
-  <link rel="alternate" hreflang={HREFLANG[code]} href={localeUrl(code)} />
+{/* Her dil, var olan diğer dilleri ve x-default'u işaret eder — Google'ın
+    istediği karşılıklı bağ. Tek dilde olan sayfada hreflang yazılmaz. */}
+{!noindex && altCodes.length > 1 && altCodes.map((code) => (
+  <link rel="alternate" hreflang={HREFLANG[code]} href={SITE_URL + alt[code]} />
 ))}
-{!noindex && <link rel="alternate" hreflang="x-default" href={localeUrl(DEFAULT_LOCALE)} />}
+{!noindex && altCodes.length > 1 && (
+  <link rel="alternate" hreflang="x-default" href={SITE_URL + xDefault} />
+)}
 
 {/* Open Graph */}
-<meta property="og:type" content="website" />
+<meta property="og:type" content={ogType} />
 <meta property="og:site_name" content="EMDR İzmir" />
 <meta property="og:url" content={canonical} />
 <meta property="og:title" content={pageTitle} />
@@ -42,7 +67,7 @@ const ogImage = `${SITE_URL}/og/emdrizmir.jpg`;
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content={t.meta.ogImageAlt} />
 <meta property="og:locale" content={t.ogLocale} />
-{LOCALES.filter((c) => c !== locale).map((code) => (
+{altCodes.filter((c) => c !== locale).map((code) => (
   <meta property="og:locale:alternate" content={dictionaries[code].ogLocale} />
 ))}
 

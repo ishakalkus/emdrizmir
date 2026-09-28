@@ -1,4 +1,5 @@
 eski_adres,dil,tur,karar,hedef,hreflang_esi,gerekce,eski_durum,kelime,google,duckduckgo,simdiki_kural,degisim,baslik
+/de,de,ana-sayfa,yeni-sayfa,/de/,,Sonda / eksik; Cloudflare Pages kendi 308'iyle ana sayfaya götürür.,404,,,,/de → /de/,kural kaldırılacak (sayfayı yutuyor),
 /de/,de,ana-sayfa,yeni-sayfa,/de/,,Dil ana sayfası.,home,356,evet,,,aynı,EMDR IZMIR
 /de/bireysel-yetiskin-psikoterapisi,de,hizmet,yeni-sayfa,/de/bireysel-yetiskin-psikoterapisi/,/tr/bireysel-yetiskin-psikoterapisi/ /en/individual-adult-psychotherapy/ /fr/psychotherapie-individuelle-adulte/,"Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak.",page,0,,,,sayfa eklenecek,- EMDR IZMIR
 /de/cift-aile-terapisi,de,hizmet,yeni-sayfa,/de/cift-aile-terapisi/,/tr/cift-aile-terapisi/ /en/couple-and-family-therapy/ /fr/therapie-de-couple-et-de-famille/,"Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak.",page,0,,,,sayfa eklenecek,- EMDR IZMIR
@@ -6,6 +7,7 @@ eski_adres,dil,tur,karar,hedef,hreflang_esi,gerekce,eski_durum,kelime,google,duc
 /de/online-bireysel-terapi,de,hizmet,yeni-sayfa,/de/online-bireysel-terapi/,/tr/online-bireysel-terapi/ /en/online-individual-therapy/ /fr/therapie-individuelle-en-ligne/,"Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak.",page,0,evet,,,sayfa eklenecek,- EMDR IZMIR
 /de/psikoterapi-ve-psikolojik-danismanlik-hizmetleri,de,hizmet,yeni-sayfa,/de/psikoterapi-ve-psikolojik-danismanlik-hizmetleri/,/tr/psikoterapi-ve-psikolojik-danismanlik-hizmetleri/ /en/psychotherapy-and-psychological-counselling/ /fr/psychotherapie-et-accompagnement-psychologique/,"Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak.",page,0,evet,,,sayfa eklenecek,- EMDR IZMIR
 /de/sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi,de,hizmet,yeni-sayfa,/de/sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi/,/tr/sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi/ /en/virtual-reality-exposure-therapy/ /fr/therapie-exposition-realite-virtuelle/,"Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak.",page,0,,,,sayfa eklenecek,- EMDR IZMIR
+/en,en,ana-sayfa,yeni-sayfa,/en/,,Sonda / eksik; Cloudflare Pages kendi 308'iyle ana sayfaya götürür.,404,,,,/en → /en/,kural kaldırılacak (sayfayı yutuyor),
 /en/,en,ana-sayfa,yeni-sayfa,/en/,,Dil ana sayfası.,home,362,evet,evet,,aynı,EMDR IZMIR
 /en/adaptation-problems,en,konu,yeni-sayfa,/en/adaptation-problems/,/tr/uyum-problemleri/,Konu sayfası korunur.,page,49,evet,,,sayfa eklenecek,Adaptation Problems - EMDR IZMIR
 /en/anger-management,en,konu,yeni-sayfa,/en/anger-management/,/tr/ofke-kontrolu/,Konu sayfası korunur.,page,103,,,,sayfa eklenecek,Anger Management - EMDR IZMIR
@@ -30,169 +32,167 @@ eski_adres,dil,tur,karar,hedef,hreflang_esi,gerekce,eski_durum,kelime,google,duc
 /en/covid-19-and-mental-change-to-be-or-not-to-be-,en,makale,yeni-sayfa,/en/covid-19-and-mental-change-to-be-or-not-to-be-/,/tr/covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak/,Makale korunur.,page,950,,,,sayfa eklenecek,Covid-19 and Mental Change: to be or not to be! - EMDR IZMIR
 /en/delirium-due-to-viral-encephalitis-a-case-report,en,makale,yeni-sayfa,/en/delirium-due-to-viral-encephalitis-a-case-report/,/tr/viral-ensefalite-bagli-deliryum-bir-olgu-sunumu/,Makale korunur.,page,3254,evet,,,sayfa eklenecek,Delirium Due to Viral Encephalitis: A Case Report - EMDR IZMIR
 /en/diaper-fetishism-due-to-a-case,en,makale,yeni-sayfa,/en/diaper-fetishism-due-to-a-case/,/tr/bir-olgu-nedeniyle-bebek-bezi-fetisizmi/,Makale korunur.,page,3540,evet,,,sayfa eklenecek,Diaper Fetishism Due to A Case - EMDR IZMIR
-/en/why--emdr,en,mektup,yeni-sayfa,/en/why--emdr/,/tr/neden-emdr/,"Hekimin mektubu; Google'da indeksli, metin hazır.",page,420,evet,evet,/en/why--emdr → /en/#neden,kural kaldırılacak (sayfayı yutuyor),WHY EMDR - EMDR IZMIR
+/en/why--emdr,en,mektup,yeni-sayfa,/en/why--emdr/,/tr/neden-emdr/,"Hekimin mektubu; Google'da indeksli, metin hazır.",page,420,evet,evet,,sayfa eklenecek,WHY EMDR - EMDR IZMIR
+/fr,fr,ana-sayfa,yeni-sayfa,/fr/,,Sonda / eksik; Cloudflare Pages kendi 308'iyle ana sayfaya götürür.,404,,,,/fr → /fr/,kural kaldırılacak (sayfayı yutuyor),
 /fr/,fr,ana-sayfa,yeni-sayfa,/fr/,,Dil ana sayfası. Eski sitede Fransızca yoktu.,soft404,,,,,aynı,
-/tr/bireysel-yetiskin-psikoterapisi,tr,hizmet,yeni-sayfa,/tr/bireysel-yetiskin-psikoterapisi/,/de/bireysel-yetiskin-psikoterapisi/ /en/individual-adult-psychotherapy/ /fr/psychotherapie-individuelle-adulte/,"Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak.",page,16,evet,,/tr/bireysel-yetiskin-psikoterapisi → /#hizmetler,kural kaldırılacak (sayfayı yutuyor),BİREYSEL YETİŞKİN PSİKOTERAPİSİ - EMDR İZMİR
-/tr/cift-aile-terapisi,tr,hizmet,yeni-sayfa,/tr/cift-aile-terapisi/,/de/cift-aile-terapisi/ /en/couple-and-family-therapy/ /fr/therapie-de-couple-et-de-famille/,"Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak.",page,0,evet,,/tr/cift-aile-terapisi → /#hizmetler,kural kaldırılacak (sayfayı yutuyor),ÇİFT AİLE TERAPİSİ - EMDR İZMİR
-/tr/cocuk-ve-ergen-terapisi-,tr,hizmet,yeni-sayfa,/tr/cocuk-ve-ergen-terapisi-/,/de/cocuk-ve-ergen-terapisi-/ /en/child-and-adolescent-therapy/ /fr/therapie-enfant-et-adolescent/,"Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak.",page,0,evet,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),ÇOCUK VE ERGEN TERAPİSİ - EMDR İZMİR
-/tr/online-bireysel-terapi,tr,hizmet,yeni-sayfa,/tr/online-bireysel-terapi/,/de/online-bireysel-terapi/ /en/online-individual-therapy/ /fr/therapie-individuelle-en-ligne/,"Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak.",page,0,evet,evet,/tr/online-bireysel-terapi → /#hizmetler,kural kaldırılacak (sayfayı yutuyor),Online Bireysel Terapi - EMDR İZMİR
-/tr/psikoterapi-ve-psikolojik-danismanlik-hizmetleri,tr,hizmet,yeni-sayfa,/tr/psikoterapi-ve-psikolojik-danismanlik-hizmetleri/,/de/psikoterapi-ve-psikolojik-danismanlik-hizmetleri/ /en/psychotherapy-and-psychological-counselling/ /fr/psychotherapie-et-accompagnement-psychologique/,"Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak.",page,0,evet,evet,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),Psikoterapi ve Psikolojik Danışmanlık Hizmetleri - EMDR İZMİR
-/tr/sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi,tr,hizmet,yeni-sayfa,/tr/sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi/,/de/sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi/ /en/virtual-reality-exposure-therapy/ /fr/therapie-exposition-realite-virtuelle/,"Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak.",page,0,evet,evet,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),SANAL GERÇEKLİK (VR) İLE ALIŞTIRMA (EXPOSURE) TEDAVİSİ - EMDR İZMİR
-/tr/aile-iliskileri,tr,konu,yeni-sayfa,/tr/aile-iliskileri/,/en/family-relations/,Konu sayfası korunur.,page,87,,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),Aile İlişkileri - EMDR İZMİR
-/tr/ayrilik-kaygisi,tr,konu,yeni-sayfa,/tr/ayrilik-kaygisi/,/en/separation-anxiety/,Konu sayfası korunur.,page,48,evet,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),Ayrılık Kaygısı - EMDR İZMİR
-/tr/cinsel-sorunlar,tr,konu,yeni-sayfa,/tr/cinsel-sorunlar/,/en/sexual-problems/,Konu sayfası korunur.,page,88,evet,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),Cinsel Sorunlar - EMDR İZMİR
-/tr/davranis-bozukluklari,tr,konu,yeni-sayfa,/tr/davranis-bozukluklari/,/en/behaviour-disorders/,Konu sayfası korunur.,page,43,evet,,/tr/davranis-bozukluklari → /#hizmetler,kural kaldırılacak (sayfayı yutuyor),Davranış Bozuklukları - EMDR İZMİR
-/tr/depresyon,tr,konu,yeni-sayfa,/tr/depresyon/,,Konu sayfası korunur.,page,58,evet,,/tr/depresyon → /#hizmetler,kural kaldırılacak (sayfayı yutuyor),Depresyon - EMDR İZMİR
-/tr/ders-basarisizligi-ve-sinav-kaygisi,tr,konu,yeni-sayfa,/tr/ders-basarisizligi-ve-sinav-kaygisi/,/en/course-failure-and-exam-anxiety/,Konu sayfası korunur.,page,45,evet,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),Ders Başarısızlığı ve Sınav Kaygısı - EMDR İZMİR
-/tr/hamilelik-sureci-ve-sonrasi--depresyon,tr,konu,yeni-sayfa,/tr/hamilelik-sureci-ve-sonrasi--depresyon/,/en/the-pregnancy-process-and-its-consequences---depression/,Konu sayfası korunur.,page,44,evet,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),Hamilelik Süreci ve Sonrası – Depresyon - EMDR İZMİR
-/tr/iliski-ve-evlilik-sorunlari,tr,konu,yeni-sayfa,/tr/iliski-ve-evlilik-sorunlari/,/en/relationship-and-marriage-problems/,Konu sayfası korunur.,page,40,evet,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),İlişki ve Evlilik Sorunları - EMDR İZMİR
-/tr/is-yasamina-iliskin-sorunlar,tr,konu,yeni-sayfa,/tr/is-yasamina-iliskin-sorunlar/,/en/problems-regarding-business-life/,Konu sayfası korunur.,page,25,evet,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),İş Yaşamına İlişkin Sorunlar - EMDR İZMİR
-/tr/kaygi-bozukluklari,tr,konu,yeni-sayfa,/tr/kaygi-bozukluklari/,/en/anxiety-disorders/,Konu sayfası korunur.,page,174,evet,,/tr/kaygi-bozukluklari → /#hizmetler,kural kaldırılacak (sayfayı yutuyor),Kaygı Bozuklukları - EMDR İZMİR
-/tr/kisilik-bozukluklari,tr,konu,yeni-sayfa,/tr/kisilik-bozukluklari/,/en/personality-disorder/,Konu sayfası korunur.,page,47,evet,,/tr/kisilik-bozukluklari → /#hizmetler,kural kaldırılacak (sayfayı yutuyor),Kişilik Bozuklukları - EMDR İZMİR
-/tr/obsesif--kompulsif-bozukluk,tr,konu,yeni-sayfa,/tr/obsesif--kompulsif-bozukluk/,/en/obsessive-compulsive-disorder/,Konu sayfası korunur.,page,59,evet,,/tr/obsesif--kompulsif-bozukluk → /#hizmetler,kural kaldırılacak (sayfayı yutuyor),Obsesif – Kompulsif Bozukluk - EMDR İZMİR
-/tr/ofke-kontrolu,tr,konu,yeni-sayfa,/tr/ofke-kontrolu/,/en/anger-management/,Konu sayfası korunur.,page,66,evet,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),Öfke Kontrolü - EMDR İZMİR
-/tr/okula-uyum,tr,konu,yeni-sayfa,/tr/okula-uyum/,,Konu sayfası korunur.,page,49,,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),Okula Uyum - EMDR İZMİR
-/tr/panik-atak,tr,konu,yeni-sayfa,/tr/panik-atak/,/en/panic-attack/,Konu sayfası korunur.,page,55,evet,,/tr/panik-atak → /#hizmetler,kural kaldırılacak (sayfayı yutuyor),Panik Atak - EMDR İZMİR
-/tr/psikosomatik-bozukluklar,tr,konu,yeni-sayfa,/tr/psikosomatik-bozukluklar/,/en/psychosomatic-disorders/,Konu sayfası korunur.,page,51,evet,,/tr/psikosomatik-bozukluklar → /#hizmetler,kural kaldırılacak (sayfayı yutuyor),Psikosomatik Bozukluklar - EMDR İZMİR
-/tr/stresle-basa-cikma-ve-ofke-kontrolu,tr,konu,yeni-sayfa,/tr/stresle-basa-cikma-ve-ofke-kontrolu/,/en/coping-with-stress-and-anger-management/,Konu sayfası korunur.,page,39,evet,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),Stresle Başa Çıkma ve Öfke Kontrolü - EMDR İZMİR
-/tr/travma-sonrasi-stres-bozuklugu,tr,konu,yeni-sayfa,/tr/travma-sonrasi-stres-bozuklugu/,/en/post-traumatic-stress-disorder/,Konu sayfası korunur.,page,65,evet,,/tr/travma-sonrasi-stres-bozuklugu → /#hizmetler,kural kaldırılacak (sayfayı yutuyor),Travma Sonrası Stres Bozukluğu - EMDR İZMİR
-/tr/uyum-problemleri,tr,konu,yeni-sayfa,/tr/uyum-problemleri/,/en/adaptation-problems/,Konu sayfası korunur.,page,34,,,/tr/uyum-problemleri → /#hizmetler,kural kaldırılacak (sayfayı yutuyor),Uyum Problemleri - EMDR İZMİR
-/tr/yas-sureci,tr,konu,yeni-sayfa,/tr/yas-sureci/,/en/the-mourning-process/,Konu sayfası korunur.,page,61,evet,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),Yas Süreci - EMDR İZMİR
-/tr/yeme-bozukluklari,tr,konu,yeni-sayfa,/tr/yeme-bozukluklari/,/en/eating-disorders/,Konu sayfası korunur.,page,51,evet,,/tr/yeme-bozukluklari → /#hizmetler,kural kaldırılacak (sayfayı yutuyor),Yeme Bozuklukları - EMDR İZMİR
-/tr/belgelerimiz,tr,kvkk,yeni-sayfa,/tr/belgelerimiz/,,KVKK aydınlatma metni; yasal olarak gerekli.,page,777,,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),DANIŞAN AYDINLATMA METNİ - EMDR İZMİR
-/tr/beyin-tumorlerin-neden-oldugu-psikiyatrik-tablolar-iki-olgu-sunumu,tr,makale,yeni-sayfa,/tr/beyin-tumorlerin-neden-oldugu-psikiyatrik-tablolar-iki-olgu-sunumu/,/en/caused-by-brain-tumors-psychiatric-tables-two-case-reports/,Makale korunur.,page,1855,evet,,/tr/beyin-tumorlerin-neden-oldugu-psikiyatrik-tablolar-iki-olgu-sunumu → /#makaleler,kural kaldırılacak (sayfayı yutuyor),Beyin Tümörlerin Neden Olduğu Psikiyatrik Tablolar: İki Olgu Sunumu - EMDR İZMİR
-/tr/beyin-tumorlerin-neden-oldugu-psikiyatrik-tablolar-iki-olgu-sunumu/,tr,makale,yeni-sayfa,/tr/beyin-tumorlerin-neden-oldugu-psikiyatrik-tablolar-iki-olgu-sunumu/,/en/caused-by-brain-tumors-psychiatric-tables-two-case-reports/,Aynı sayfanın sonu / ile biten hâli. Makale korunur.,page,1855,,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),Beyin Tümörlerin Neden Olduğu Psikiyatrik Tablolar: İki Olgu Sunumu - EMDR İZMİR
-/tr/bir-olgu-nedeniyle-bebek-bezi-fetisizmi,tr,makale,yeni-sayfa,/tr/bir-olgu-nedeniyle-bebek-bezi-fetisizmi/,/en/diaper-fetishism-due-to-a-case/,Makale korunur.,page,3151,evet,,/tr/bir-olgu-nedeniyle-bebek-bezi-fetisizmi → /#makaleler,kural kaldırılacak (sayfayı yutuyor),Bir Olgu Nedeniyle Bebek Bezi Fetişizmi - EMDR İZMİR
-/tr/covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak,tr,makale,yeni-sayfa,/tr/covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak/,/en/covid-19-and-mental-change-to-be-or-not-to-be-/,Makale korunur.,page,684,evet,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),Covid-19 ve Ruhsal Değişim: Olmak ya da Olmamak! - EMDR İZMİR
-/tr/hayata-baslangic-bos-bir-tahta-midir,tr,makale,yeni-sayfa,/tr/hayata-baslangic-bos-bir-tahta-midir/,,Makale korunur.,page,303,evet,,/tr/hayata-baslangic-bos-bir-tahta-midir → /#makaleler,kural kaldırılacak (sayfayı yutuyor),HAYATA BAŞLANGIÇ BOŞ BİR TAHTA MIDIR? - EMDR İZMİR
-/tr/viral-ensefalite-bagli-deliryum-bir-olgu-sunumu,tr,makale,yeni-sayfa,/tr/viral-ensefalite-bagli-deliryum-bir-olgu-sunumu/,/en/delirium-due-to-viral-encephalitis-a-case-report/,Makale korunur.,page,2854,evet,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),Viral Ensefalite Bağlı Deliryum: Bir Olgu Sunumu - EMDR İZMİR
-/tr/viral-ensefalite-bagli-deliryum-bir-olgu-sunumu/,tr,makale,yeni-sayfa,/tr/viral-ensefalite-bagli-deliryum-bir-olgu-sunumu/,/en/delirium-due-to-viral-encephalitis-a-case-report/,Aynı sayfanın sonu / ile biten hâli. Makale korunur.,page,2854,,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),Viral Ensefalite Bağlı Deliryum: Bir Olgu Sunumu - EMDR İZMİR
-/tr/neden-emdr,tr,mektup,yeni-sayfa,/tr/neden-emdr/,/en/why--emdr/,"Hekimin mektubu; Google'da indeksli, metin hazır.",page,317,evet,evet,/tr/neden-emdr → /#neden,kural kaldırılacak (sayfayı yutuyor),Neden EMDR - EMDR İZMİR
-/tr/neden-emdr/,tr,mektup,yeni-sayfa,/tr/neden-emdr/,/en/why--emdr/,"Aynı sayfanın sonu / ile biten hâli. Hekimin mektubu; Google'da indeksli, metin hazır.",page,317,,,/tr/* → /,kural kaldırılacak (sayfayı yutuyor),Neden EMDR - EMDR İZMİR
+/tr/bireysel-yetiskin-psikoterapisi,tr,hizmet,yeni-sayfa,/tr/bireysel-yetiskin-psikoterapisi/,/de/bireysel-yetiskin-psikoterapisi/ /en/individual-adult-psychotherapy/ /fr/psychotherapie-individuelle-adulte/,"Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak.",page,16,evet,,,sayfa eklenecek,BİREYSEL YETİŞKİN PSİKOTERAPİSİ - EMDR İZMİR
+/tr/cift-aile-terapisi,tr,hizmet,yeni-sayfa,/tr/cift-aile-terapisi/,/de/cift-aile-terapisi/ /en/couple-and-family-therapy/ /fr/therapie-de-couple-et-de-famille/,"Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak.",page,0,evet,,,sayfa eklenecek,ÇİFT AİLE TERAPİSİ - EMDR İZMİR
+/tr/cocuk-ve-ergen-terapisi-,tr,hizmet,yeni-sayfa,/tr/cocuk-ve-ergen-terapisi-/,/de/cocuk-ve-ergen-terapisi-/ /en/child-and-adolescent-therapy/ /fr/therapie-enfant-et-adolescent/,"Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak.",page,0,evet,,,sayfa eklenecek,ÇOCUK VE ERGEN TERAPİSİ - EMDR İZMİR
+/tr/online-bireysel-terapi,tr,hizmet,yeni-sayfa,/tr/online-bireysel-terapi/,/de/online-bireysel-terapi/ /en/online-individual-therapy/ /fr/therapie-individuelle-en-ligne/,"Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak.",page,0,evet,evet,,sayfa eklenecek,Online Bireysel Terapi - EMDR İZMİR
+/tr/psikoterapi-ve-psikolojik-danismanlik-hizmetleri,tr,hizmet,yeni-sayfa,/tr/psikoterapi-ve-psikolojik-danismanlik-hizmetleri/,/de/psikoterapi-ve-psikolojik-danismanlik-hizmetleri/ /en/psychotherapy-and-psychological-counselling/ /fr/psychotherapie-et-accompagnement-psychologique/,"Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak.",page,0,evet,evet,,sayfa eklenecek,Psikoterapi ve Psikolojik Danışmanlık Hizmetleri - EMDR İZMİR
+/tr/sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi,tr,hizmet,yeni-sayfa,/tr/sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi/,/de/sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi/ /en/virtual-reality-exposure-therapy/ /fr/therapie-exposition-realite-virtuelle/,"Hizmet sayfası; eski sayfa boştu, yeni metin yazılacak.",page,0,evet,evet,,sayfa eklenecek,SANAL GERÇEKLİK (VR) İLE ALIŞTIRMA (EXPOSURE) TEDAVİSİ - EMDR İZMİR
+/tr/aile-iliskileri,tr,konu,yeni-sayfa,/tr/aile-iliskileri/,/en/family-relations/,Konu sayfası korunur.,page,87,,,,sayfa eklenecek,Aile İlişkileri - EMDR İZMİR
+/tr/ayrilik-kaygisi,tr,konu,yeni-sayfa,/tr/ayrilik-kaygisi/,/en/separation-anxiety/,Konu sayfası korunur.,page,48,evet,,,sayfa eklenecek,Ayrılık Kaygısı - EMDR İZMİR
+/tr/cinsel-sorunlar,tr,konu,yeni-sayfa,/tr/cinsel-sorunlar/,/en/sexual-problems/,Konu sayfası korunur.,page,88,evet,,,sayfa eklenecek,Cinsel Sorunlar - EMDR İZMİR
+/tr/davranis-bozukluklari,tr,konu,yeni-sayfa,/tr/davranis-bozukluklari/,/en/behaviour-disorders/,Konu sayfası korunur.,page,43,evet,,,sayfa eklenecek,Davranış Bozuklukları - EMDR İZMİR
+/tr/depresyon,tr,konu,yeni-sayfa,/tr/depresyon/,,Konu sayfası korunur.,page,58,evet,,,sayfa eklenecek,Depresyon - EMDR İZMİR
+/tr/ders-basarisizligi-ve-sinav-kaygisi,tr,konu,yeni-sayfa,/tr/ders-basarisizligi-ve-sinav-kaygisi/,/en/course-failure-and-exam-anxiety/,Konu sayfası korunur.,page,45,evet,,,sayfa eklenecek,Ders Başarısızlığı ve Sınav Kaygısı - EMDR İZMİR
+/tr/hamilelik-sureci-ve-sonrasi--depresyon,tr,konu,yeni-sayfa,/tr/hamilelik-sureci-ve-sonrasi--depresyon/,/en/the-pregnancy-process-and-its-consequences---depression/,Konu sayfası korunur.,page,44,evet,,,sayfa eklenecek,Hamilelik Süreci ve Sonrası – Depresyon - EMDR İZMİR
+/tr/iliski-ve-evlilik-sorunlari,tr,konu,yeni-sayfa,/tr/iliski-ve-evlilik-sorunlari/,/en/relationship-and-marriage-problems/,Konu sayfası korunur.,page,40,evet,,,sayfa eklenecek,İlişki ve Evlilik Sorunları - EMDR İZMİR
+/tr/is-yasamina-iliskin-sorunlar,tr,konu,yeni-sayfa,/tr/is-yasamina-iliskin-sorunlar/,/en/problems-regarding-business-life/,Konu sayfası korunur.,page,25,evet,,,sayfa eklenecek,İş Yaşamına İlişkin Sorunlar - EMDR İZMİR
+/tr/kaygi-bozukluklari,tr,konu,yeni-sayfa,/tr/kaygi-bozukluklari/,/en/anxiety-disorders/,Konu sayfası korunur.,page,174,evet,,,sayfa eklenecek,Kaygı Bozuklukları - EMDR İZMİR
+/tr/kisilik-bozukluklari,tr,konu,yeni-sayfa,/tr/kisilik-bozukluklari/,/en/personality-disorder/,Konu sayfası korunur.,page,47,evet,,,sayfa eklenecek,Kişilik Bozuklukları - EMDR İZMİR
+/tr/obsesif--kompulsif-bozukluk,tr,konu,yeni-sayfa,/tr/obsesif--kompulsif-bozukluk/,/en/obsessive-compulsive-disorder/,Konu sayfası korunur.,page,59,evet,,,sayfa eklenecek,Obsesif – Kompulsif Bozukluk - EMDR İZMİR
+/tr/ofke-kontrolu,tr,konu,yeni-sayfa,/tr/ofke-kontrolu/,/en/anger-management/,Konu sayfası korunur.,page,66,evet,,,sayfa eklenecek,Öfke Kontrolü - EMDR İZMİR
+/tr/okula-uyum,tr,konu,yeni-sayfa,/tr/okula-uyum/,,Konu sayfası korunur.,page,49,,,,sayfa eklenecek,Okula Uyum - EMDR İZMİR
+/tr/panik-atak,tr,konu,yeni-sayfa,/tr/panik-atak/,/en/panic-attack/,Konu sayfası korunur.,page,55,evet,,,sayfa eklenecek,Panik Atak - EMDR İZMİR
+/tr/psikosomatik-bozukluklar,tr,konu,yeni-sayfa,/tr/psikosomatik-bozukluklar/,/en/psychosomatic-disorders/,Konu sayfası korunur.,page,51,evet,,,sayfa eklenecek,Psikosomatik Bozukluklar - EMDR İZMİR
+/tr/stresle-basa-cikma-ve-ofke-kontrolu,tr,konu,yeni-sayfa,/tr/stresle-basa-cikma-ve-ofke-kontrolu/,/en/coping-with-stress-and-anger-management/,Konu sayfası korunur.,page,39,evet,,,sayfa eklenecek,Stresle Başa Çıkma ve Öfke Kontrolü - EMDR İZMİR
+/tr/travma-sonrasi-stres-bozuklugu,tr,konu,yeni-sayfa,/tr/travma-sonrasi-stres-bozuklugu/,/en/post-traumatic-stress-disorder/,Konu sayfası korunur.,page,65,evet,,,sayfa eklenecek,Travma Sonrası Stres Bozukluğu - EMDR İZMİR
+/tr/uyum-problemleri,tr,konu,yeni-sayfa,/tr/uyum-problemleri/,/en/adaptation-problems/,Konu sayfası korunur.,page,34,,,,sayfa eklenecek,Uyum Problemleri - EMDR İZMİR
+/tr/yas-sureci,tr,konu,yeni-sayfa,/tr/yas-sureci/,/en/the-mourning-process/,Konu sayfası korunur.,page,61,evet,,,sayfa eklenecek,Yas Süreci - EMDR İZMİR
+/tr/yeme-bozukluklari,tr,konu,yeni-sayfa,/tr/yeme-bozukluklari/,/en/eating-disorders/,Konu sayfası korunur.,page,51,evet,,,sayfa eklenecek,Yeme Bozuklukları - EMDR İZMİR
+/tr/belgelerimiz,tr,kvkk,yeni-sayfa,/tr/belgelerimiz/,,KVKK aydınlatma metni; yasal olarak gerekli.,page,777,,,,sayfa eklenecek,DANIŞAN AYDINLATMA METNİ - EMDR İZMİR
+/tr/beyin-tumorlerin-neden-oldugu-psikiyatrik-tablolar-iki-olgu-sunumu,tr,makale,yeni-sayfa,/tr/beyin-tumorlerin-neden-oldugu-psikiyatrik-tablolar-iki-olgu-sunumu/,/en/caused-by-brain-tumors-psychiatric-tables-two-case-reports/,Makale korunur.,page,1855,evet,,,sayfa eklenecek,Beyin Tümörlerin Neden Olduğu Psikiyatrik Tablolar: İki Olgu Sunumu - EMDR İZMİR
+/tr/beyin-tumorlerin-neden-oldugu-psikiyatrik-tablolar-iki-olgu-sunumu/,tr,makale,yeni-sayfa,/tr/beyin-tumorlerin-neden-oldugu-psikiyatrik-tablolar-iki-olgu-sunumu/,/en/caused-by-brain-tumors-psychiatric-tables-two-case-reports/,Aynı sayfanın sonu / ile biten hâli. Makale korunur.,page,1855,,,,sayfa eklenecek,Beyin Tümörlerin Neden Olduğu Psikiyatrik Tablolar: İki Olgu Sunumu - EMDR İZMİR
+/tr/bir-olgu-nedeniyle-bebek-bezi-fetisizmi,tr,makale,yeni-sayfa,/tr/bir-olgu-nedeniyle-bebek-bezi-fetisizmi/,/en/diaper-fetishism-due-to-a-case/,Makale korunur.,page,3151,evet,,,sayfa eklenecek,Bir Olgu Nedeniyle Bebek Bezi Fetişizmi - EMDR İZMİR
+/tr/covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak,tr,makale,yeni-sayfa,/tr/covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak/,/en/covid-19-and-mental-change-to-be-or-not-to-be-/,Makale korunur.,page,684,evet,,,sayfa eklenecek,Covid-19 ve Ruhsal Değişim: Olmak ya da Olmamak! - EMDR İZMİR
+/tr/hayata-baslangic-bos-bir-tahta-midir,tr,makale,yeni-sayfa,/tr/hayata-baslangic-bos-bir-tahta-midir/,,Makale korunur.,page,303,evet,,,sayfa eklenecek,HAYATA BAŞLANGIÇ BOŞ BİR TAHTA MIDIR? - EMDR İZMİR
+/tr/viral-ensefalite-bagli-deliryum-bir-olgu-sunumu,tr,makale,yeni-sayfa,/tr/viral-ensefalite-bagli-deliryum-bir-olgu-sunumu/,/en/delirium-due-to-viral-encephalitis-a-case-report/,Makale korunur.,page,2854,evet,,,sayfa eklenecek,Viral Ensefalite Bağlı Deliryum: Bir Olgu Sunumu - EMDR İZMİR
+/tr/viral-ensefalite-bagli-deliryum-bir-olgu-sunumu/,tr,makale,yeni-sayfa,/tr/viral-ensefalite-bagli-deliryum-bir-olgu-sunumu/,/en/delirium-due-to-viral-encephalitis-a-case-report/,Aynı sayfanın sonu / ile biten hâli. Makale korunur.,page,2854,,,,sayfa eklenecek,Viral Ensefalite Bağlı Deliryum: Bir Olgu Sunumu - EMDR İZMİR
+/tr/neden-emdr,tr,mektup,yeni-sayfa,/tr/neden-emdr/,/en/why--emdr/,"Hekimin mektubu; Google'da indeksli, metin hazır.",page,317,evet,evet,,sayfa eklenecek,Neden EMDR - EMDR İZMİR
+/tr/neden-emdr/,tr,mektup,yeni-sayfa,/tr/neden-emdr/,/en/why--emdr/,"Aynı sayfanın sonu / ile biten hâli. Hekimin mektubu; Google'da indeksli, metin hazır.",page,317,,,,sayfa eklenecek,Neden EMDR - EMDR İZMİR
 /,,ana-sayfa,yeni-sayfa,/,,Türkçe ana sayfa.,home,511,,evet,,aynı,EMDR İZMİR
-/de,de,ana-sayfa,301,/de/,,Sonda / eksik.,404,,,,/de → /de/,aynı,
 /de/kontakt,de,iletisim,301,/de/#iletisim,,Yeni ana sayfanın iletişim ve randevu bölümü.,page,15,evet,,/de/kontakt → /de/#iletisim,aynı,KONTAKT - EMDR IZMIR
-/de/terminformular,de,iletisim,301,/de/#iletisim,,Yeni ana sayfanın iletişim ve randevu bölümü.,page,62,,,,kural eklenecek,Terminformular - EMDR IZMIR
+/de/terminformular,de,iletisim,301,/de/#iletisim,,Yeni ana sayfanın iletişim ve randevu bölümü.,page,62,,,/de/terminformular → /de/#iletisim,aynı,Terminformular - EMDR IZMIR
 /de/uber-uns,de,kurumsal,301,/de/#ekip,,Yeni ana sayfanın ekip bölümü.,page,0,evet,,/de/uber-uns → /de/#ekip,aynı,ÜBER UNS - EMDR IZMIR
 /de/unser-team,de,kurumsal,301,/de/#ekip,,Yeni ana sayfanın ekip bölümü.,page,549,evet,,/de/unser-team → /de/#ekip,aynı,UNSER TEAM - EMDR IZMIR
 /de/unsere-artikel,de,liste,301,/de/#makaleler,,Makale listesi; yeni ana sayfada makaleler bölümü.,page,502,evet,,/de/unsere-artikel → /de/#makaleler,aynı,UNSERE ARTIKEL - EMDR IZMIR
 /de/unsere-studienbereiche,de,liste,301,/de/#hizmetler,,Çalışma alanları listesi.,page,58,evet,,/de/unsere-studienbereiche → /de/#hizmetler,aynı,UNSERE STUDIENBEREICHE - EMDR IZMIR
 /de/medien,de,medya,301,/de/,,Eski sayfa boştu; yeni sitede karşılığı yok.,page,0,evet,,/de/medien → /de/,aynı,MEDIEN - EMDR IZMIR
 /de/unsere-dokumente,de,medya,301,/de/,,Eski sayfa boştu; yeni sitede karşılığı yok.,page,0,evet,,/de/unsere-dokumente → /de/,aynı,UNSERE DOKUMENTE - EMDR IZMIR
-/de/videos,de,medya,301,/de/,,Eski sayfa boştu; yeni sitede karşılığı yok.,page,0,,,,kural eklenecek,VIDEOS - EMDR IZMIR
-/de/blog,de,mektup,301,/de/#neden,,Eski blogda yalnızca 'Neden EMDR' mektubu vardı. Almanca mektup ana sayfada.,page,188,,,,kural eklenecek,BLOG - EMDR IZMIR
-/de/client-comments,de,yorum,301,/de/,,Danışan yorumları Yönetmelik md. 5/1/e gereği yayınlanmıyor. (Almanca menüdeki bu bağlantı zaten kırıktı.),soft404,,,,,kural eklenecek,
-/en,en,ana-sayfa,301,/en/,,Sonda / eksik.,404,,,,/en → /en/,aynı,
-/en/appointment-form,en,iletisim,301,/en/#iletisim,,Yeni ana sayfanın iletişim ve randevu bölümü.,page,61,,,,kural eklenecek,Appointment Form - EMDR IZMIR
+/de/videos,de,medya,301,/de/,,Eski sayfa boştu; yeni sitede karşılığı yok.,page,0,,,/de/videos → /de/,aynı,VIDEOS - EMDR IZMIR
+/de/blog,de,mektup,301,/de/#neden,,Eski blogda yalnızca 'Neden EMDR' mektubu vardı. Almanca mektup ana sayfada.,page,188,,,/de/blog → /de/#neden,aynı,BLOG - EMDR IZMIR
+/de/client-comments,de,yorum,301,/de/,,Danışan yorumları Yönetmelik md. 5/1/e gereği yayınlanmıyor. (Almanca menüdeki bu bağlantı zaten kırıktı.),soft404,,,,/de/client-comments → /de/,aynı,
+/en/appointment-form,en,iletisim,301,/en/#iletisim,,Yeni ana sayfanın iletişim ve randevu bölümü.,page,61,,,/en/appointment-form → /en/#iletisim,aynı,Appointment Form - EMDR IZMIR
 /en/contact,en,iletisim,301,/en/#iletisim,,Yeni ana sayfanın iletişim ve randevu bölümü.,page,41,evet,evet,/en/contact → /en/#iletisim,aynı,CONTACT - EMDR IZMIR
-/en/bireysel-yetiskin-psikoterapisi,en,kirik-baglanti,301,/en/individual-adult-psychotherapy/,,Eski Almanca menüdeki kırık bağlantı; aynı hizmetin İngilizce sayfası.,soft404,,,,,kural eklenecek,
-/en/cift-aile-terapisi,en,kirik-baglanti,301,/en/couple-and-family-therapy/,,Eski Almanca menüdeki kırık bağlantı; aynı hizmetin İngilizce sayfası.,soft404,,,,,kural eklenecek,
-/en/cocuk-ve-ergen-terapisi-,en,kirik-baglanti,301,/en/child-and-adolescent-therapy/,,Eski Almanca menüdeki kırık bağlantı; aynı hizmetin İngilizce sayfası.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/en/institution,en,kirik-baglanti,301,/en/#ekip,,Eski Almanca menüdeki kırık bağlantı.,soft404,,,evet,,kural eklenecek,
-/en/kontakt,en,kirik-baglanti,301,/en/#iletisim,,Eski Almanca menüdeki kırık bağlantı.,soft404,,,,,kural eklenecek,
-/en/neden-emdr,en,kirik-baglanti,301,/en/why--emdr/,,Eski Almanca menüdeki kırık bağlantı.,soft404,,,,,kural eklenecek,
-/en/online-bireysel-terapi,en,kirik-baglanti,301,/en/online-individual-therapy/,,Eski Almanca menüdeki kırık bağlantı; aynı hizmetin İngilizce sayfası.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/en/psikoterapi-ve-psikolojik-danismanlik-hizmetleri,en,kirik-baglanti,301,/en/psychotherapy-and-psychological-counselling/,,Eski Almanca menüdeki kırık bağlantı; aynı hizmetin İngilizce sayfası.,soft404,,,,,kural eklenecek,
-/en/sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi,en,kirik-baglanti,301,/en/virtual-reality-exposure-therapy/,,Eski Almanca menüdeki kırık bağlantı; aynı hizmetin İngilizce sayfası.,soft404,,,,,kural eklenecek,
-/en/unsere-artikel,en,kirik-baglanti,301,/en/#makaleler,,Eski Almanca menüdeki kırık bağlantı.,soft404,,,,,kural eklenecek,
-/en/unsere-studienbereiche,en,kirik-baglanti,301,/en/#hizmetler,,Eski Almanca menüdeki kırık bağlantı.,soft404,,,,,kural eklenecek,
+/en/bireysel-yetiskin-psikoterapisi,en,kirik-baglanti,301,/en/individual-adult-psychotherapy/,,Eski Almanca menüdeki kırık bağlantı; aynı hizmetin İngilizce sayfası.,soft404,,,,/en/bireysel-yetiskin-psikoterapisi → /en/individual-adult-psychotherapy/,aynı,
+/en/cift-aile-terapisi,en,kirik-baglanti,301,/en/couple-and-family-therapy/,,Eski Almanca menüdeki kırık bağlantı; aynı hizmetin İngilizce sayfası.,soft404,,,,/en/cift-aile-terapisi → /en/couple-and-family-therapy/,aynı,
+/en/cocuk-ve-ergen-terapisi-,en,kirik-baglanti,301,/en/child-and-adolescent-therapy/,,Eski Almanca menüdeki kırık bağlantı; aynı hizmetin İngilizce sayfası.,soft404,,,,/en/cocuk-ve-ergen-terapisi- → /en/child-and-adolescent-therapy/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/en/institution,en,kirik-baglanti,301,/en/#ekip,,Eski Almanca menüdeki kırık bağlantı.,soft404,,,evet,/en/institution → /en/#ekip,aynı,
+/en/kontakt,en,kirik-baglanti,301,/en/#iletisim,,Eski Almanca menüdeki kırık bağlantı.,soft404,,,,/en/kontakt → /en/#iletisim,aynı,
+/en/neden-emdr,en,kirik-baglanti,301,/en/why--emdr/,,Eski Almanca menüdeki kırık bağlantı.,soft404,,,,/en/neden-emdr → /en/why--emdr/,aynı,
+/en/online-bireysel-terapi,en,kirik-baglanti,301,/en/online-individual-therapy/,,Eski Almanca menüdeki kırık bağlantı; aynı hizmetin İngilizce sayfası.,soft404,,,,/en/online-bireysel-terapi → /en/online-individual-therapy/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/en/psikoterapi-ve-psikolojik-danismanlik-hizmetleri,en,kirik-baglanti,301,/en/psychotherapy-and-psychological-counselling/,,Eski Almanca menüdeki kırık bağlantı; aynı hizmetin İngilizce sayfası.,soft404,,,,/en/psikoterapi-ve-psikolojik-danismanlik-hizmetleri → /en/psychotherapy-and-psychological-counselling/,aynı,
+/en/sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi,en,kirik-baglanti,301,/en/virtual-reality-exposure-therapy/,,Eski Almanca menüdeki kırık bağlantı; aynı hizmetin İngilizce sayfası.,soft404,,,,/en/sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi → /en/virtual-reality-exposure-therapy/,aynı,
+/en/unsere-artikel,en,kirik-baglanti,301,/en/#makaleler,,Eski Almanca menüdeki kırık bağlantı.,soft404,,,,/en/unsere-artikel → /en/#makaleler,aynı,
+/en/unsere-studienbereiche,en,kirik-baglanti,301,/en/#hizmetler,,Eski Almanca menüdeki kırık bağlantı.,soft404,,,,/en/unsere-studienbereiche → /en/#hizmetler,aynı,
 /en/about-us,en,kurumsal,301,/en/#ekip,,Yeni ana sayfanın ekip bölümü.,page,288,evet,evet,/en/about-us → /en/#ekip,aynı,ABOUT US - EMDR IZMIR
 /en/corporate,en,kurumsal,301,/en/#ekip,,Yeni ana sayfanın ekip bölümü.,page,0,evet,,/en/corporate → /en/#ekip,aynı,CORPORATE - EMDR IZMIR
 /en/our-team,en,kurumsal,301,/en/#ekip,,Yeni ana sayfanın ekip bölümü.,page,549,evet,,/en/our-team → /en/#ekip,aynı,OUR TEAM - EMDR IZMIR
 /en/articles,en,liste,301,/en/#makaleler,,Makale listesi; yeni ana sayfada makaleler bölümü.,page,501,evet,,/en/articles → /en/#makaleler,aynı,ARTICLES - EMDR IZMIR
 /en/study-areas,en,liste,301,/en/#hizmetler,,Çalışma alanları listesi.,page,57,evet,,/en/study-areas → /en/#hizmetler,aynı,STUDY AREAS - EMDR IZMIR
-/en/documents,en,medya,301,/en/,,Eski sayfa boştu; yeni sitede karşılığı yok.,page,0,evet,,,kural eklenecek,DOCUMENTS - EMDR IZMIR
-/en/media,en,medya,301,/en/,,Eski sayfa boştu; yeni sitede karşılığı yok.,page,0,evet,,,kural eklenecek,MEDIA - EMDR IZMIR
-/en/videos,en,medya,301,/en/,,Eski sayfa boştu; yeni sitede karşılığı yok.,page,0,evet,,,kural eklenecek,VIDEOS - EMDR IZMIR
-/en/blog,en,mektup,301,/en/why--emdr/,,Eski blogda yalnızca 'Neden EMDR' mektubu vardı.,page,187,evet,evet,/en/blog → /en/#neden,hedef değişecek,BLOG - EMDR IZMIR
+/en/documents,en,medya,301,/en/,,Eski sayfa boştu; yeni sitede karşılığı yok.,page,0,evet,,/en/documents → /en/,aynı,DOCUMENTS - EMDR IZMIR
+/en/media,en,medya,301,/en/,,Eski sayfa boştu; yeni sitede karşılığı yok.,page,0,evet,,/en/media → /en/,aynı,MEDIA - EMDR IZMIR
+/en/videos,en,medya,301,/en/,,Eski sayfa boştu; yeni sitede karşılığı yok.,page,0,evet,,/en/videos → /en/,aynı,VIDEOS - EMDR IZMIR
+/en/blog,en,mektup,301,/en/why--emdr/,,Eski blogda yalnızca 'Neden EMDR' mektubu vardı.,page,187,evet,evet,/en/blog → /en/why--emdr/,aynı,BLOG - EMDR IZMIR
 /en/client-comments,en,yorum,301,/en/,,Danışan yorumları Yönetmelik md. 5/1/e gereği yayınlanmıyor.,page,282,evet,,/en/client-comments → /en/,aynı,Client Comments - EMDR IZMIR
-/fr,fr,ana-sayfa,301,/fr/,,Sonda / eksik.,404,,,,/fr → /fr/,aynı,
 /tr,tr,ana-sayfa,301,/,,Yeni sitede Türkçe ana sayfa kökte.,404,,,,/tr → /,aynı,
-/tr/,tr,ana-sayfa,301,/,,Yeni sitede Türkçe ana sayfa kökte.,home,511,,evet,/tr/* → /,tekil kural eklenecek (şimdi splat yakalıyor),EMDR İZMİR
+/tr/,tr,ana-sayfa,301,/,,Yeni sitede Türkçe ana sayfa kökte.,home,511,,evet,/tr/ → /,aynı,EMDR İZMİR
 /tr/iletisim,tr,iletisim,301,/#iletisim,,Yeni ana sayfanın iletişim ve randevu bölümü.,page,41,evet,evet,/tr/iletisim → /#iletisim,aynı,İLETİŞİM - EMDR İZMİR
-/tr/randevu-formu,tr,iletisim,301,/#iletisim,,Yeni ana sayfanın iletişim ve randevu bölümü.,page,39,evet,evet,/tr/* → /,tekil kural eklenecek (şimdi splat yakalıyor),Randevu Formu - EMDR İZMİR
+/tr/randevu-formu,tr,iletisim,301,/#iletisim,,Yeni ana sayfanın iletişim ve randevu bölümü.,page,39,evet,evet,/tr/randevu-formu → /#iletisim,aynı,Randevu Formu - EMDR İZMİR
 /tr/ekibimiz,tr,kurumsal,301,/#ekip,,Yeni ana sayfanın ekip bölümü.,page,467,,evet,/tr/ekibimiz → /#ekip,aynı,EKİBİMİZ - EMDR İZMİR
 /tr/hakkimizda,tr,kurumsal,301,/#ekip,,Yeni ana sayfanın ekip bölümü.,page,132,evet,evet,/tr/hakkimizda → /#ekip,aynı,HAKKIMIZDA - EMDR İZMİR
 /tr/kurumsal,tr,kurumsal,301,/#ekip,,Yeni ana sayfanın ekip bölümü.,page,0,evet,evet,/tr/kurumsal → /#ekip,aynı,KURUMSAL - EMDR İZMİR
 /tr/calisma-alanlarimiz,tr,liste,301,/#hizmetler,,Çalışma alanları listesi.,page,106,evet,evet,/tr/calisma-alanlarimiz → /#hizmetler,aynı,ÇALIŞMA ALANLARIMIZ - EMDR İZMİR
 /tr/makalelerimiz,tr,liste,301,/#makaleler,,Makale listesi; yeni ana sayfada makaleler bölümü.,page,510,,,/tr/makalelerimiz → /#makaleler,aynı,MAKALELERİMİZ - EMDR İZMİR
-/tr/covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak-,tr,makale,301,/tr/covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak/,,Aynı yazının sonu tireli eski adresi.,soft404,,,,/tr/* → /,tekil kural eklenecek (şimdi splat yakalıyor),Covid-19 ve Ruhsal Değişim: Olmak ya da Olmamak! - EMDR İZMİR
-/tr/viral-ensefalite-baglideliryum-bir-olgu-sunumu,tr,makale,301,/tr/viral-ensefalite-bagli-deliryum-bir-olgu-sunumu/,,Eski yazım hatalı adres (baglideliryum).,soft404,,,,/tr/* → /,tekil kural eklenecek (şimdi splat yakalıyor),(boş ya da yalnızca ana sayfa kopyası)
-/tr/medya,tr,medya,301,/,,Eski sayfa boştu; yeni sitede karşılığı yok. (Videolar'da yalnızca tek YouTube videosu vardı.),page,0,evet,evet,/tr/* → /,tekil kural eklenecek (şimdi splat yakalıyor),MEDYA - EMDR İZMİR
-/tr/videolar,tr,medya,301,/,,Eski sayfa boştu; yeni sitede karşılığı yok. (Videolar'da yalnızca tek YouTube videosu vardı.),page,0,evet,,/tr/* → /,tekil kural eklenecek (şimdi splat yakalıyor),VİDEOLAR - EMDR İZMİR
-/tr/blog,tr,mektup,301,/tr/neden-emdr/,,Eski blogda yalnızca 'Neden EMDR' mektubu vardı.,page,158,evet,evet,/tr/blog → /#neden,hedef değişecek,BLOG - EMDR İZMİR
+/tr/covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak-,tr,makale,301,/tr/covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak/,,Aynı yazının sonu tireli eski adresi.,soft404,,,,/tr/covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak- → /tr/covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak/,aynı,Covid-19 ve Ruhsal Değişim: Olmak ya da Olmamak! - EMDR İZMİR
+/tr/viral-ensefalite-baglideliryum-bir-olgu-sunumu,tr,makale,301,/tr/viral-ensefalite-bagli-deliryum-bir-olgu-sunumu/,,Eski yazım hatalı adres (baglideliryum).,soft404,,,,/tr/viral-ensefalite-baglideliryum-bir-olgu-sunumu → /tr/viral-ensefalite-bagli-deliryum-bir-olgu-sunumu/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/tr/medya,tr,medya,301,/,,Eski sayfa boştu; yeni sitede karşılığı yok. (Videolar'da yalnızca tek YouTube videosu vardı.),page,0,evet,evet,/tr/medya → /,aynı,MEDYA - EMDR İZMİR
+/tr/videolar,tr,medya,301,/,,Eski sayfa boştu; yeni sitede karşılığı yok. (Videolar'da yalnızca tek YouTube videosu vardı.),page,0,evet,,/tr/videolar → /,aynı,VİDEOLAR - EMDR İZMİR
+/tr/blog,tr,mektup,301,/tr/neden-emdr/,,Eski blogda yalnızca 'Neden EMDR' mektubu vardı.,page,158,evet,evet,/tr/blog → /tr/neden-emdr/,aynı,BLOG - EMDR İZMİR
 /tr/danisan-yorumlari,tr,yorum,301,/,,Danışan yorumları Yönetmelik md. 5/1/e gereği yayınlanmıyor.,page,282,evet,,/tr/danisan-yorumlari → /,aynı,Danışan Yorumları - EMDR İZMİR
-/alkol-ve-madde-bagimliligi,,eski-surum,301,/#hizmetler,,Konu listesinde var ya da en yakın bölüm hizmetler.,404,,,,,kural eklenecek,
-/bedensel-belirtilerle-giden-psikiyatrik-bozukluklarda-emdr-tedavisi,,eski-surum,301,/tr/psikosomatik-bozukluklar/,,Bedensel belirtilerle giden bozukluklar = psikosomatik.,404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/bedensel-belirtilerle-giden-psikiyatrik-bozukluklarda-emdr-tedavisi-emdr/,,eski-surum,301,/tr/psikosomatik-bozukluklar/,,Bedensel belirtilerle giden bozukluklar = psikosomatik.,soft404,,,evet,,kural eklenecek,Bedensel Belirtilerle Giden Psikiyatrik Bozukluklarda EMDR Tedavisi - EMDR
-/belgelerimiz,,eski-surum,301,/#ekip,,2018'de hekimin belgeleri (sertifika görselleri) vardı; KVKK metni değil.,404,,,,,kural eklenecek,Belgelerimiz - EMDR
-/belgelerimiz/,,eski-surum,301,/#ekip,,2018'de hekimin belgeleri (sertifika görselleri) vardı; KVKK metni değil.,soft404,,,evet,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/bipolar-bozukluk,,eski-surum,301,/#hizmetler,,Konu listesinde var ya da en yakın bölüm hizmetler.,404,,,,,kural eklenecek,
-/bir-soru-ustune,,eski-surum,301,/,,Ücret üzerine mektup; yeni sitede karşılığı yok.,404,,,,,kural eklenecek,Bir Soru Üstüne... - EMDR
-/bir-soru-uzerine/,,eski-surum,301,/,,Ücret üzerine mektup; yeni sitede karşılığı yok.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/blog,,eski-surum,301,/#makaleler,,Blog ve makale listesi.,404,,,,,kural eklenecek,EMDR | Izmir Dr. Mehmet Oğuz
-/blog/,,eski-surum,301,/#makaleler,,Blog ve makale listesi.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/cinsel-islev-bozukluklari,,eski-surum,301,/tr/cinsel-sorunlar/,,Aynı konu.,404,,,,,kural eklenecek,
-/cinsel-istismara-bagli-travmalarda-emdr-terapisinin-basarisi/,,eski-surum,301,/tr/travma-sonrasi-stres-bozuklugu/,,Travma konusu.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/cinsel-sorunlar-ve-cinsel-terapi/,,eski-surum,301,/tr/cinsel-sorunlar/,,Aynı konu.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/daha-iyi-hissediyorum/,,eski-surum,301,/,,İçeriği hiçbir kaynakta kalmamış.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/depresyonla-yasamak-zorunda-degiliz/,,eski-surum,301,/tr/depresyon/,,Aynı konu.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/dikkat-eksikligi-hiperaktivite-bozu,,eski-surum,301,/#hizmetler,,Konu listesinde var ya da en yakın bölüm hizmetler.,404,,,,,kural eklenecek,
-/ekibimiz,,eski-surum,301,/#ekip,,Hekim ve ekip tanıtımı.,404,,,,,kural eklenecek,Ekibimiz - EMDR
-/ekibimiz/,,eski-surum,301,/#ekip,,Hekim ve ekip tanıtımı.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/emdr-nedir,,eski-surum,301,/#emdr,,EMDR'yi anlatan yazılar; yeni ana sayfada 'EMDR nedir' bölümü.,404,,,,,kural eklenecek,EMDR Nedir - EMDR
-/emdr-nedir/,,eski-surum,301,/#emdr,,EMDR'yi anlatan yazılar; yeni ana sayfada 'EMDR nedir' bölümü.,soft404,,,evet,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/emdr-nin-tanimi-ve-1980-lerden-gunumuze-dunyadaki-yeri,,eski-surum,301,/#emdr,,EMDR'yi anlatan yazılar; yeni ana sayfada 'EMDR nedir' bölümü.,404,,,,,kural eklenecek,EMDR’nin Tanımı ve 1980’lerden Günümüze Dünyadaki Yeri - EMDR
-/emdr-nin-tanimi-ve-1980-lerden-gunumuze-dunyadaki-yeri/,,eski-surum,301,/#emdr,,EMDR'yi anlatan yazılar; yeni ana sayfada 'EMDR nedir' bölümü.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/emdr-tedavisinin-ruhsal-travmalardaki-etkisi,,eski-surum,301,/tr/travma-sonrasi-stres-bozuklugu/,,Travma konusu.,404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/emdr-tedavisinin-ruhsal-travmalardaki-etkisi-emdr/,,eski-surum,301,/tr/travma-sonrasi-stres-bozuklugu/,,Travma konusu.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/emdr-terapisinde-grup-tedavisi-mumkun-mu-,,eski-surum,301,/#emdr,,EMDR'yi anlatan yazılar; yeni ana sayfada 'EMDR nedir' bölümü.,404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/emdr-terapisinde-grup-tedavisi-mumkun-mu/,,eski-surum,301,/#emdr,,EMDR'yi anlatan yazılar; yeni ana sayfada 'EMDR nedir' bölümü.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/hakkimda,,eski-surum,301,/#ekip,,Hekim ve ekip tanıtımı.,404,,,,,kural eklenecek,Hakkımda - EMDR
-/hakkimizda/,,eski-surum,301,/#ekip,,Hekim ve ekip tanıtımı.,soft404,,,evet,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/hizmetlerimiz,,eski-surum,301,/#hizmetler,,Konu listesinde var ya da en yakın bölüm hizmetler.,404,,,,,kural eklenecek,
-/iletisim,,eski-surum,301,/#iletisim,,İletişim ve randevu.,404,,,,,kural eklenecek,İletişim - EMDR
-/iletisim/,,eski-surum,301,/#iletisim,,İletişim ve randevu.,soft404,,,evet,,kural eklenecek,İletişim
-/internet-ve-oyun-bagimliligi,,eski-surum,301,/#hizmetler,,Konu listesinde var ya da en yakın bölüm hizmetler.,404,,,,,kural eklenecek,
-/kaygi-anksiyete-bozukluklari/,,eski-surum,301,/tr/kaygi-bozukluklari/,,Aynı konu.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/kaygi-bozukluklari,,eski-surum,301,/tr/kaygi-bozukluklari/,,Aynı konu.,404,,,,,kural eklenecek,
-/kumar-bagimliligi,,eski-surum,301,/#hizmetler,,Konu listesinde var ya da en yakın bölüm hizmetler.,404,,,,,kural eklenecek,
-/madde-ve-alkol-bagimliligi-icin-yeni-populer-yontem-emdr-psikoterapisi/,,eski-surum,301,/#emdr,,EMDR'yi anlatan yazılar; yeni ana sayfada 'EMDR nedir' bölümü.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/makaleler,,eski-surum,301,/#makaleler,,Blog ve makale listesi.,404,,,,,kural eklenecek,Makaleler - EMDR
-/medya,,eski-surum,301,/,,Boş medya sayfası.,404,,,,,kural eklenecek,Medya - EMDR
-/medya/,,eski-surum,301,/,,Boş medya sayfası.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/neden-emdr,,eski-surum,301,/tr/neden-emdr/,,Hekimin mektubu.,404,,,,,kural eklenecek,Neden EMDR? - EMDR
-/neden-emdr/,,eski-surum,301,/tr/neden-emdr/,,Hekimin mektubu.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/obsesif-kompulsif-bozukluk,,eski-surum,301,/tr/obsesif--kompulsif-bozukluk/,,Aynı konu.,404,,,,,kural eklenecek,
-/oegrenme-bozukluklari,,eski-surum,301,/tr/ders-basarisizligi-ve-sinav-kaygisi/,,En yakın konu (öğrenme güçlüğü).,404,,,,,kural eklenecek,
-/online-randevu-al,,eski-surum,301,/#iletisim,,İletişim ve randevu.,404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/panik-atak/,,eski-surum,301,/tr/panik-atak/,,Aynı konu.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/panik-bozukluk,,eski-surum,301,/tr/panik-atak/,,Aynı konu.,404,,,,,kural eklenecek,
-/psikiyatri-2,,eski-surum,301,/#ekip,,Hekim ve ekip tanıtımı.,404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/psikiyatri-nedir-psikiyatrist-kimdir/,,eski-surum,301,/#ekip,,Hekim ve ekip tanıtımı.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/randevu,,eski-surum,301,/#iletisim,,İletişim ve randevu.,404,,,,,kural eklenecek,
-/seans-sureleri-ve-sikligi,,eski-surum,301,/#protokol,,Seans süresi ve sıklığı; yeni ana sayfada seans akışı bölümü.,404,,,,,kural eklenecek,Seans Süreleri ve Sıklığı - EMDR
-/seans-sureleri-ve-sikligi/,,eski-surum,301,/#protokol,,Seans süresi ve sıklığı; yeni ana sayfada seans akışı bölümü.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/sema-terapisi-nedir-nasil-uygulanir-,,eski-surum,301,/tr/bireysel-yetiskin-psikoterapisi/,,Şema terapi bireysel psikoterapide kullanılan bir yöntem.,404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/sema-terapisi-nedir-nasil-uygulanir/,,eski-surum,301,/tr/bireysel-yetiskin-psikoterapisi/,,Şema terapi bireysel psikoterapide kullanılan bir yöntem.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/single-post/2017/02/15/Ho%C5%9Fgeldiniz-karde%C5%9Flerim,,eski-surum,301,/tr/neden-emdr/,,2017 blog yazıları; en yakın yer hekimin mektubu. (kural: /single-post/*),soft404,,,,,kural eklenecek,EMDR | Izmir Dr. Mehmet Oğuz
-/single-post/2017/02/19/EMDR-nedir-diye-soranlara-san%C4%B1r%C4%B1m-bu-makale-bir%C5%9Feyler-anlat%C4%B1r-EMDR-travmatikac%C4%B1-an%C4%B1lar%C4%B1-silmez-yeniden-anlamland%C4%B1r%C4%B1r,,eski-surum,301,/tr/neden-emdr/,,2017 blog yazıları; en yakın yer hekimin mektubu. (kural: /single-post/*),soft404,,,,,kural eklenecek,
-/single-post/2017/03/17/Ben-iyi-bir-terapist-de%C4%9Filim,,eski-surum,301,/tr/neden-emdr/,,2017 blog yazıları; en yakın yer hekimin mektubu. (kural: /single-post/*),soft404,,,,,kural eklenecek,
-/single-post/2017/03/26/Seans-%C3%9Ccretleri,,eski-surum,301,/tr/neden-emdr/,,2017 blog yazıları; en yakın yer hekimin mektubu. (kural: /single-post/*),soft404,,,,,kural eklenecek,EMDR | Izmir Dr. Mehmet Oğuz
-/single-post/2017/03/27/Bir-Soru-%C3%9Cst%C3%BCne,,eski-surum,301,/tr/neden-emdr/,,2017 blog yazıları; en yakın yer hekimin mektubu. (kural: /single-post/*),soft404,,,,,kural eklenecek,
-/single-post/2017/04/02/SEANS-S%C3%9CRELER%C4%B0-VE-SIKLI%C4%9EI,,eski-surum,301,/tr/neden-emdr/,,2017 blog yazıları; en yakın yer hekimin mektubu. (kural: /single-post/*),soft404,,,,,kural eklenecek,EMDR | Izmir Dr. Mehmet Oğuz
-/single-post/2017/04/03/Neden-EMDR,,eski-surum,301,/tr/neden-emdr/,,2017 blog yazıları; en yakın yer hekimin mektubu. (kural: /single-post/*),soft404,,,,,kural eklenecek,EMDR | Izmir Dr. Mehmet Oğuz
-/single-post/2017/04/19/S%C4%B1ran-geldi%C4%9Finde-en-parlak-sen-olursun,,eski-surum,301,/tr/neden-emdr/,,2017 blog yazıları; en yakın yer hekimin mektubu. (kural: /single-post/*),soft404,,,,,kural eklenecek,
-/sizofreni-ve-psikotik-bozukluklar,,eski-surum,301,/#hizmetler,,Konu listesinde var ya da en yakın bölüm hizmetler.,404,,,,,kural eklenecek,
-/soner-yalcin-in-karakutu-isimli-kitabina-psikiyatri-ve-psikoloji-bilimi-adina-tepkimiz/,,eski-surum,301,/#makaleler,,Blog ve makale listesi.,soft404,,,,,kural eklenecek,Soner Yalçın’ın Karakutu isimli kitabına Psikiyatri ve Psikoloji Bilimi adına tepkimiz
-/sorulafr,,eski-surum,301,/#iletisim,,İletişim ve randevu.,404,,,,,kural eklenecek,EMDR | Izmir Dr. Mehmet Oğuz
-/sosyal-fobi-tedavisinde-emdr-gucu,,eski-surum,301,/tr/kaygi-bozukluklari/,,Sosyal fobi bir kaygı bozukluğu.,404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/sosyal-fobi-tedavisinde-emdr-gucu-emdr/,,eski-surum,301,/tr/kaygi-bozukluklari/,,Sosyal fobi bir kaygı bozukluğu.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/travma-sonrasi-stres-bozuklugiu,,eski-surum,301,/tr/travma-sonrasi-stres-bozuklugu/,,Travma konusu.,404,,,,,kural eklenecek,EMDR | Izmir Dr. Mehmet Oğuz
-/tssb,,eski-surum,301,/tr/travma-sonrasi-stres-bozuklugu/,,Travma konusu.,404,,,,,kural eklenecek,
-/uyum-bozukluklari,,eski-surum,301,/tr/uyum-problemleri/,,Aynı konu.,404,,,,,kural eklenecek,
-/yeme-bozukluklari,,eski-surum,301,/tr/yeme-bozukluklari/,,Aynı konu.,404,,,,,kural eklenecek,
-/yuksek-duzeydeki-sinav-kaygisi-ile-bas-etmenin-yollari,,eski-surum,301,/tr/ders-basarisizligi-ve-sinav-kaygisi/,,Sınav kaygısı konusu.,404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/yuksek-duzeydeki-sinav-kaygisi-ile-bas-etmenin-yollari-ve-emdr-emdr/,,eski-surum,301,/tr/ders-basarisizligi-ve-sinav-kaygisi/,,Sınav kaygısı konusu.,soft404,,,,,kural eklenecek,(boş ya da yalnızca ana sayfa kopyası)
-/tr/cocuk-ve-ergen-terapisi,tr,hic-olmamis,kural-kaldir,,,Eski sitede hiç olmamış adres. Doğrusu /tr/cocuk-ve-ergen-terapisi- (sonda tire).,soft404,,,,/tr/cocuk-ve-ergen-terapisi → /#hizmetler,kural kaldırılacak,
-/tr/psikoterapi-ve-psikolojik-danismanlik,tr,hic-olmamis,kural-kaldir,,,Eski sitede hiç olmamış adres. Doğrusu /tr/psikoterapi-ve-psikolojik-danismanlik-hizmetleri.,soft404,,,,/tr/psikoterapi-ve-psikolojik-danismanlik → /#hizmetler,kural kaldırılacak,
+/alkol-ve-madde-bagimliligi,,eski-surum,301,/#hizmetler,,Konu listesinde var ya da en yakın bölüm hizmetler.,404,,,,/alkol-ve-madde-bagimliligi → /#hizmetler,aynı,
+/bedensel-belirtilerle-giden-psikiyatrik-bozukluklarda-emdr-tedavisi,,eski-surum,301,/tr/psikosomatik-bozukluklar/,,Bedensel belirtilerle giden bozukluklar = psikosomatik.,404,,,,/bedensel-belirtilerle-giden-psikiyatrik-bozukluklarda-emdr-tedavisi → /tr/psikosomatik-bozukluklar/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/bedensel-belirtilerle-giden-psikiyatrik-bozukluklarda-emdr-tedavisi-emdr/,,eski-surum,301,/tr/psikosomatik-bozukluklar/,,Bedensel belirtilerle giden bozukluklar = psikosomatik.,soft404,,,evet,/bedensel-belirtilerle-giden-psikiyatrik-bozukluklarda-emdr-tedavisi-emdr/ → /tr/psikosomatik-bozukluklar/,aynı,Bedensel Belirtilerle Giden Psikiyatrik Bozukluklarda EMDR Tedavisi - EMDR
+/belgelerimiz,,eski-surum,301,/#ekip,,2018'de hekimin belgeleri (sertifika görselleri) vardı; KVKK metni değil.,404,,,,/belgelerimiz → /#ekip,aynı,Belgelerimiz - EMDR
+/belgelerimiz/,,eski-surum,301,/#ekip,,2018'de hekimin belgeleri (sertifika görselleri) vardı; KVKK metni değil.,soft404,,,evet,/belgelerimiz/ → /#ekip,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/bipolar-bozukluk,,eski-surum,301,/#hizmetler,,Konu listesinde var ya da en yakın bölüm hizmetler.,404,,,,/bipolar-bozukluk → /#hizmetler,aynı,
+/bir-soru-ustune,,eski-surum,301,/,,Ücret üzerine mektup; yeni sitede karşılığı yok.,404,,,,/bir-soru-ustune → /,aynı,Bir Soru Üstüne... - EMDR
+/bir-soru-uzerine/,,eski-surum,301,/,,Ücret üzerine mektup; yeni sitede karşılığı yok.,soft404,,,,/bir-soru-uzerine/ → /,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/blog,,eski-surum,301,/#makaleler,,Blog ve makale listesi.,404,,,,/blog → /#makaleler,aynı,EMDR | Izmir Dr. Mehmet Oğuz
+/blog/,,eski-surum,301,/#makaleler,,Blog ve makale listesi.,soft404,,,,/blog/ → /#makaleler,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/cinsel-islev-bozukluklari,,eski-surum,301,/tr/cinsel-sorunlar/,,Aynı konu.,404,,,,/cinsel-islev-bozukluklari → /tr/cinsel-sorunlar/,aynı,
+/cinsel-istismara-bagli-travmalarda-emdr-terapisinin-basarisi/,,eski-surum,301,/tr/travma-sonrasi-stres-bozuklugu/,,Travma konusu.,soft404,,,,/cinsel-istismara-bagli-travmalarda-emdr-terapisinin-basarisi/ → /tr/travma-sonrasi-stres-bozuklugu/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/cinsel-sorunlar-ve-cinsel-terapi/,,eski-surum,301,/tr/cinsel-sorunlar/,,Aynı konu.,soft404,,,,/cinsel-sorunlar-ve-cinsel-terapi/ → /tr/cinsel-sorunlar/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/daha-iyi-hissediyorum/,,eski-surum,301,/,,İçeriği hiçbir kaynakta kalmamış.,soft404,,,,/daha-iyi-hissediyorum/ → /,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/depresyonla-yasamak-zorunda-degiliz/,,eski-surum,301,/tr/depresyon/,,Aynı konu.,soft404,,,,/depresyonla-yasamak-zorunda-degiliz/ → /tr/depresyon/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/dikkat-eksikligi-hiperaktivite-bozu,,eski-surum,301,/#hizmetler,,Konu listesinde var ya da en yakın bölüm hizmetler.,404,,,,/dikkat-eksikligi-hiperaktivite-bozu → /#hizmetler,aynı,
+/ekibimiz,,eski-surum,301,/#ekip,,Hekim ve ekip tanıtımı.,404,,,,/ekibimiz → /#ekip,aynı,Ekibimiz - EMDR
+/ekibimiz/,,eski-surum,301,/#ekip,,Hekim ve ekip tanıtımı.,soft404,,,,/ekibimiz/ → /#ekip,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/emdr-nedir,,eski-surum,301,/#emdr,,EMDR'yi anlatan yazılar; yeni ana sayfada 'EMDR nedir' bölümü.,404,,,,/emdr-nedir → /#emdr,aynı,EMDR Nedir - EMDR
+/emdr-nedir/,,eski-surum,301,/#emdr,,EMDR'yi anlatan yazılar; yeni ana sayfada 'EMDR nedir' bölümü.,soft404,,,evet,/emdr-nedir/ → /#emdr,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/emdr-nin-tanimi-ve-1980-lerden-gunumuze-dunyadaki-yeri,,eski-surum,301,/#emdr,,EMDR'yi anlatan yazılar; yeni ana sayfada 'EMDR nedir' bölümü.,404,,,,/emdr-nin-tanimi-ve-1980-lerden-gunumuze-dunyadaki-yeri → /#emdr,aynı,EMDR’nin Tanımı ve 1980’lerden Günümüze Dünyadaki Yeri - EMDR
+/emdr-nin-tanimi-ve-1980-lerden-gunumuze-dunyadaki-yeri/,,eski-surum,301,/#emdr,,EMDR'yi anlatan yazılar; yeni ana sayfada 'EMDR nedir' bölümü.,soft404,,,,/emdr-nin-tanimi-ve-1980-lerden-gunumuze-dunyadaki-yeri/ → /#emdr,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/emdr-tedavisinin-ruhsal-travmalardaki-etkisi,,eski-surum,301,/tr/travma-sonrasi-stres-bozuklugu/,,Travma konusu.,404,,,,/emdr-tedavisinin-ruhsal-travmalardaki-etkisi → /tr/travma-sonrasi-stres-bozuklugu/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/emdr-tedavisinin-ruhsal-travmalardaki-etkisi-emdr/,,eski-surum,301,/tr/travma-sonrasi-stres-bozuklugu/,,Travma konusu.,soft404,,,,/emdr-tedavisinin-ruhsal-travmalardaki-etkisi-emdr/ → /tr/travma-sonrasi-stres-bozuklugu/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/emdr-terapisinde-grup-tedavisi-mumkun-mu-,,eski-surum,301,/#emdr,,EMDR'yi anlatan yazılar; yeni ana sayfada 'EMDR nedir' bölümü.,404,,,,/emdr-terapisinde-grup-tedavisi-mumkun-mu- → /#emdr,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/emdr-terapisinde-grup-tedavisi-mumkun-mu/,,eski-surum,301,/#emdr,,EMDR'yi anlatan yazılar; yeni ana sayfada 'EMDR nedir' bölümü.,soft404,,,,/emdr-terapisinde-grup-tedavisi-mumkun-mu/ → /#emdr,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/hakkimda,,eski-surum,301,/#ekip,,Hekim ve ekip tanıtımı.,404,,,,/hakkimda → /#ekip,aynı,Hakkımda - EMDR
+/hakkimizda/,,eski-surum,301,/#ekip,,Hekim ve ekip tanıtımı.,soft404,,,evet,/hakkimizda/ → /#ekip,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/hizmetlerimiz,,eski-surum,301,/#hizmetler,,Konu listesinde var ya da en yakın bölüm hizmetler.,404,,,,/hizmetlerimiz → /#hizmetler,aynı,
+/iletisim,,eski-surum,301,/#iletisim,,İletişim ve randevu.,404,,,,/iletisim → /#iletisim,aynı,İletişim - EMDR
+/iletisim/,,eski-surum,301,/#iletisim,,İletişim ve randevu.,soft404,,,evet,/iletisim/ → /#iletisim,aynı,İletişim
+/internet-ve-oyun-bagimliligi,,eski-surum,301,/#hizmetler,,Konu listesinde var ya da en yakın bölüm hizmetler.,404,,,,/internet-ve-oyun-bagimliligi → /#hizmetler,aynı,
+/kaygi-anksiyete-bozukluklari/,,eski-surum,301,/tr/kaygi-bozukluklari/,,Aynı konu.,soft404,,,,/kaygi-anksiyete-bozukluklari/ → /tr/kaygi-bozukluklari/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/kaygi-bozukluklari,,eski-surum,301,/tr/kaygi-bozukluklari/,,Aynı konu.,404,,,,/kaygi-bozukluklari → /tr/kaygi-bozukluklari/,aynı,
+/kumar-bagimliligi,,eski-surum,301,/#hizmetler,,Konu listesinde var ya da en yakın bölüm hizmetler.,404,,,,/kumar-bagimliligi → /#hizmetler,aynı,
+/madde-ve-alkol-bagimliligi-icin-yeni-populer-yontem-emdr-psikoterapisi/,,eski-surum,301,/#emdr,,EMDR'yi anlatan yazılar; yeni ana sayfada 'EMDR nedir' bölümü.,soft404,,,,/madde-ve-alkol-bagimliligi-icin-yeni-populer-yontem-emdr-psikoterapisi/ → /#emdr,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/makaleler,,eski-surum,301,/#makaleler,,Blog ve makale listesi.,404,,,,/makaleler → /#makaleler,aynı,Makaleler - EMDR
+/medya,,eski-surum,301,/,,Boş medya sayfası.,404,,,,/medya → /,aynı,Medya - EMDR
+/medya/,,eski-surum,301,/,,Boş medya sayfası.,soft404,,,,/medya/ → /,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/neden-emdr,,eski-surum,301,/tr/neden-emdr/,,Hekimin mektubu.,404,,,,/neden-emdr → /tr/neden-emdr/,aynı,Neden EMDR? - EMDR
+/neden-emdr/,,eski-surum,301,/tr/neden-emdr/,,Hekimin mektubu.,soft404,,,,/neden-emdr/ → /tr/neden-emdr/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/obsesif-kompulsif-bozukluk,,eski-surum,301,/tr/obsesif--kompulsif-bozukluk/,,Aynı konu.,404,,,,/obsesif-kompulsif-bozukluk → /tr/obsesif--kompulsif-bozukluk/,aynı,
+/oegrenme-bozukluklari,,eski-surum,301,/tr/ders-basarisizligi-ve-sinav-kaygisi/,,En yakın konu (öğrenme güçlüğü).,404,,,,/oegrenme-bozukluklari → /tr/ders-basarisizligi-ve-sinav-kaygisi/,aynı,
+/online-randevu-al,,eski-surum,301,/#iletisim,,İletişim ve randevu.,404,,,,/online-randevu-al → /#iletisim,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/panik-atak/,,eski-surum,301,/tr/panik-atak/,,Aynı konu.,soft404,,,,/panik-atak/ → /tr/panik-atak/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/panik-bozukluk,,eski-surum,301,/tr/panik-atak/,,Aynı konu.,404,,,,/panik-bozukluk → /tr/panik-atak/,aynı,
+/psikiyatri-2,,eski-surum,301,/#ekip,,Hekim ve ekip tanıtımı.,404,,,,/psikiyatri-2 → /#ekip,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/psikiyatri-nedir-psikiyatrist-kimdir/,,eski-surum,301,/#ekip,,Hekim ve ekip tanıtımı.,soft404,,,,/psikiyatri-nedir-psikiyatrist-kimdir/ → /#ekip,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/randevu,,eski-surum,301,/#iletisim,,İletişim ve randevu.,404,,,,/randevu → /#iletisim,aynı,
+/seans-sureleri-ve-sikligi,,eski-surum,301,/#protokol,,Seans süresi ve sıklığı; yeni ana sayfada seans akışı bölümü.,404,,,,/seans-sureleri-ve-sikligi → /#protokol,aynı,Seans Süreleri ve Sıklığı - EMDR
+/seans-sureleri-ve-sikligi/,,eski-surum,301,/#protokol,,Seans süresi ve sıklığı; yeni ana sayfada seans akışı bölümü.,soft404,,,,/seans-sureleri-ve-sikligi/ → /#protokol,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/sema-terapisi-nedir-nasil-uygulanir-,,eski-surum,301,/tr/bireysel-yetiskin-psikoterapisi/,,Şema terapi bireysel psikoterapide kullanılan bir yöntem.,404,,,,/sema-terapisi-nedir-nasil-uygulanir- → /tr/bireysel-yetiskin-psikoterapisi/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/sema-terapisi-nedir-nasil-uygulanir/,,eski-surum,301,/tr/bireysel-yetiskin-psikoterapisi/,,Şema terapi bireysel psikoterapide kullanılan bir yöntem.,soft404,,,,/sema-terapisi-nedir-nasil-uygulanir/ → /tr/bireysel-yetiskin-psikoterapisi/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/single-post/2017/02/15/Ho%C5%9Fgeldiniz-karde%C5%9Flerim,,eski-surum,301,/tr/neden-emdr/,,2017 blog yazıları; en yakın yer hekimin mektubu. (kural: /single-post/*),soft404,,,,/single-post/* → /tr/neden-emdr/,tekil kural eklenecek (şimdi splat yakalıyor),EMDR | Izmir Dr. Mehmet Oğuz
+/single-post/2017/02/19/EMDR-nedir-diye-soranlara-san%C4%B1r%C4%B1m-bu-makale-bir%C5%9Feyler-anlat%C4%B1r-EMDR-travmatikac%C4%B1-an%C4%B1lar%C4%B1-silmez-yeniden-anlamland%C4%B1r%C4%B1r,,eski-surum,301,/tr/neden-emdr/,,2017 blog yazıları; en yakın yer hekimin mektubu. (kural: /single-post/*),soft404,,,,/single-post/* → /tr/neden-emdr/,tekil kural eklenecek (şimdi splat yakalıyor),
+/single-post/2017/03/17/Ben-iyi-bir-terapist-de%C4%9Filim,,eski-surum,301,/tr/neden-emdr/,,2017 blog yazıları; en yakın yer hekimin mektubu. (kural: /single-post/*),soft404,,,,/single-post/* → /tr/neden-emdr/,tekil kural eklenecek (şimdi splat yakalıyor),
+/single-post/2017/03/26/Seans-%C3%9Ccretleri,,eski-surum,301,/tr/neden-emdr/,,2017 blog yazıları; en yakın yer hekimin mektubu. (kural: /single-post/*),soft404,,,,/single-post/* → /tr/neden-emdr/,tekil kural eklenecek (şimdi splat yakalıyor),EMDR | Izmir Dr. Mehmet Oğuz
+/single-post/2017/03/27/Bir-Soru-%C3%9Cst%C3%BCne,,eski-surum,301,/tr/neden-emdr/,,2017 blog yazıları; en yakın yer hekimin mektubu. (kural: /single-post/*),soft404,,,,/single-post/* → /tr/neden-emdr/,tekil kural eklenecek (şimdi splat yakalıyor),
+/single-post/2017/04/02/SEANS-S%C3%9CRELER%C4%B0-VE-SIKLI%C4%9EI,,eski-surum,301,/tr/neden-emdr/,,2017 blog yazıları; en yakın yer hekimin mektubu. (kural: /single-post/*),soft404,,,,/single-post/* → /tr/neden-emdr/,tekil kural eklenecek (şimdi splat yakalıyor),EMDR | Izmir Dr. Mehmet Oğuz
+/single-post/2017/04/03/Neden-EMDR,,eski-surum,301,/tr/neden-emdr/,,2017 blog yazıları; en yakın yer hekimin mektubu. (kural: /single-post/*),soft404,,,,/single-post/* → /tr/neden-emdr/,tekil kural eklenecek (şimdi splat yakalıyor),EMDR | Izmir Dr. Mehmet Oğuz
+/single-post/2017/04/19/S%C4%B1ran-geldi%C4%9Finde-en-parlak-sen-olursun,,eski-surum,301,/tr/neden-emdr/,,2017 blog yazıları; en yakın yer hekimin mektubu. (kural: /single-post/*),soft404,,,,/single-post/* → /tr/neden-emdr/,tekil kural eklenecek (şimdi splat yakalıyor),
+/sizofreni-ve-psikotik-bozukluklar,,eski-surum,301,/#hizmetler,,Konu listesinde var ya da en yakın bölüm hizmetler.,404,,,,/sizofreni-ve-psikotik-bozukluklar → /#hizmetler,aynı,
+/soner-yalcin-in-karakutu-isimli-kitabina-psikiyatri-ve-psikoloji-bilimi-adina-tepkimiz/,,eski-surum,301,/#makaleler,,Blog ve makale listesi.,soft404,,,,/soner-yalcin-in-karakutu-isimli-kitabina-psikiyatri-ve-psikoloji-bilimi-adina-tepkimiz/ → /#makaleler,aynı,Soner Yalçın’ın Karakutu isimli kitabına Psikiyatri ve Psikoloji Bilimi adına tepkimiz
+/sorulafr,,eski-surum,301,/#iletisim,,İletişim ve randevu.,404,,,,/sorulafr → /#iletisim,aynı,EMDR | Izmir Dr. Mehmet Oğuz
+/sosyal-fobi-tedavisinde-emdr-gucu,,eski-surum,301,/tr/kaygi-bozukluklari/,,Sosyal fobi bir kaygı bozukluğu.,404,,,,/sosyal-fobi-tedavisinde-emdr-gucu → /tr/kaygi-bozukluklari/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/sosyal-fobi-tedavisinde-emdr-gucu-emdr/,,eski-surum,301,/tr/kaygi-bozukluklari/,,Sosyal fobi bir kaygı bozukluğu.,soft404,,,,/sosyal-fobi-tedavisinde-emdr-gucu-emdr/ → /tr/kaygi-bozukluklari/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/travma-sonrasi-stres-bozuklugiu,,eski-surum,301,/tr/travma-sonrasi-stres-bozuklugu/,,Travma konusu.,404,,,,/travma-sonrasi-stres-bozuklugiu → /tr/travma-sonrasi-stres-bozuklugu/,aynı,EMDR | Izmir Dr. Mehmet Oğuz
+/tssb,,eski-surum,301,/tr/travma-sonrasi-stres-bozuklugu/,,Travma konusu.,404,,,,/tssb → /tr/travma-sonrasi-stres-bozuklugu/,aynı,
+/uyum-bozukluklari,,eski-surum,301,/tr/uyum-problemleri/,,Aynı konu.,404,,,,/uyum-bozukluklari → /tr/uyum-problemleri/,aynı,
+/yeme-bozukluklari,,eski-surum,301,/tr/yeme-bozukluklari/,,Aynı konu.,404,,,,/yeme-bozukluklari → /tr/yeme-bozukluklari/,aynı,
+/yuksek-duzeydeki-sinav-kaygisi-ile-bas-etmenin-yollari,,eski-surum,301,/tr/ders-basarisizligi-ve-sinav-kaygisi/,,Sınav kaygısı konusu.,404,,,,/yuksek-duzeydeki-sinav-kaygisi-ile-bas-etmenin-yollari → /tr/ders-basarisizligi-ve-sinav-kaygisi/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/yuksek-duzeydeki-sinav-kaygisi-ile-bas-etmenin-yollari-ve-emdr-emdr/,,eski-surum,301,/tr/ders-basarisizligi-ve-sinav-kaygisi/,,Sınav kaygısı konusu.,soft404,,,,/yuksek-duzeydeki-sinav-kaygisi-ile-bas-etmenin-yollari-ve-emdr-emdr/ → /tr/ders-basarisizligi-ve-sinav-kaygisi/,aynı,(boş ya da yalnızca ana sayfa kopyası)
+/tr/cocuk-ve-ergen-terapisi,tr,hic-olmamis,kural-kaldir,,,Eski sitede hiç olmamış adres. Doğrusu /tr/cocuk-ve-ergen-terapisi- (sonda tire).,soft404,,,,,kural kaldırılacak,
+/tr/psikoterapi-ve-psikolojik-danismanlik,tr,hic-olmamis,kural-kaldir,,,Eski sitede hiç olmamış adres. Doğrusu /tr/psikoterapi-ve-psikolojik-danismanlik-hizmetleri.,soft404,,,,,kural kaldırılacak,

@@ -288,7 +288,7 @@ site ve e-posta aynı anda durur.
 3. **Site haritaları** bölümüne şunu ekleyin:
 
    ```
-   sitemap-index.xml
+   sitemap.xml
    ```
 
    Bu dosya derlemede üretilir ve dört dilin tamamını, karşılıklı
@@ -355,7 +355,7 @@ for p in "" en/ de/ fr/; do
 done
 
 # Site haritası
-curl -s https://www.emdrizmir.com/sitemap-index.xml
+curl -s https://www.emdrizmir.com/sitemap.xml
 ```
 
 Ayrıca:

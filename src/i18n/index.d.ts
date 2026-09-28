@@ -12,7 +12,10 @@ export const dictionaries: Record<Locale, Dictionary>;
 
 export function t(locale: Locale): Dictionary;
 
-export function languageLinks(current: Locale): Array<{
+export function languageLinks(
+  current: Locale,
+  alternates?: Partial<Record<Locale, string>>
+): Array<{
   code: Locale;
   name: string;
   href: string;
