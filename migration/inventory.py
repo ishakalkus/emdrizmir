@@ -61,17 +61,28 @@ KVKK = [("belgelerimiz", None)]
 LETTER = [("neden-emdr", "why--emdr")]
 
 # Hizmet sayfaları. Eski sitede içleri boştu ama Google'da indeksliler;
-# kullanıcı kararı (28.09.2026): TR ve DE aynı adreste, yeni metinle
-# yayınlanır. DE eski adresleri Türkçe slug'lıydı ve öyle kalır. EN/FR
-# için karar bekleniyor (eski sitede EN hizmet sayfası hiç olmadı).
-SERVICES = ["bireysel-yetiskin-psikoterapisi", "cift-aile-terapisi", "cocuk-ve-ergen-terapisi-",
-            "online-bireysel-terapi", "psikoterapi-ve-psikolojik-danismanlik-hizmetleri",
-            "sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi"]
+# kullanıcı kararı (28.09.2026): dört dilde, yeni metinle yayınlanır.
+# TR ve DE eski adreslerinde (DE eskisi gibi Türkçe slug'lı) kalır. EN ve
+# FR eski sitede hiç olmadı; adresleri yeni ve kendi dillerinde.
+SERVICE_PAGES = [
+    # (TR/DE eski slug, EN yeni slug, FR yeni slug)
+    ("bireysel-yetiskin-psikoterapisi", "individual-adult-psychotherapy", "psychotherapie-individuelle-adulte"),
+    ("cift-aile-terapisi", "couple-and-family-therapy", "therapie-de-couple-et-de-famille"),
+    ("cocuk-ve-ergen-terapisi-", "child-and-adolescent-therapy", "therapie-enfant-et-adolescent"),
+    ("online-bireysel-terapi", "online-individual-therapy", "therapie-individuelle-en-ligne"),
+    ("psikoterapi-ve-psikolojik-danismanlik-hizmetleri", "psychotherapy-and-psychological-counselling", "psychotherapie-et-accompagnement-psychologique"),
+    ("sanal-gerceklik-vr-ile-alistirma--exposure-tedavisi", "virtual-reality-exposure-therapy", "therapie-exposition-realite-virtuelle"),
+]
+SERVICES = [tr for tr, _, _ in SERVICE_PAGES]
 
 GROUPS = []  # (tür, {dil: slug})
 for kind, pairs in (("konu", TOPICS), ("makale", ARTICLES), ("kvkk", KVKK), ("mektup", LETTER)):
     GROUPS += [(kind, {"tr": tr, "en": en}) for tr, en in pairs]
-GROUPS += [("hizmet", {"tr": s, "de": s}) for s in SERVICES]
+GROUPS += [("hizmet", {"tr": tr, "de": tr, "en": en, "fr": fr}) for tr, en, fr in SERVICE_PAGES]
+
+# Eski sitede hiç olmamış, yeni açılan adresler: envanterde satırları
+# yok, yalnızca eski sayfaların dil eşi olarak görünürler.
+NEW_ONLY = {f"/en/{en}" for _, en, _ in SERVICE_PAGES} | {f"/fr/{fr}" for _, _, fr in SERVICE_PAGES}
 
 KEEP = {}  # yol -> (tür, hreflang eşleri)
 for kind, langs in GROUPS:
@@ -102,11 +113,10 @@ rd("makale", "/tr/covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak/",
    "Aynı yazının sonu tireli eski adresi.", "/tr/covid-19-ve-ruhsal-degisim-olmak-ya-da-olmamak-")
 
 # Eski Almanca menü hizmetlere /en/ altında Türkçe slug'la bağlanıyordu;
-# bu adreslerde hiç sayfa olmadı. EN hizmet sayfası kararı verilirse
-# hedefleri o sayfalar olur.
-rd("kirik-baglanti", "/en/#hizmetler",
-   "Eski Almanca menüdeki kırık bağlantı; hiç sayfa olmadı.",
-   *[f"/en/{s}" for s in SERVICES])
+# bu adreslerde hiç sayfa olmadı. Artık aynı hizmetin EN sayfasına gider.
+for tr, en, _ in SERVICE_PAGES:
+    rd("kirik-baglanti", f"/en/{en}/",
+       "Eski Almanca menüdeki kırık bağlantı; aynı hizmetin İngilizce sayfası.", f"/en/{tr}")
 
 # Kurumsal, ekip
 why_team = "Yeni ana sayfanın ekip bölümü."
@@ -312,7 +322,7 @@ def main():
     # Tabloda olup urls.csv'de olmayan karar varsa (yazım hatası) yakala.
     known = {r["path"] for r in rows}
     stray = [p for p in list(R) + list(NEVER_EXISTED) if p not in known]
-    stray += [p for p in KEEP if p not in known]
+    stray += [p for p in KEEP if p not in known and p not in NEW_ONLY]
     if stray:
         sys.exit("urls.csv'de olmayan adres için karar yazılmış:\n  " + "\n  ".join(stray))
 

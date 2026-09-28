@@ -161,12 +161,14 @@ sayısı, `google`/`duckduckgo`, `simdiki_kural` (şimdiki `_redirects`),
 varsayılanı). Kullanıcı kararıyla (28.09.2026) hizmet sayfaları ve
 "Neden EMDR" mektubu da eklendi. Gerisi en yakın ilgili yere 301 alır.
 
-- **64 yeni sayfa**, eski adresleriyle:
+- **64 sayfa eski adresinde** yeniden yayınlanır, **12 sayfa** yeni açılır:
   - 21 TR + 19 EN konu sayfası.
   - 5 TR + 4 EN makale.
-  - 6 TR + 6 DE hizmet sayfası. Eski sayfalar boştu, **yeni metin
+  - Hizmet sayfaları, 6 hizmet × 4 dil. Eski sayfalar boştu, **yeni metin
     yazılacak**; yayından önce hekim onayı alınmalı (tanıtım
-    yönetmeliği). DE adresleri eskisi gibi Türkçe slug'lı kalır.
+    yönetmeliği). TR ve DE eski adreslerinde kalır (DE eskisi gibi Türkçe
+    slug'lı). EN ve FR eski sitede hiç olmadı; bu 12 sayfa kendi dilinde
+    yeni adresle açılır ve envanterde yalnızca dil eşi olarak görünür.
   - "Neden EMDR" mektubu (TR + EN): hekimin metni, ana sayfada kısa bölüm
     ve bu sayfaya bağlantı kalır.
   - KVKK aydınlatma metni (TR).
@@ -180,10 +182,8 @@ varsayılanı). Kullanıcı kararıyla (28.09.2026) hizmet sayfaları ve
   Formu, Ekibimiz, Hakkımızda, Kurumsal, liste sayfaları) ayrı sayfa
   olmaz; ilgili bölüme 301 alır. Bunlara gelen aramalar isim aramaları
   ve ana sayfa bu aramalarda zaten çıkıyor.
-- **Karar bekleyen:** EN ve FR hizmet sayfaları. Eski sitede EN hizmet
-  sayfası hiç olmadı (Almanca menüdeki `/en/<türkçe-slug>` bağlantıları
-  kırıktı); açılırsa yeni adres ve kırık adreslerin hedefi o sayfalar
-  olur.
+- Eski Almanca menüdeki kırık `/en/<türkçe-slug>` hizmet bağlantıları,
+  aynı hizmetin yeni İngilizce sayfasına 301 alır.
 - Eski Almanca site aslında İngilizce metinlerle kurulmuştu; Almanca içerik
   yalnızca menüdeydi. Korunacak Almanca sayfa yok.
 - `_redirects`'teki `/tr/*` splat'ı kalkacak (yeni `/tr/…` sayfalarını
